@@ -4,6 +4,7 @@ import stackedwave from "../../assets/stackedwave.svg";
 import stackedwavetop from "../../assets/stackedwavetop.svg";
 import TheMessage from "./TheMessage";
 import Heroes from "./Heroes";
+import p1 from "../../assets/p1.png";
 
 const Home = () => {
   return (
