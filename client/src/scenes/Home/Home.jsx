@@ -4,7 +4,7 @@ import stackedwave from "../../assets/stackedwave.svg";
 import stackedwavetop from "../../assets/stackedwavetop.svg";
 import TheMessage from "./TheMessage";
 import Heroes from "./Heroes";
-import p1 from "../../assets/p1.png";
+import Reviews from "../../components/Reviews";
 
 const Home = () => {
   return (
@@ -37,6 +37,7 @@ const Home = () => {
       <TheMessage />
       <img src={stackedwavetop} alt="" />
       <Heroes />
+      <Reviews />
     </section>
   );
 };
