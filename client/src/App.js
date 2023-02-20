@@ -4,6 +4,8 @@ import { Routes, Route } from "react-router-dom";
 import AboutUs from "./scenes/AboutUs";
 import React from "react";
 import NDISServices from "./scenes/NDISServices";
+import NDISPricing from "./scenes/NDISPricing";
+import OurTeam from "./scenes/OurTeam";
 
 
 
@@ -20,6 +22,10 @@ function App() {
         <Route path='/about' element={<AboutUs />} />
 
         <Route path='/ndis-services' element={<NDISServices />} />
+
+        <Route path='/ndis-pricing' element={<NDISPricing />} />
+
+        <Route path='/our-team' element={<OurTeam />} />
       </Routes>
     
     </main>

@@ -5,6 +5,7 @@ import stackedwavetop from "../../assets/stackedwavetop.svg";
 import TheMessage from "./TheMessage";
 import Heroes from "./Heroes";
 import Reviews from "../../components/Reviews";
+import ContactForm from "../../components/ContactForm";
 
 const Home = () => {
   return (
@@ -36,8 +37,37 @@ const Home = () => {
       <img src={stackedwave} alt="" />
       <TheMessage />
       <img src={stackedwavetop} alt="" />
-      <Heroes />
-      <Reviews />
+
+      <section>
+        <Heroes />
+      </section>
+
+      <section>
+        <Reviews />
+      </section>
+
+      <section className="bg-primary flex justify-center font-Oswald text-lavender gap-10">
+        <div className="flex flex-col w-[500px] my-5">
+          <h1 className="text-2xl font-bold  my-5">OUR DETAILS</h1>
+          <div className="flex flex-col gap-3">
+            <h2 className="text-xl font-bold ">Our Address</h2>
+            <p>
+              Suite 6, 75 Rickard Rd, Bankstown corner (Corner of 443 Chapel Rd
+              Bankstown) NSW 2200.
+            </p>
+            <h2 className="text-xl font-bold ">Email</h2>
+            <p>info@jobsrus.com.au</p>
+            <h2 className="text-xl font-bold ">Phone</h2>
+            <p>02 9703 5732</p>
+            <h2 className="text-xl font-bold ">Mobile</h2>
+            <p>0450 518 508</p>
+          </div>
+        </div>
+        <div className="flex flex-col w-[500px] my-5">
+          <h1 className="text-2xl font-bold  my-5">CONTACT FORM</h1>
+          <ContactForm />
+        </div>
+      </section>
     </section>
   );
 };
