@@ -6,6 +6,7 @@ import React from "react";
 import NDISServices from "./scenes/NDISServices";
 import NDISPricing from "./scenes/NDISPricing";
 import OurTeam from "./scenes/OurTeam";
+import Contact from "./scenes/Contact";
 
 
 
@@ -13,7 +14,7 @@ import OurTeam from "./scenes/OurTeam";
 
 function App() {
   return (
-    <main className="App flex flex-col ">
+    <main className="App flex flex-col w-full ">
       <Navbar />
       
       <Routes>
@@ -26,6 +27,10 @@ function App() {
         <Route path='/ndis-pricing' element={<NDISPricing />} />
 
         <Route path='/our-team' element={<OurTeam />} />
+
+        <Route path='/contact' element={<Contact />} />
+
+        
       </Routes>
     
     </main>

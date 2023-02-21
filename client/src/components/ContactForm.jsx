@@ -28,7 +28,7 @@ const ContactForm = () => {
         method="POST"
       >
         <div className="flex flex-row justify-center items-center  gap-2 ">
-          <div className="w-full flex flex-col gap-5">
+          <div className="lg:w-full md:w-[350px] flex flex-col gap-5">
             <p className="font-semibold text-lavender text-opacity-90">
               Your Name
             </p>
@@ -98,8 +98,8 @@ const ContactForm = () => {
           <div></div>
           <button
             type="submit"
-            className="p-3 bg-lavender shadow-xl font-semibold text-primary mt-5 rounded-full  hover:bg-alt2 hover:text-lavender
-              transition duration-500 "
+            className="p-3 bg-lavender shadow-xl font-semibold text-primary mt-5 rounded-xl hover:scale-105
+              transition duration-300 "
           >
             SEND A MESSAGE
           </button>

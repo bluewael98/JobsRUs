@@ -21,9 +21,10 @@ module.exports = {
         xs: "480px",
         ss: "620px",
         sm: "768px",
-        md: "1060px",
+        md: "1020px",
         lg: "1200px",
-        xl: "1700px", 
+        xlg: "1300px",
+        xxl: "1700px", 
       },
       boxShadow: {
         "5xl": "0px 10px 30px rgba(0,0,0, 0.5)"
