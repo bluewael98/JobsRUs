@@ -20,7 +20,7 @@ import useMediaQuery from "../hooks/useMediaQuery";
 const OurTeam = () => {
   const [open, setOpen] = useState(null);
   const isDesktop = useMediaQuery("(min-width: 1300px)");
-  const isMobile = useMediaQuery("(max-width: 500px)");
+  const isSmallDevice = useMediaQuery("(max-width: 768px)");
   const openModal = (id) => {
     setOpen(id);
   };
@@ -36,9 +36,9 @@ const OurTeam = () => {
         </div>
       </div>
 
-      {isMobile ? (
+      {isSmallDevice ? (
         <div className="flex xxs:p-10 sm:px-20 md:px-[100px] xlg:px-[200px] xxs:flex-col xlg:flex-row gap-3 justify-center items-center w-full pt-10">
-          <div className="lg:w-[70%] md:w-[100%] flex flex-col gap-2">
+          <div className="lg:w-[70%] md:w-[100%] flex flex-col gap-3">
             <h1 className="md:text-5xl xxs:text-2xl font text-primary">
               Meet our team of{" "}
               <span className=" font-semibold opacity-100">HEROES.</span>
@@ -51,19 +51,22 @@ const OurTeam = () => {
               div
               className="xlg:w-[30%] xxs:w-[90%]  relative xlg:mt-[200px] xxs:my-10 "
             >
-              <div className=" bg-primary flex justify-center items-center p-5 rounded-2xl z-10">
-                <img src={group} alt="" className="rounded-2xl z-10 " />
-              </div>
+              <img src={group} alt="" className="rounded-2xl z-10 w-full " />
             </div>
             <p className="text-lg text-primary text-semibold">
               At Jobs R Us, we thoroughly screen our staff to ensure we hire
               HEROES - Honest, Empathetic, Reliable, and Open-minded individuals
-              who meet and surpass your expectations. This involves two
-              face-to-face interviews with their department heads and a final
-              sign-off by the Managing Director on the third interview. We also
-              assess both existing and new staff to ensure a suitable placement
-              is catered to you based on your goals and the type of support you
-              need. Our staff are then able to perform the role of a key support
+              who meet and surpass your expectations.
+            </p>
+            <p className="text-lg text-primary text-semibold">
+              This involves two face-to-face interviews with their department
+              heads and a final sign-off by the Managing Director on the third
+              interview. We also assess both existing and new staff to ensure a
+              suitable placement is catered to you based on your goals and the
+              type of support you need.
+            </p>
+            <p className="text-lg text-primary text-semibold">
+              Our staff are then able to perform the role of a key support
               worker and be the main contact for you, ensuring effective
               coordination and communication across the board. Our priority is
               the quality of service you receive, and we've taken this approach
@@ -85,12 +88,17 @@ const OurTeam = () => {
             <p className="text-lg text-primary text-semibold">
               At Jobs R Us, we thoroughly screen our staff to ensure we hire
               HEROES - Honest, Empathetic, Reliable, and Open-minded individuals
-              who meet and surpass your expectations. This involves two
-              face-to-face interviews with their department heads and a final
-              sign-off by the Managing Director on the third interview. We also
-              assess both existing and new staff to ensure a suitable placement
-              is catered to you based on your goals and the type of support you
-              need. Our staff are then able to perform the role of a key support
+              who meet and surpass your expectations.
+            </p>
+            <p className="text-lg text-primary text-semibold">
+              This involves two face-to-face interviews with their department
+              heads and a final sign-off by the Managing Director on the third
+              interview. We also assess both existing and new staff to ensure a
+              suitable placement is catered to you based on your goals and the
+              type of support you need.
+            </p>
+            <p className="text-lg text-primary text-semibold">
+              Our staff are then able to perform the role of a key support
               worker and be the main contact for you, ensuring effective
               coordination and communication across the board. Our priority is
               the quality of service you receive, and we've taken this approach
@@ -217,7 +225,7 @@ const OurTeam = () => {
             </Dialog>
           </Transition>
         </Fragment>
-        <div className=" grid md:grid-cols-2 lg:grid-cols-3 xxs:grid-cols-1 mt-16 gap-[200px]">
+        <div className=" grid md:grid-cols-2 lg:grid-cols-3 xxs:grid-cols-1 mt-[200px] gap-[200px]">
           {/* AMINA */}
           <Fragment>
             <div className="flex justify-center items-center flex-col text-center">
