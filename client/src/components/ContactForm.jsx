@@ -27,11 +27,9 @@ const ContactForm = () => {
         action="https://formsubmit.co/e562502946854997d37372895dcbfc61"
         method="POST"
       >
-        <div className="flex flex-row justify-center items-center  gap-2 ">
-          <div className="lg:w-full md:w-[350px] flex flex-col gap-5">
-            <p className="font-semibold text-lavender text-opacity-90">
-              Your Name
-            </p>
+        <div className="flex md:flex-row xxs:flex-col justify-center items-center  gap-2 ">
+          <div className="w-full flex flex-col gap-5">
+            <p className="font-semibold text-lavender text-opacity-90">Name</p>
             <input
               className="w-full bg-lavender text-black placeholder-opaque-black p-3"
               type="text"
@@ -49,27 +47,46 @@ const ContactForm = () => {
               </p>
             )}
           </div>
+
           <div className="w-full flex flex-col gap-5">
             <p className="font-semibold text-lavender text-opacity-90">
-              Your Email
+              Phone Number
             </p>
             <input
               className="w-full bg-lavender text-black placeholder-opaque-black p-3 "
               type="text"
-              placeholder="Email."
-              {...register("email", {
+              placeholder="Phone Number."
+              {...register("phone", {
                 required: true,
-                pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                pattern: /^(0|\+61)[0-9]{9}$/,
               })}
             />
             {errors.email && (
               <p className=" text-lavender font-semibold ">
-                {errors.email.type === "required" &&
+                {errors.phone.type === "required" &&
                   "**This field is required."}
-                {errors.email.type === "pattern" && "**Invalid email address."}
+                {errors.phone.type === "pattern" && "**Invalid email address."}
               </p>
             )}
           </div>
+        </div>
+        <div className="w-full flex flex-col gap-5 mt-5">
+          <p className="font-semibold text-lavender text-opacity-90">Email</p>
+          <input
+            className="w-full bg-lavender text-black placeholder-opaque-black p-3 "
+            type="text"
+            placeholder="Email."
+            {...register("email", {
+              required: true,
+              pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+            })}
+          />
+          {errors.email && (
+            <p className=" text-lavender font-semibold ">
+              {errors.email.type === "required" && "**This field is required."}
+              {errors.email.type === "pattern" && "**Invalid email address."}
+            </p>
+          )}
         </div>
 
         <div className="mt-5 gap-5 flex flex-col">

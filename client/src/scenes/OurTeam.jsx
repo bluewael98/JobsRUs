@@ -15,6 +15,9 @@ import Dancia from "../assets/team/Dancia.jpg";
 import Zeinah from "../assets/team/Zeinah.jpg";
 import Alfred from "../assets/team/Alfred.jpg";
 import Fish from "../assets/team/Fish.jpg";
+import screening from "../assets/screening.svg";
+import support from "../assets/support.svg";
+import standtogether from "../assets/standtogether.svg";
 import useMediaQuery from "../hooks/useMediaQuery";
 
 const OurTeam = () => {
@@ -30,48 +33,94 @@ const OurTeam = () => {
   };
   return (
     <section className=" flex justify-center flex-col mt-[100px] pb-[200px] items-center font-Oswald">
-      <div className="w-full bg-primary relative flex justify-center items-center h-[220px] overflow-hidden">
-        <div className="flex flex-col justify-center ">
-          <h2 className=" text-6xl font-bold text-lavender ">OUR TEAM </h2>
+      <div className="w-full bg-primary relative flex justify-center items-center xxs:p-10  sm:h-[220px] overflow-hidden z-0">
+        <div className="flex flex-col justify-center items-center z-0 ">
+          <h2 className=" md:text-6xl xxs:text-4xl font-bold text-lavender ">
+            OUR TEAM{" "}
+          </h2>
+          {isSmallDevice ? (
+            <div className="text-center flex flex-col pt-5">
+              {" "}
+              <h1 className="md:text-5xl xxs:text-2xl font text-lavender">
+                Meet our team of{" "}
+                <span className=" font-semibold opacity-100">HEROES.</span>
+              </h1>
+              <h1 className="md:text-5xl xxs:text-2xl  font text-lavender">
+                {" "}
+                Honest, empathetic, reliable, and open-minded individuals.
+              </h1>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
       </div>
 
       {isSmallDevice ? (
-        <div className="flex xxs:p-10 sm:px-20 md:px-[100px] xlg:px-[200px] xxs:flex-col xlg:flex-row gap-3 justify-center items-center w-full pt-10">
-          <div className="lg:w-[70%] md:w-[100%] flex flex-col gap-3">
-            <h1 className="md:text-5xl xxs:text-2xl font text-primary">
-              Meet our team of{" "}
-              <span className=" font-semibold opacity-100">HEROES.</span>
-            </h1>
-            <h1 className="md:text-5xl xxs:text-2xl  font text-primary">
-              {" "}
-              Honest, empathetic, reliable, and open-minded individuals.
-            </h1>
-            <div
-              div
-              className="xlg:w-[30%] xxs:w-[90%]  relative xlg:mt-[200px] xxs:my-10 "
-            >
-              <img src={group} alt="" className="rounded-2xl z-10 w-full " />
+        <div className="flex sm:px-20 md:px-[100px] xlg:px-[200px] xxs:flex-col xlg:flex-row gap-3 justify-center items-center w-full pt-10 mx-auto">
+          <div className=" flex flex-col justify-center text-center gap-3">
+            <div div className="w-screen ">
+              <img src={group} alt="" className=" z-10 w-screen " />
             </div>
-            <p className="text-lg text-primary text-semibold">
-              At Jobs R Us, we thoroughly screen our staff to ensure we hire
-              HEROES - Honest, Empathetic, Reliable, and Open-minded individuals
-              who meet and surpass your expectations.
-            </p>
-            <p className="text-lg text-primary text-semibold">
-              This involves two face-to-face interviews with their department
-              heads and a final sign-off by the Managing Director on the third
-              interview. We also assess both existing and new staff to ensure a
-              suitable placement is catered to you based on your goals and the
-              type of support you need.
-            </p>
-            <p className="text-lg text-primary text-semibold">
-              Our staff are then able to perform the role of a key support
-              worker and be the main contact for you, ensuring effective
-              coordination and communication across the board. Our priority is
-              the quality of service you receive, and we've taken this approach
-              to provide you with the best possible experience.
-            </p>
+            {/* P1*/}
+            <div className="flex flex-col items-center justify-between relative ">
+              <div className="flex justify-center items-center align-top w-[screen] relative ">
+                <div className="bg-alt2 text-lavender mt-10 p-[2rem] text-xl flex flex-col gap-5 justify-center items-center font-Oswald rounded-2xl text-center">
+                  <p className=" max-w-screen">
+                    At Jobs R Us, we thoroughly screen our staff to ensure we
+                    hire HEROES - Honest, Empathetic, Reliable, and Open-minded
+                    individuals who meet and surpass your expectations.
+                  </p>
+                  <img
+                    src={standtogether}
+                    alt=""
+                    className="min-w-[100px] max-w-[200px]"
+                  />
+                </div>
+              </div>
+            </div>
+            {/* p2 */}
+            <div className="flex flex-col items-center justify-between relative ">
+              <div className="flex justify-center items-center align-top w-[screen] relative ">
+                <div className="bg-alt2 text-lavender mt-10 p-[2rem] text-xl flex flex-col gap-5 justify-center items-center font-Oswald rounded-2xl text-center">
+                  <p className=" max-w-screen">
+                    This involves two face-to-face interviews with their
+                    department heads and a final sign-off by the Managing
+                    Director on the third interview. We also assess both
+                    existing and new staff to ensure a suitable placement is
+                    catered to you based on your goals and the type of support
+                    you need.
+                  </p>
+                  <img
+                    src={screening}
+                    alt=""
+                    className="min-w-[100px] max-w-[200px]"
+                  />
+                </div>
+              </div>
+            </div>
+            {/* P3*/}
+            <div className="flex flex-col items-center justify-between relative ">
+              <div className="flex justify-center items-center align-top w-[screen] relative ">
+                <div className="bg-alt2 text-lavender mt-10 p-[2rem] text-xl flex flex-col gap-5 justify-center items-center font-Oswald rounded-2xl text-center">
+                  <p className=" max-w-screen">
+                    Our staff are then able to perform the role of a key support
+                    worker and be the main contact for you, ensuring effective
+                    coordination and communication across the board.
+                  </p>
+                  <p>
+                    Our priority is the quality of service you receive, and
+                    we've taken this approach to provide you with the best
+                    possible experience.
+                  </p>
+                  <img
+                    src={support}
+                    alt=""
+                    className="min-w-[100px] max-w-[200px]"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       ) : (
@@ -85,19 +134,19 @@ const OurTeam = () => {
               {" "}
               Honest, empathetic, reliable, and open-minded individuals.
             </h1>
-            <p className="text-lg text-primary text-semibold">
+            <p className="text-lg text-alt2 text-semibold">
               At Jobs R Us, we thoroughly screen our staff to ensure we hire
               HEROES - Honest, Empathetic, Reliable, and Open-minded individuals
               who meet and surpass your expectations.
             </p>
-            <p className="text-lg text-primary text-semibold">
+            <p className="text-lg text-alt2 text-semibold">
               This involves two face-to-face interviews with their department
               heads and a final sign-off by the Managing Director on the third
               interview. We also assess both existing and new staff to ensure a
               suitable placement is catered to you based on your goals and the
               type of support you need.
             </p>
-            <p className="text-lg text-primary text-semibold">
+            <p className="text-lg text-alt2 text-semibold">
               Our staff are then able to perform the role of a key support
               worker and be the main contact for you, ensuring effective
               coordination and communication across the board. Our priority is
@@ -164,7 +213,7 @@ const OurTeam = () => {
           >
             <Dialog
               as="div"
-              className="fixed inset-0 z-10 overflow-y-auto"
+              className="fixed inset-0 z-50 overflow-y-auto"
               onClose={closeModal}
             >
               <div className="min-h-screen px-4 text-center">
@@ -259,7 +308,7 @@ const OurTeam = () => {
               >
                 <Dialog
                   as="div"
-                  className="fixed inset-0 z-10 overflow-y-auto"
+                  className="fixed inset-0 z-50 overflow-y-auto"
                   onClose={closeModal}
                 >
                   <div className="min-h-screen px-4 text-center">
@@ -349,7 +398,7 @@ const OurTeam = () => {
             >
               <Dialog
                 as="div"
-                className="fixed inset-0 z-10 overflow-y-auto"
+                className="fixed inset-0 z-50 overflow-y-auto"
                 onClose={closeModal}
               >
                 <div className="min-h-screen px-4 text-center">
@@ -440,7 +489,7 @@ const OurTeam = () => {
             >
               <Dialog
                 as="div"
-                className="fixed inset-0 z-10 overflow-y-auto"
+                className="fixed inset-0 z-50 overflow-y-auto"
                 onClose={closeModal}
               >
                 <div className="min-h-screen px-4 text-center">
@@ -530,7 +579,7 @@ const OurTeam = () => {
             >
               <Dialog
                 as="div"
-                className="fixed inset-0 z-10 overflow-y-auto"
+                className="fixed inset-0 z-50 overflow-y-auto"
                 onClose={closeModal}
               >
                 <div className="min-h-screen px-4 text-center">
@@ -631,7 +680,7 @@ const OurTeam = () => {
             >
               <Dialog
                 as="div"
-                className="fixed inset-0 z-10 overflow-y-auto"
+                className="fixed inset-0 z-50 overflow-y-auto"
                 onClose={closeModal}
               >
                 <div className="min-h-screen px-4 text-center">
@@ -722,7 +771,7 @@ const OurTeam = () => {
             >
               <Dialog
                 as="div"
-                className="fixed inset-0 z-10 overflow-y-auto"
+                className="fixed inset-0 z-50 overflow-y-auto"
                 onClose={closeModal}
               >
                 <div className="min-h-screen px-4 text-center">
@@ -815,7 +864,7 @@ const OurTeam = () => {
             >
               <Dialog
                 as="div"
-                className="fixed inset-0 z-10 overflow-y-auto"
+                className="fixed inset-0 z-50 overflow-y-auto"
                 onClose={closeModal}
               >
                 <div className="min-h-screen px-4 text-center">
@@ -910,7 +959,7 @@ const OurTeam = () => {
             >
               <Dialog
                 as="div"
-                className="fixed inset-0 z-10 overflow-y-auto"
+                className="fixed inset-0 z-50 overflow-y-auto"
                 onClose={closeModal}
               >
                 <div className="min-h-screen px-4 text-center">
@@ -990,7 +1039,7 @@ const OurTeam = () => {
             >
               <Dialog
                 as="div"
-                className="fixed inset-0 z-10 overflow-y-auto"
+                className="fixed inset-0 z-50 overflow-y-auto"
                 onClose={closeModal}
               >
                 <div className="min-h-screen px-4 text-center">
@@ -1091,7 +1140,7 @@ const OurTeam = () => {
             >
               <Dialog
                 as="div"
-                className="fixed inset-0 z-10 overflow-y-auto"
+                className="fixed inset-0 z-50 overflow-y-auto"
                 onClose={closeModal}
               >
                 <div className="min-h-screen px-4 text-center">
@@ -1171,7 +1220,7 @@ const OurTeam = () => {
             >
               <Dialog
                 as="div"
-                className="fixed inset-0 z-10 overflow-y-auto"
+                className="fixed inset-0 z-50 overflow-y-auto"
                 onClose={closeModal}
               >
                 <div className="min-h-screen px-4 text-center">
@@ -1253,7 +1302,7 @@ const OurTeam = () => {
             >
               <Dialog
                 as="div"
-                className="fixed inset-0 z-10 overflow-y-auto"
+                className="fixed inset-0 z-50 overflow-y-auto"
                 onClose={closeModal}
               >
                 <div className="min-h-screen px-4 text-center">

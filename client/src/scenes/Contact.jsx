@@ -9,8 +9,8 @@ import wearehere from "../assets/wearehere.png";
 const Contact = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   return (
-    <section className=" flex justify-center flex-col mt-[100px] md:pb-[200px] items-center font-Oswald xxs:text ">
-      <div className="w-[100%] bg-primary relative flex justify-center items-center md:h-[220px] xxs:h-[150px] overflow-hidden z-30">
+    <section className=" flex justify-center flex-col mt-[100px]  items-center font-Oswald xxs:text ">
+      <div className="w-[100%] bg-primary relative flex justify-center items-center md:h-[220px] xxs:h-[150px] overflow-hidden z-10">
         <div className="flex flex-col justify-center ">
           <h2 className=" md:text-6xl xxs:text-3xl font-bold text-lavender ">
             CONTACT US
@@ -21,7 +21,7 @@ const Contact = () => {
       {/* CONTACT BOX */}
       <div className="z-10 relative w-full flex flex-col justify-center items-center md:px-10">
         <div className=" lg:px-20 lg:py-20 md:py-10 px:10 bg-primary mt-[80px] flex flex-col items-center justify-center  z-40 rounded-3xl shadow-xl">
-          <h1 className="md:text-4xl xxs:text-2xl font text-lavender my-5">
+          <h1 className="md:text-5xl xxs:text-2xl font text-lavender my-5">
             We'd love to here from{" "}
             <span className=" font-semibold opacity-100">you.</span>
           </h1>
@@ -55,7 +55,7 @@ const Contact = () => {
                     className={`${
                       isExpanded
                         ? "w-full h-full"
-                        : "w-[200px] p-2 bg-lavender rounded-3xl hover:scale-105"
+                        : "w-[200px] shadow-sm bg-lavender rounded-3xl hover:scale-105"
                     } object-cover cursor-pointer transition-all ease-out duration-500`}
                   />
                 </div>
@@ -83,11 +83,14 @@ const Contact = () => {
             </div>
           </div>
         </div>
+        <div className="py-10"></div>
 
+        <div className="w-screen h-1/2 absolute bottom-0 opacity-60  z-1 bg-alt2">
+          <p> &nbsp; </p>
+        </div>
         <img
           src={blobscatter}
-          alt=""
-          className="w-full absolute opacity-60 mt-[110px] z-1"
+          className="w-screen h-1/2 absolute bottom-0 opacity-60  z-10"
         />
       </div>
     </section>

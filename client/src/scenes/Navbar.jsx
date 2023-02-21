@@ -16,11 +16,11 @@ const Navbar = ({ isTopOfPage }) => {
   const isDesktop = useMediaQuery("(min-width: 1020px)");
   const navbarBackground = isTopOfPage
     ? "transition duration-500"
-    : "bg-primary transition duration-500";
+    : "bg-lavender transition duration-500 shadow-md";
 
   return (
     <nav
-      className={`${navbarBackground} z-40 w-full fixed top-0 pt-4 h-[80px]`}
+      className={`${navbarBackground} z-30 w-full fixed top-0 pt-4 h-[80px]`}
     >
       {/* DESKTOP NAV */}
       {isDesktop ? (
