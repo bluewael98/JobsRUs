@@ -20,7 +20,7 @@ const Navbar = ({ isTopOfPage }) => {
 
   return (
     <nav
-      className={`${navbarBackground} z-30 w-full fixed top-0 pt-4 h-[80px]`}
+      className={`${navbarBackground} z-50 w-full fixed top-0 pt-4 h-[80px]`}
     >
       {/* DESKTOP NAV */}
       {isDesktop ? (

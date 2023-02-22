@@ -33,7 +33,7 @@ const OurTeam = () => {
   };
   return (
     <section className=" flex justify-center flex-col mt-[100px] pb-[200px] items-center font-Oswald">
-      <div className="w-full bg-primary relative flex justify-center items-center xxs:p-10  sm:h-[220px] overflow-hidden z-0">
+      <div className="w-full bg-primary relative flex justify-center items-center xxs:p-10  sm:h-[220px] overflow-hidden z-0 font-Bebas">
         <div className="flex flex-col justify-center items-center z-0 ">
           <h2 className=" md:text-6xl xxs:text-4xl font-bold text-lavender ">
             OUR TEAM{" "}
@@ -43,9 +43,11 @@ const OurTeam = () => {
               {" "}
               <h1 className="md:text-5xl xxs:text-2xl font text-lavender">
                 Meet our team of{" "}
-                <span className=" font-semibold opacity-100">HEROES.</span>
+                <span className=" font-semibold opacity-100 italic">
+                  HEROES.
+                </span>
               </h1>
-              <h1 className="md:text-5xl xxs:text-2xl  font text-lavender">
+              <h1 className="md:text-5xl xxs:text-2xl  font text-lavender font">
                 {" "}
                 Honest, empathetic, reliable, and open-minded individuals.
               </h1>
@@ -57,7 +59,7 @@ const OurTeam = () => {
       </div>
 
       {isSmallDevice ? (
-        <div className="flex sm:px-20 md:px-[100px] xlg:px-[200px] xxs:flex-col xlg:flex-row gap-3 justify-center items-center w-full pt-10 mx-auto">
+        <div className="flex sm:px-20 md:px-[100px] xlg:px-[200px] xxs:flex-col xlg:flex-row gap-3 justify-center items-center w-full pt-10 mx-auto text-opacity-90">
           <div className=" flex flex-col justify-center text-center gap-3">
             <div div className="w-screen ">
               <img src={group} alt="" className=" z-10 w-screen " />
@@ -79,7 +81,7 @@ const OurTeam = () => {
                 </div>
               </div>
             </div>
-            {/* p2 */}
+            {/* P2 */}
             <div className="flex flex-col items-center justify-between relative ">
               <div className="flex justify-center items-center align-top w-[screen] relative ">
                 <div className="bg-alt2 text-lavender mt-10 p-[2rem] text-xl flex flex-col gap-5 justify-center items-center font-Oswald rounded-2xl text-center">
@@ -128,13 +130,13 @@ const OurTeam = () => {
           <div className="xlg:w-[70%] md:w-[100%] flex flex-col xxs:justify-center xxs:items-center xxs:text-center xlg:justify-start xlg:items-start xlg:text-left gap-2">
             <h1 className="md:text-5xl xxs:text-2xl font text-primary">
               Meet our team of{" "}
-              <span className=" font-semibold opacity-100">HEROES.</span>
+              <span className=" font-semibold opacity-100 italic">HEROES.</span>
             </h1>
             <h1 className="md:text-5xl xxs:text-2xl  font text-primary">
               {" "}
               Honest, empathetic, reliable, and open-minded individuals.
             </h1>
-            <p className="text-lg text-alt2 text-semibold">
+            <p className="text-lg text-alt2 text-semibold font-Oswald ">
               At Jobs R Us, we thoroughly screen our staff to ensure we hire
               HEROES - Honest, Empathetic, Reliable, and Open-minded individuals
               who meet and surpass your expectations.

@@ -12,8 +12,9 @@ module.exports = {
         alt2: "#7A7A7A"
       },
       fontFamily: {
-        Oswald: ["proxima-nova, sans-serif"],
-        Charter: ["Charter, serif"]
+        Oswald: ["inter, sans-serif"],
+        Charter: ["Charter, serif"],
+        Bebas: ["Bebas Neue, sans-serif"]
       },
     
       screens: {

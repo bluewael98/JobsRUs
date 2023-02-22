@@ -10,6 +10,7 @@ import Paper from "@material-ui/core/Paper";
 import IconButton from "@material-ui/core/IconButton";
 import { KeyboardArrowDown } from "@mui/icons-material";
 import { KeyboardArrowUp } from "@mui/icons-material";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 const useStyles = makeStyles({
   root: {
@@ -28,6 +29,10 @@ const useStyles = makeStyles({
     backgroundColor: "#303FA1",
     fontFamily: "Oswald",
     padding: "40px",
+    "@media (max-width: 767px)": {
+      fontSize: "24px",
+      padding: "20px",
+    },
   },
   rowName: {
     fontSize: "18px",
@@ -122,6 +127,7 @@ const rows = [
 
 const ExpandableTableRow = ({ children, expandComponent, ...otherProps }) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
+  const isSmallScreen = useMediaQuery("(max-width: 470px)");
 
   return (
     <>
@@ -135,7 +141,8 @@ const ExpandableTableRow = ({ children, expandComponent, ...otherProps }) => {
       </TableRow>
       {isExpanded && (
         <TableRow>
-          <TableCell padding="checkbox" />
+          {isSmallScreen ? "" : <TableCell padding="checkbox" />}
+
           {expandComponent}
         </TableRow>
       )}

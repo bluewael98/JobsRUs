@@ -4,7 +4,7 @@ import { SensorOccupied, School, Badge, Diversity3 } from "@mui/icons-material";
 
 import "./styles.css";
 
-function Content({ data, disabled, showSubtitle = true }) {
+function Content({ data, showSubtitle = true }) {
   return (
     <motion.div className="content font-Oswald" layoutId="content">
       <motion.h1
@@ -29,7 +29,7 @@ function ExpandedCard({ children, onCollapse }) {
   return (
     <>
       <motion.div
-        className="card expanded content-center flex justify-center items-center"
+        className="card expanded xxs:w-[370px] sm:w-[500px]  md:w-[700px] bg-primary  relative  content-center flex justify-center items-center top-[-300px] xxs:right-[0px] sm:right-[11  0px]"
         layoutId="expandable-card"
         onClick={onCollapse}
         style={{ justifyContent: "", zIndex: 40 }}
@@ -43,7 +43,7 @@ function ExpandedCard({ children, onCollapse }) {
 function CompactCard({ children, onExpand, disabled, data }) {
   return (
     <motion.div
-      className="card compact flex items-center content-center gap-4 text-primary  "
+      className="card compact xxs:w-[350px] sm:w-[500px] md:w-[700px] flex items-center content-center gap-2 text-primary  "
       layoutId="expandable-card"
       onClick={disabled ? undefined : onExpand}
     >
@@ -67,7 +67,7 @@ function DataButton({ data, onCollapse, onExpand, disabled }) {
   };
 
   return (
-    <div className="card-container">
+    <div className="card-container ">
       <AnimateSharedLayout>
         {isExpanded ? (
           <ExpandedCard onCollapse={collapseData} data={data}>
@@ -230,7 +230,7 @@ export default function App() {
 
   return (
     <div className="container">
-      <div className="data">
+      <div className="grid sm:grid-cols-1 ">
         {data.map((item) => (
           <DataButton
             key={item.title}

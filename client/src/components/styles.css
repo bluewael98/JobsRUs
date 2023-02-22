@@ -4,7 +4,7 @@
 
 .data {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   margin-top: 3rem;
 }
@@ -38,21 +38,13 @@
 }
 
 .expanded {
-  width: 45rem;
-  height: 45rem;
-  background-color: navy;
+ 
   position: relative;
-  right: 200px;
-  top: -300px;
+
 }
 
 
-.compact {
-  width: 15rem;
-  height: 15rem;
-  padding: 0.5rem;
-  border-radius: 1.5rem;
-}
+
 
 .expanded .title {
   font-size: 1.3rem;
