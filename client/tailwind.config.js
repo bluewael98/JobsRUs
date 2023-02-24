@@ -9,7 +9,7 @@ module.exports = {
         secondary: "#6366B8",
         lavender:"#E6E6FA",
         alt: "#6A2875",
-        alt2: "#7A7A7A"
+        alt2: "#A8A9AE"
       },
       fontFamily: {
         Oswald: ["inter, sans-serif"],

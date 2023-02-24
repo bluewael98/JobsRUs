@@ -4,14 +4,21 @@ import { Link } from "react-router-dom";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { MenuRounded } from "@mui/icons-material";
 import { CloseRounded } from "@mui/icons-material";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { Popover } from "@headlessui/react";
 
 const variants = {
-  visible: { opacity: 1 },
-  hidden: { opacity: 0 },
+  visible: { x: "0%" },
+  hidden: { x: "-100%" },
+  exit: { x: "-100%" },
+  exitActive: { x: 0 },
 };
 
 const Navbar = ({ isTopOfPage }) => {
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 1020px)");
   const navbarBackground = isTopOfPage
@@ -29,84 +36,137 @@ const Navbar = ({ isTopOfPage }) => {
             <img
               src={jobsrus}
               alt="jobsrus"
-              className="w-36 h-14 object-cover text-"
+              className="w-[70px] h-full  object-cover"
             />
-            <h2 className="">YOUR GOAL, OUR TARGET.</h2>
+            <h2 className=" font-Bebas font-extrabold text-xl text-primary">
+              JOBS <span className=" text-alt2">R</span> US
+            </h2>
           </div>
-          <div className="flex gap-4">
-            <Link to="/">
-              <h2>HOME</h2>
+          <div className="navbar flex gap-4 justify-between font-Bebas font-semibold  text-primary">
+            <Link
+              to="/"
+              className="group text-primary transition-all duration-300 ease-in-out"
+            >
+              <h2 className="bg-left-bottom bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] group-hover:opacity-80 transition-all duration-500 ease-out">
+                HOME
+              </h2>
             </Link>
-            <Link to="/about">
-              <h2>ABOUT US</h2>
+            <Link
+              to="/about"
+              className="group text-primary transition-all duration-300 ease-in-out"
+            >
+              <h2 className="bg-left-bottom bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] group-hover:opacity-80 transition-all duration-500 ease-out">
+                ABOUT US
+              </h2>
             </Link>
-            <Link to="/ndis-services">
-              <h2>NDIS SERVICES</h2>
+
+            <Popover className="relative">
+              <Popover.Button>NDIS</Popover.Button>
+              <Popover.Panel className="absolute z-20 w-[200px] h-[200px] pt-5 left-[-50px] rounded-md">
+                <div className="grid grid-cols-1 bg-lavender  px-5  gap-3 shadow-md py-5 rounded-md">
+                  <Link
+                    to="/ndis-services"
+                    className="group text-primary transition-all duration-300 ease-in-out"
+                  >
+                    <h2 className="bg-left-bottom bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] group-hover:opacity-80 transition-all duration-500 ease-out">
+                      NDIS SERVICES
+                    </h2>
+                  </Link>
+                  <Link
+                    to="/ndis-pricing"
+                    className="group text-primary transition-all duration-300 ease-in-out"
+                  >
+                    <h2 className="bg-left-bottom bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] group-hover:opacity-80 transition-all duration-500 ease-out">
+                      NDIS PRICING
+                    </h2>
+                  </Link>
+                </div>
+              </Popover.Panel>
+            </Popover>
+
+            <Link
+              to="/our-team"
+              className="group text-primary transition-all duration-300 ease-in-out"
+            >
+              <h2 className="bg-left-bottom bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] group-hover:opacity-80 transition-all duration-500 ease-out">
+                OUR TEAM
+              </h2>
             </Link>
-            <Link to="/ndis-pricing">
-              <h2>NDIS PRICING</h2>
+            <Link
+              to="/contact"
+              className="group text-primary transition-all duration-300 ease-in-out"
+            >
+              <h2 className="bg-left-bottom bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] group-hover:opacity-80 transition-all duration-500 ease-out">
+                CONTACT
+              </h2>
             </Link>
-            <Link to="/our-team">
-              <h2>OUR TEAM</h2>
-            </Link>
-            <Link to="/contact">
-              <h2>CONTACT</h2>
-            </Link>
-            <Link to="/refer-client">
-              <h2>REFER A CLIENT</h2>
+            <Link
+              to="/refer-client"
+              className="group text-primary transition-all duration-300 ease-in-out"
+            >
+              <h2 className="bg-left-bottom bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] group-hover:opacity-80 transition-all duration-500 ease-out">
+                REFER A CLIENT
+              </h2>
             </Link>
           </div>
         </div>
       ) : (
         <button
-          className="rounded-full"
+          className="rounded-full ml-5 mt-2"
           onClick={() => setIsMenuToggled(!isMenuToggled)}
         >
           {" "}
           <MenuRounded />{" "}
         </button>
       )}
-      {/* MOBILE MENU POPUP */}
-      {isDesktop && isMenuToggled && (
-        <motion.div
-          variants={variants}
-          initial="hidden"
-          animate="visible"
-          className="fixed right-0 top-0 bottom-0 height[100%] bg-secondary p-2 w-[300px] transition-500"
-        >
-          {/* CLOSE ICON */}
-          <div className="flex justify-end p-12">
-            <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-              <CloseRounded />
-            </button>
-          </div>
+      <AnimatePresence>
+        {/* MOBILE MENU POPUP */}
+        {!isDesktop && isMenuToggled && (
+          <motion.div
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            transition={{ ease: "easeOut", duration: 0.2 }}
+            exit="exit"
+            className="fixed left-0 top-0 bottom-0 height[100%] bg-lavender p-2 w-[300px] transition-300 shadow-md"
+          >
+            {/* CLOSE ICON */}
+            <div className="flex justify-end p-12">
+              <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
+                <CloseRounded />
+              </button>
+            </div>
 
-          {/* MENU ITEMS */}
-          <div className="flex flex-col gap-10 ml-[33%] text-2xl">
-            <Link to="/">
-              <h2>HOME</h2>
-            </Link>
-            <Link to="/about">
-              <h2>ABOUT US</h2>
-            </Link>
-            <Link to="/ndis-services">
-              <h2>NDIS SERVICES</h2>
-            </Link>
-            <Link to="/ndis-pricing">
-              <h2>NDIS PRICING</h2>
-            </Link>
-            <Link to="/our-team">
-              <h2>OUR TEAM</h2>
-            </Link>
-            <Link to="/contact">
-              <h2>CONTACT</h2>
-            </Link>
-            <Link to="/refer-client">
-              <h2>REFER A CLIENT</h2>
-            </Link>
-          </div>
-        </motion.div>
-      )}
+            {/* MENU ITEMS */}
+            <div
+              className="flex flex-col gap-10 ml-5 text-2xl  font-Bebas text-primary font-semibold "
+              onClick={() => setIsMenuToggled(false)}
+            >
+              <Link to="/" onClick={handleClick}>
+                <h2>HOME</h2>
+              </Link>
+              <Link to="/about" onClick={handleClick}>
+                <h2>ABOUT US</h2>
+              </Link>
+              <Link to="/ndis-services" onClick={handleClick}>
+                <h2>NDIS SERVICES</h2>
+              </Link>
+              <Link to="/ndis-pricing" onClick={handleClick}>
+                <h2>NDIS PRICING</h2>
+              </Link>
+              <Link to="/our-team" onClick={handleClick}>
+                <h2>OUR TEAM</h2>
+              </Link>
+              <Link to="/contact" onClick={handleClick}>
+                <h2>CONTACT</h2>
+              </Link>
+              <Link to="/refer-client" onClick={handleClick}>
+                <h2>REFER A CLIENT</h2>
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

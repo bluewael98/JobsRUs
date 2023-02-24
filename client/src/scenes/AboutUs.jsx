@@ -2,10 +2,10 @@ import React from "react";
 import dogood from "../assets/dogood.svg";
 import giveourbest from "../assets/giveourbest.svg";
 import standtogether from "../assets/standtogether.svg";
-import diversity from "../assets/diversity.svg";
 import caring from "../assets/caring.svg";
 import arrowdown from "../assets/arrowdown.svg";
 import useMediaQuery from "../hooks/useMediaQuery";
+import Team from "../components/team";
 
 const AboutUs = () => {
   const isSmallDevice = useMediaQuery("(max-width: 1020px)");
@@ -157,7 +157,7 @@ const AboutUs = () => {
                     </p>
                   </div>
                   <div className="bg-primary w-screen flex justify-center items-center p-5 rounded-b-2xl h-[50%]">
-                    <img src={diversity} alt="" className="w-[250px]" />
+                    <Team />
                   </div>
                 </div>
               </div>
@@ -251,7 +251,7 @@ const AboutUs = () => {
                     </p>
                   </div>
                   <div className="bg-primary w-[300px] h-[300px] rounded-full z-10 absolute left-[-240px] top-[-20px] flex justify-center items-center">
-                    <img src={diversity} alt="" className="w-[180px]" />
+                    <Team />
                   </div>
                 </div>
                 {/* WE CARE */}

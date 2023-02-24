@@ -6,16 +6,16 @@ import person4 from "../../assets/person4.png";
 
 const Heroes = () => {
   return (
-    <section className="flex justify-center flex-col bg-lavender my-10 text-primary">
+    <section className="flex justify-center flex-col bg-lavender my-10 text-primary text-center">
       <div className="flex flex-col  items-center text-primary font-Oswald">
-        <h1 className="text-3xl font-bold">
+        <h1 className="text-5xl sm:text-4xl xxs:text-3xl font-bold">
           WE BELIEVE OUR CLIENTS ARE HEROES
         </h1>
-        <h2 className="text-2xl text-gray-500 ">
+        <h2 className="sm:text-4xl xxs:text-2xl text-gray-500 ">
           SO WE TRY TO BE HEROES TOO, HERE’S WHAT THAT MEANS TO US
         </h2>
       </div>
-      <div className="flex flex-row justify-center gap-10 my-10 ">
+      <div className="flex ss:flex-row xxs:flex-col  gap-10 my-10 items-center justify-center ">
         <div className="max-w-[250px] w-auto flex flex-col items-end ">
           <img src={person1} alt="" />
           <p className="mt-5  font-Oswald text-2xl ">Honesty</p>
@@ -33,7 +33,9 @@ const Heroes = () => {
         </div>
         <div className="max-w-[250px] w-auto flex flex-col items-end">
           <img src={person4} alt="" />
-          <p className="mt-5  font-Oswald text-2xl ">Open Mindedness</p>
+          <p className="mt-5  font-Oswald text-2xl text-center ">
+            Open Mindedness
+          </p>
           <div className="w-[70px] h-[10px] bg-primary mt-3  rounded-sm opacity-70 "></div>
         </div>
       </div>

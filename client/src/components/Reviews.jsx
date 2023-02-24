@@ -49,7 +49,7 @@ function Reviews() {
 
   return (
     <section className="my-[200px]">
-      <div className="w-[100%] flex justify-center items-center text-3xl font-bold text-primary">
+      <div className="w-[100%] flex justify-center items-center text-5xl sm:text-4xl xxs:text-3xl text-center font-bold text-primary">
         <h1>HERE'S WHAT OUR CLIENTS HAVE TO SAY ABOUT US</h1>
       </div>
 
@@ -65,12 +65,12 @@ function Reviews() {
         {reviews.map((review) => (
           <div
             key={review.id}
-            className="carousel cell w-[1000px] h-[600px] justify-center flex items-center  text-2xl text-alt2 "
+            className="carousel cell w-screen md:w-[1000px] h-[600px] justify-center flex items-center  text-2xl text-alt2 px-5 "
           >
             <div className=" p-5 flex justify-center items-center flex-col gap-10">
               <h3 className=" text-2xl  font-semibold">{review.author_name}</h3>
               <img src={review.profile_photo_url} alt="" />
-              <p className="max-w-[600px]">{review.text}</p>
+              <p className="max-w-[600px] text-center">{review.text}</p>
               <div className=" text-[#fbbc04]">
                 {renderStars(review.rating)}
               </div>
