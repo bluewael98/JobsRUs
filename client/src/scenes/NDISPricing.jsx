@@ -25,10 +25,10 @@ const NDISPricing = () => {
           remote and very remote participants
         </h2>
       </div>
-
       <div className="xxs:w-[370px] ss:w-[500px] xs:w-[440px] sm:w-[700px] md:w-[1000px] ">
         <PricingTable />
       </div>
+      ADD PRICES PDF
     </section>
   );
 };

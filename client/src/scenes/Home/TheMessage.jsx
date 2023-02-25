@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import arrow from "../../assets/arrow.svg";
 
 const TheMessage = () => {
@@ -16,14 +17,12 @@ const TheMessage = () => {
           each person's unique strengths and abilities, we help to build a
           brighter future for all.
         </p>
-        <button className=" shadow-5xl  bg-lavender text-primary font-bold   mt-5  rounded-full py-2 px-4 flex justify-center items-center gap-3 hover:scale-105 transition duration-300">
-          <p className=" font-Oswald text-lg">Contact Us Here</p>
-          <img src={arrow} alt="" className="max-w-[25px]" />
-        </button>
-        <button className="shadow-5xl  bg-lavender text-primary font-bold mt-2 max-w-[200px] rounded-full py-2 px-4 flex justify-center items-center gap-3 hover:scale-105 transition duration-300">
-          <p className=" font-Oswald text-lg">Refer A Client</p>
-          <img src={arrow} alt="" className="max-w-[25px]" />
-        </button>
+        <Link to="/contact">
+          <button className=" shadow-5xl  bg-lavender text-primary font-bold   mt-5  rounded-full py-2 px-4 flex justify-center items-center gap-3 hover:scale-105 transition duration-300">
+            <p className=" font-Oswald text-lg">Contact Us Here</p>
+            <img src={arrow} alt="" className="max-w-[25px]" />
+          </button>
+        </Link>
       </div>
       <div className=" xlg:mr-10 flex-col opacity-90  text-alt2 mt-5 items-center flex justify-center px-5 xlg:px-0 ">
         <div className=" shadow-5xl  bg-lavender w-full      xlg:max-w-[400px] py-[2rem] px-[4rem] font-semibold rounded-2xl">

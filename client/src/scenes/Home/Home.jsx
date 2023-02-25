@@ -12,6 +12,7 @@ import useMediaQuery from "../../hooks/useMediaQuery";
 import p1 from "../../assets/p1.png";
 import oneonone from "../../assets/oneonone.JPG";
 import phonebackground from "../../assets/phonebackground.svg";
+import { Link } from "react-router-dom";
 const Home = () => {
   const isSmallScreen = useMediaQuery("(max-width: 1080px)");
   return (
@@ -34,10 +35,11 @@ const Home = () => {
                 </span>{" "}
                 ARE.
               </h2>
-
-              <button className="  rounded-3xl items-center  flex justify-center md:py-4 md:px-10 xxs:py-2 xxs:px-6  font-extrabold hover:scale-105 transition duration-300 bg-lavender text-primary my-5 ">
-                GET IN TOUCH
-              </button>
+              <Link to="/contact">
+                <button className="  rounded-3xl items-center  flex justify-center md:py-4 md:px-10 xxs:py-2 xxs:px-6  font-extrabold hover:scale-105 transition duration-300 bg-lavender text-primary my-5 ">
+                  GET IN TOUCH
+                </button>
+              </Link>
             </div>
 
             <img src={p1} alt="" className="sm:pl-[30%]" />
@@ -65,64 +67,73 @@ const Home = () => {
               </span>{" "}
               ARE.
             </h2>
-
-            <button className="  rounded-3xl items-center  flex justify-center md:py-4 md:px-10 xxs:py-2 xxs:px-6  font-extrabold hover:scale-105 transition duration-300 bg-lavender text-primary my-5 ">
-              GET IN TOUCH
-            </button>
+            <Link to="/contact">
+              <button className="  rounded-3xl items-center  flex justify-center md:py-4 md:px-10 xxs:py-2 xxs:px-6  font-extrabold hover:scale-105 transition duration-300 bg-lavender text-primary my-5 ">
+                GET IN TOUCH
+              </button>
+            </Link>
           </div>
 
           <div className="flex items-center justify-center w-3/4  gap-10  ">
-            <div className=" overflow-hidden  flex justify-center items-centr w-full z-10 xlg:p-2 bg-lavender rounded-[20%] shadow-md hover:scale-105 transition duration-300 mt-[100px]  max-h-[250px] ">
-              <div className="bg-black  overflow-hidden rounded-[20%] relative flex justify-center items-center">
-                <img
-                  src={header3}
-                  alt=""
-                  className="w-screen  object-cover object-top opacity-60 z-[5]"
-                />
-                <div className=" xxl:text-3xl md:text-2xl font-Oswald text-center text-lavender opacity-90 z-10 absolute p-0 m-0">
-                  <p>Employment</p> <p>Support</p>
+            <Link to="/ndis-services" className="z-10">
+              <div className=" overflow-hidden cursor-pointer  flex justify-center items-centr w-full z-10 xlg:p-2 bg-lavender rounded-[20%] shadow-md hover:scale-105 transition duration-300 mt-[100px]  max-h-[250px] ">
+                <div className="bg-black  overflow-hidden rounded-[20%] relative flex justify-center items-center">
+                  <img
+                    src={header3}
+                    alt=""
+                    className="w-screen  object-cover object-top opacity-60 z-[5]"
+                  />
+                  <div className=" xxl:text-3xl md:text-2xl font-Oswald text-center text-lavender opacity-90 z-10 absolute p-0 m-0">
+                    <p>Employment</p> <p>Support</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
 
-            <div className=" overflow-hidden  flex justify-center items-centr w-full z-10 xlg:p-2 bg-lavender rounded-[20%] shadow-md hover:scale-105 transition duration-300  max-h-[250px]  ">
-              <div className="bg-black  overflow-hidden rounded-[20%] relative flex justify-center items-center">
-                <img
-                  src={oneonone}
-                  alt=""
-                  className="w-screen  object-cover object-top opacity-60 z-[5]"
-                />
-                <h2 className=" xxl:text-3xl md:text-2xl font-Oswald text-center text-lavender opacity-90 z-10 absolute p-0 m-0">
-                  1:1 Training
-                </h2>
-              </div>
-            </div>
-
-            <div className=" overflow-hidden  flex justify-center items-centr w-full z-10 xlg:p-2 bg-lavender rounded-[20%] shadow-md hover:scale-105 transition duration-300 mt-[100px]  max-h-[250px]  ">
-              <div className="bg-black  overflow-hidden rounded-[20%] relative flex justify-center items-center">
-                <img
-                  src={header2}
-                  alt=""
-                  className="w-screen  object-cover object-top opacity-60 z-[5]"
-                />
-                <div className=" xxl:text-3xl md:text-2xl font-Oswald text-center text-lavender opacity-90 z-10 absolute p-0 m-0">
-                  <p>SLES</p> <p>Training</p>
+            <Link to="/ndis-services" className="z-10">
+              <div className=" overflow-hidden  flex justify-center items-centr w-full z-10 xlg:p-2 bg-lavender rounded-[20%] shadow-md hover:scale-105 transition duration-300  max-h-[250px]  ">
+                <div className="bg-black  overflow-hidden rounded-[20%] relative flex justify-center items-center">
+                  <img
+                    src={oneonone}
+                    alt=""
+                    className="w-screen  object-cover object-top opacity-60 z-[5]"
+                  />
+                  <h2 className=" xxl:text-3xl md:text-2xl font-Oswald text-center text-lavender opacity-90 z-10 absolute p-0 m-0">
+                    1:1 Training
+                  </h2>
                 </div>
               </div>
-            </div>
+            </Link>
 
-            <div className=" overflow-hidden  flex justify-center items-centr  w-full   z-10 xlg:p-2 bg-lavender relative rounded-[20%] shadow-md hover:scale-105 transition duration-300 max-h-[250px]">
-              <div className="bg-black  overflow-hidden rounded-[20%] flex justify-center  items-center   w-full">
-                <img
-                  src={ourteamheader}
-                  alt=""
-                  className="w-screen  object-cover object-top opacity-60 z-[5]"
-                />
-                <div className=" xxl:text-3xl md:text-2xl  font-Oswald text-center text-lavender opacity-90 z-10 absolute p-0 m-0 w-full">
-                  <p>Weekend</p> <p>Activities</p>
+            <Link to="/ndis-services" className="z-10">
+              <div className=" overflow-hidden  flex justify-center items-centr w-full z-10 xlg:p-2 bg-lavender rounded-[20%] shadow-md hover:scale-105 transition duration-300 mt-[100px]  max-h-[250px]  ">
+                <div className="bg-black  overflow-hidden rounded-[20%] relative flex justify-center items-center">
+                  <img
+                    src={header2}
+                    alt=""
+                    className="w-screen  object-cover object-top opacity-60 z-[5]"
+                  />
+                  <div className=" xxl:text-3xl md:text-2xl font-Oswald text-center text-lavender opacity-90 z-10 absolute p-0 m-0">
+                    <p>SLES</p> <p>Training</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
+
+            <Link to="/ndis-services" className="z-10">
+              <div className=" overflow-hidden  flex justify-center items-centr  w-full   z-10 xlg:p-2 bg-lavender relative rounded-[20%] shadow-md hover:scale-105 transition duration-300 max-h-[250px]">
+                <div className="bg-black  overflow-hidden rounded-[20%] flex justify-center  items-center   w-full">
+                  <img
+                    src={ourteamheader}
+                    alt=""
+                    className="w-screen  object-cover object-top opacity-60 z-[5]"
+                  />
+                  <div className=" xxl:text-3xl md:text-2xl  font-Oswald text-center text-lavender opacity-90 z-10 absolute p-0 m-0 w-full">
+                    <p>Weekend</p> <p>Activities</p>
+                  </div>
+                </div>
+              </div>
+            </Link>
           </div>
 
           <div className="w-screen h-3/4 absolute top-0 opacity-100  z-[5] bg-primary overflow-hidden ">

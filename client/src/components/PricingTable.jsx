@@ -104,7 +104,26 @@ const rows = [
     "04_803_0133_5_1_T",
     "04_805_0133_5_1_T"
   ),
-  createData("SLES", 70.56, "Weekday Evening – TTP ", "04_802_0133_5_1_T"),
+  createData(
+    "SLES",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "Prices vary, contact for quotes.",
+    "",
+    "",
+    "",
+    "",
+
+    "",
+    "",
+    "",
+    "",
+    ""
+  ),
+
   createData(
     "Employment counselling",
     90.14,

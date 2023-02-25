@@ -7,6 +7,7 @@ import NDISServices from "./scenes/NDISServices";
 import NDISPricing from "./scenes/NDISPricing";
 import OurTeam from "./scenes/OurTeam";
 import Contact from "./scenes/Contact";
+import Referral from "./scenes/Referral";
 
 
 
@@ -16,7 +17,7 @@ function App() {
   return (
     <main className="App flex flex-col w-full ">
       <Navbar />
-      
+      <Referral />
       <Routes>
         <Route path='/' element={<Home />} />
 
@@ -32,6 +33,7 @@ function App() {
 
         
       </Routes>
+    
     
     </main>
   );

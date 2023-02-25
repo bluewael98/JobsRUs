@@ -5,8 +5,9 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import { MenuRounded } from "@mui/icons-material";
 import { CloseRounded } from "@mui/icons-material";
 import { motion, AnimatePresence } from "framer-motion";
-import { Popover } from "@headlessui/react";
-
+import { Popover, Transition } from "@headlessui/react";
+import { Fragment, useRef } from "react";
+import { ArrowDropDown } from "@mui/icons-material";
 const variants = {
   visible: { x: "0%" },
   hidden: { x: "-100%" },
@@ -17,6 +18,31 @@ const variants = {
 const Navbar = ({ isTopOfPage }) => {
   const handleClick = () => {
     window.scrollTo(0, 0);
+  };
+
+  const buttonRef = useRef(null);
+  const timeoutDuration = 200;
+  let timeout;
+
+  const closePopover = () => {
+    return buttonRef.current?.dispatchEvent(
+      new KeyboardEvent("keydown", {
+        key: "Escape",
+        bubbles: true,
+        cancelable: true,
+      })
+    );
+  };
+
+  const onMouseEnter = (open) => {
+    clearTimeout(timeout);
+    if (open) return;
+    return buttonRef.current?.click();
+  };
+
+  const onMouseLeave = (open) => {
+    if (!open) return;
+    timeout = setTimeout(() => closePopover(), timeoutDuration);
   };
 
   const [isMenuToggled, setIsMenuToggled] = useState(false);
@@ -32,7 +58,7 @@ const Navbar = ({ isTopOfPage }) => {
       {/* DESKTOP NAV */}
       {isDesktop ? (
         <div className="flex items-center align-middle justify-between mx-auto w-5/6">
-          <div className="flex flex-row align-middle items-center font-semibold">
+          <div className="flex flex-row  align-middle items-center font-semibold">
             <img
               src={jobsrus}
               alt="jobsrus"
@@ -42,7 +68,7 @@ const Navbar = ({ isTopOfPage }) => {
               JOBS <span className=" text-alt2">R</span> US
             </h2>
           </div>
-          <div className="navbar flex gap-4 justify-between font-Bebas font-semibold  text-primary">
+          <div className="navbar flex items-center gap-4 justify-between font-Bebas font-semibold  text-primary">
             <Link
               to="/"
               className="group text-primary transition-all duration-300 ease-in-out"
@@ -61,27 +87,57 @@ const Navbar = ({ isTopOfPage }) => {
             </Link>
 
             <Popover className="relative">
-              <Popover.Button>NDIS</Popover.Button>
-              <Popover.Panel className="absolute z-20 w-[200px] h-[200px] pt-5 left-[-50px] rounded-md">
-                <div className="grid grid-cols-1 bg-lavender  px-5  gap-3 shadow-md py-5 rounded-md">
-                  <Link
-                    to="/ndis-services"
-                    className="group text-primary transition-all duration-300 ease-in-out"
-                  >
-                    <h2 className="bg-left-bottom bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] group-hover:opacity-80 transition-all duration-500 ease-out">
-                      NDIS SERVICES
-                    </h2>
-                  </Link>
-                  <Link
-                    to="/ndis-pricing"
-                    className="group text-primary transition-all duration-300 ease-in-out"
-                  >
-                    <h2 className="bg-left-bottom bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] group-hover:opacity-80 transition-all duration-500 ease-out">
-                      NDIS PRICING
-                    </h2>
-                  </Link>
-                </div>
-              </Popover.Panel>
+              {({ open }) => {
+                return (
+                  <>
+                    <div onMouseLeave={onMouseLeave.bind(null, open)}>
+                      <Popover.Button
+                        ref={buttonRef}
+                        onMouseEnter={onMouseEnter.bind(null, open)}
+                        onMouseLeave={onMouseLeave.bind(null, open)}
+                        className="flex justify center items-center"
+                      >
+                        <p>NDIS</p>
+                        <ArrowDropDown />
+                      </Popover.Button>
+                      <Transition
+                        as={Fragment}
+                        enter="transition ease-out duration-200"
+                        enterFrom="opacity-0 translate-y-1"
+                        enterTo="opacity-100 translate-y-0"
+                        leave="transition ease-in duration-150"
+                        leaveFrom="opacity-100 translate-y-0"
+                        leaveTo="opacity-0 translate-y-1"
+                      >
+                        <Popover.Panel
+                          className="absolute z-20 w-[200px] h-[200px] pt-5 left-[-50px] rounded-md"
+                          onMouseEnter={onMouseEnter.bind(null, open)}
+                          onMouseLeave={onMouseLeave.bind(null, open)}
+                        >
+                          <div className="grid grid-cols-1 bg-lavender  px-5  gap-3 shadow-md py-5 rounded-md">
+                            <Link
+                              to="/ndis-services"
+                              className="group text-primary transition-all duration-300 ease-in-out"
+                            >
+                              <h2 className="bg-left-bottom bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] group-hover:opacity-80 transition-all duration-500 ease-out">
+                                NDIS SERVICES
+                              </h2>
+                            </Link>
+                            <Link
+                              to="/ndis-pricing"
+                              className="group text-primary transition-all duration-300 ease-in-out"
+                            >
+                              <h2 className="bg-left-bottom bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] group-hover:opacity-80 transition-all duration-500 ease-out">
+                                NDIS PRICING
+                              </h2>
+                            </Link>
+                          </div>
+                        </Popover.Panel>
+                      </Transition>
+                    </div>
+                  </>
+                );
+              }}
             </Popover>
 
             <Link
@@ -100,14 +156,14 @@ const Navbar = ({ isTopOfPage }) => {
                 CONTACT
               </h2>
             </Link>
-            <Link
-              to="/refer-client"
-              className="group text-primary transition-all duration-300 ease-in-out"
+            <a
+              href="https://6gitozn79lt.typeform.com/to/c6p2y0pE?typeform-source=jobsrus.com.au"
+              className="group text-lavender transition-all duration-300 ease-in-out"
             >
-              <h2 className="bg-left-bottom bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] group-hover:opacity-80 transition-all duration-500 ease-out">
+              <h2 className="bg-left-bottom bg-primary bg-gradient-to-r from-lavender to-lavender bg-[length:0%_40px] bg-no-repeat group-hover:bg-[length:100%_40px] group-hover:opacity-80 group-hover:text-primary transition-all duration-500 ease-out py-2 px-3 rounded-full">
                 REFER A CLIENT
               </h2>
-            </Link>
+            </a>
           </div>
         </div>
       ) : (
