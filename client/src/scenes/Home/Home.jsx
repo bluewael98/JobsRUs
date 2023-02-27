@@ -212,20 +212,11 @@ const Home = () => {
       <section>
         <Heroes />
       </section>
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.5 }}
-        variants={{
-          hidden: { opacity: 0, y: 100 },
-          visible: { opacity: 1, y: 0 },
-        }}
-      >
-        <img src={stackedwave} alt="" />
-        <TheMessage />
-        <img src={stackedwavetop} alt="" />
-      </motion.div>
+
+      <img src={stackedwave} alt="" />
+      <TheMessage />
+      <img src={stackedwavetop} alt="" />
+
       <section>
         <Reviews />
       </section>
