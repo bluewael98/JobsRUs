@@ -29,7 +29,7 @@ function ExpandedCard({ children, onCollapse }) {
   return (
     <>
       <motion.div
-        className="card expanded xxs:w-[370px] sm:w-[500px]  md:w-[700px] bg-primary  relative  content-center flex justify-center items-center top-[-300px] xxs:right-[0px] sm:right-[11  0px]"
+        className="card expanded xxs:w-[370px] sm:w-[500px]  md:w-[700px] bg-primary  relative  content-center flex justify-center items-center top-[-300px] xxs:right-[18px] sm:right-[11  0px]"
         layoutId="expandable-card"
         onClick={onCollapse}
         style={{ justifyContent: "", zIndex: 40 }}
@@ -67,7 +67,7 @@ function DataButton({ data, onCollapse, onExpand, disabled }) {
   };
 
   return (
-    <div className="card-container ">
+    <div className="card-container  ">
       <AnimateSharedLayout>
         {isExpanded ? (
           <ExpandedCard onCollapse={collapseData} data={data}>
@@ -229,8 +229,8 @@ export default function App() {
   ];
 
   return (
-    <div className="container">
-      <div className="grid sm:grid-cols-1 ">
+    <div className="container ">
+      <div className="grid sm:grid-cols-1  justify-items-center gap-5 w-full ">
         {data.map((item) => (
           <DataButton
             key={item.title}

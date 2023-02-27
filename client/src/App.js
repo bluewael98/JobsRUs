@@ -8,6 +8,7 @@ import NDISPricing from "./scenes/NDISPricing";
 import OurTeam from "./scenes/OurTeam";
 import Contact from "./scenes/Contact";
 import Referral from "./scenes/Referral";
+import Footer from "./scenes/Footer";
 
 
 
@@ -18,6 +19,8 @@ function App() {
     <main className="App flex flex-col w-full ">
       <Navbar />
       <Referral />
+   
+      
       <Routes>
         <Route path='/' element={<Home />} />
 
@@ -33,7 +36,7 @@ function App() {
 
         
       </Routes>
-    
+      <Footer />
     
     </main>
   );

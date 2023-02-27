@@ -9,7 +9,7 @@ import wearehere from "../assets/wearehere.png";
 const Contact = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   return (
-    <section className=" flex justify-center flex-col mt-[100px]  items-center font-Oswald xxs:text ">
+    <section className=" flex justify-center flex-col mt-[80px]  items-center font-Bebas xxs:text ">
       <div className="w-[100%] bg-primary relative flex justify-center items-center md:h-[220px] xxs:h-[150px] overflow-hidden z-10">
         <div className="flex flex-col justify-center ">
           <h2 className=" md:text-6xl xxs:text-3xl font-bold text-lavender ">
@@ -85,12 +85,10 @@ const Contact = () => {
         </div>
         <div className="py-10"></div>
 
-        <div className="w-screen h-1/2 absolute bottom-0 opacity-60  z-1 bg-alt2">
-          <p> &nbsp; </p>
-        </div>
         <img
           src={blobscatter}
-          className="w-screen h-1/2 absolute bottom-0 opacity-60  z-10"
+          className="w-screen h-1/2 absolute bottom-0 opacity-60  z-10  "
+          alt=""
         />
       </div>
     </section>

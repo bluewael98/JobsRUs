@@ -6,17 +6,20 @@ import caring from "../assets/caring.svg";
 import arrowdown from "../assets/arrowdown.svg";
 import useMediaQuery from "../hooks/useMediaQuery";
 import Team from "../components/team";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   const isSmallDevice = useMediaQuery("(max-width: 1020px)");
   return (
-    <section className=" flex justify-center flex-col mt-[100px] pb-[200px] items-center font-Oswald overflow-hidden">
+    <section className=" flex justify-center flex-col mt-[80px] pb-[200px] items-center font-Oswald overflow-hidden">
       <div className="w-screen bg-primary relative flex justify-center items-center h-[220px] overflow-hidden  mb-[5rem]">
         <div className="flex flex-col justify-center ">
           <h2 className=" text-4xl font-bold text-lavender ">About Us </h2>
-          <button className="py-[0.5rem] px-[0.5rem] w-[150px] rounded-lg font-bold text-primary  mt-[20px] bg-lavender">
-            Learn More
-          </button>
+          <Link to="/ndis-services">
+            <button className="py-[0.5rem] px-[0.5rem] w-[150px] rounded-lg font-bold text-primary  mt-[20px] bg-lavender shadow-md hover:scale-105 transition duration-300">
+              Learn More
+            </button>
+          </Link>
         </div>
       </div>
       {/* MAIN SECTION */}

@@ -1,5 +1,6 @@
 .container {
   font-family: sans-serif;
+  
 }
 
 .data {
@@ -16,8 +17,6 @@
 }
 
 .card-container {
-  width: 15rem;
-  height: 15rem;
   position: relative;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -42,7 +41,6 @@
   position: relative;
 
 }
-
 
 
 

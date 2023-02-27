@@ -5,7 +5,6 @@ import shape from "../assets/shape.svg";
 import Tureif from "../assets/team/Tureif.jpg";
 import Amina from "../assets/team/Amina.jpg";
 import Jordan from "../assets/team/Jordan.jpg";
-import Charlotte from "../assets/team/Charlotte.jpg";
 import abbeir from "../assets/team/abbeir.jpg";
 import Maryam from "../assets/team/Maryam.jpg";
 import Layla from "../assets/team/Layla.jpg";
@@ -14,11 +13,13 @@ import Tahlia from "../assets/team/Tahlia.jpg";
 import Dancia from "../assets/team/Dancia.jpg";
 import Zeinah from "../assets/team/Zeinah.jpg";
 import Alfred from "../assets/team/Alfred.jpg";
+import user from "../assets/user.svg";
 import Fish from "../assets/team/Fish.jpg";
 import screening from "../assets/screening.svg";
 import support from "../assets/support.svg";
 import standtogether from "../assets/standtogether.svg";
 import useMediaQuery from "../hooks/useMediaQuery";
+import WeAreHiring from "../components/WeAreHiring";
 
 const OurTeam = () => {
   const [open, setOpen] = useState(null);
@@ -32,9 +33,10 @@ const OurTeam = () => {
     setOpen(null);
   };
   return (
-    <section className=" flex justify-center flex-col mt-[100px] pb-[200px] items-center font-Oswald">
+    <section className=" flex justify-center flex-col mt-[80px] pb-[200px] items-center font-Oswald">
+      <WeAreHiring />
       <div className="w-full bg-primary relative flex justify-center items-center xxs:p-10  sm:h-[220px] overflow-hidden z-0 font-Bebas">
-        <div className="flex flex-col justify-center items-center z-0 ">
+        <div className="flex flex-col justify-center items-center z-0 font-Bebas">
           <h2 className=" md:text-6xl xxs:text-4xl font-bold text-lavender ">
             OUR TEAM{" "}
           </h2>
@@ -47,7 +49,7 @@ const OurTeam = () => {
                   HEROES.
                 </span>
               </h1>
-              <h1 className="md:text-5xl xxs:text-2xl  font text-lavender font">
+              <h1 className="md:text-5xl xxs:text-2xl  font text-lavender ">
                 {" "}
                 Honest, empathetic, reliable, and open-minded individuals.
               </h1>
@@ -59,7 +61,7 @@ const OurTeam = () => {
       </div>
 
       {isSmallDevice ? (
-        <div className="flex sm:px-20 md:px-[100px] xlg:px-[200px] xxs:flex-col xlg:flex-row gap-3 justify-center items-center w-full pt-10 mx-auto text-opacity-90">
+        <div className="flex sm:px-20 md:px-[100px] xlg:px-[200px] xxs:flex-col xlg:flex-row gap-3 justify-center items-center w-full pt-10 mx-auto text-opacity-90 ">
           <div className=" flex flex-col justify-center text-center gap-3">
             <div div className="w-screen ">
               <img src={group} alt="" className=" z-10 w-screen " />
@@ -437,96 +439,6 @@ const OurTeam = () => {
                         potentially better their quality of life. And being
                         employed by Enaya, I have been given that platform to
                         provide those services.
-                      </p>
-                    </div>
-
-                    <div className="mt-4">
-                      <button
-                        type="button"
-                        className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-md hover:bg-primary-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
-                        onClick={() => setOpen(false)}
-                      >
-                        Close
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </Dialog>
-            </Transition>
-          </Fragment>
-
-          {/* CHARLOTTE */}
-          <Fragment>
-            <div className="flex justify-center items-center flex-col text-center">
-              <div
-                className="rounded-full  bg-primary flex flex-col justify-center items-center content-center w-[220px] h-[220px] hover:scale-105 cursor-pointer transition: duration-500"
-                onClick={() => openModal("charlotte")}
-              >
-                <img
-                  src={Charlotte}
-                  alt=""
-                  className="rounded-full w-[200px] h-[200px] object-cover"
-                />
-              </div>
-              <h2 className=" text-xl font-semibold text-primary mt-5">
-                CHARLOTTE
-              </h2>
-              <h2 className=" text-lg font-semibold text-alt2 my-2">
-                Support Worker
-              </h2>
-              <p className="w-[240px] text-alt2">
-                I'm Charlotte, a Support Worker and emerging yoga teacher based
-                in Western Sydney. I strive to...
-              </p>
-            </div>
-            <Transition
-              show={open === "charlotte"}
-              enter="transition duration-500 ease-out"
-              enterFrom="transform scale-100 opacity-0"
-              enterTo="transform scale-100 opacity-100"
-              leave="transition duration-300 ease-out"
-              leaveFrom="transform scale-100 opacity-100"
-              leaveTo="transform scale-100 opacity-0"
-              as={Fragment}
-            >
-              <Dialog
-                as="div"
-                className="fixed inset-0 z-50 overflow-y-auto"
-                onClose={closeModal}
-              >
-                <div className="min-h-screen px-4 text-center">
-                  <Dialog.Overlay className="fixed inset-0 bg-black opacity-30" />
-
-                  <span
-                    className="inline-block h-screen align-middle"
-                    aria-hidden="true"
-                  >
-                    &#8203;
-                  </span>
-
-                  <div className="inline-block w-full max-w-[600px] p-10 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
-                    <Dialog.Title
-                      as="h3"
-                      className="text-lg flex flex-col gap-3 justify-center items-center leading-6"
-                    >
-                      <p className=" text-primary font-semibold text-3xl">
-                        CHARLOTTE
-                      </p>
-                      <p className=" text-alt2 font-semibold text-2xl">
-                        Support Worker.
-                      </p>
-                    </Dialog.Title>
-                    <div className="mt-2 text-xl text-alt2 text-center flex flex-col">
-                      <p>
-                        I'm Charlotte, a Support Worker and emerging yoga
-                        teacher based in Western Sydney. I strive to infuse my
-                        work with a sense of fun and joy. I graduated from The
-                        University of Sydney in 2020 with a Bachelor of Arts
-                        (English & Psychology), and this year completed 200-HR
-                        Yoga Teacher Training Course with Nin Yoga. In my spare
-                        time I enjoy baking, bushwalking, art, photography,
-                        listening to indie pop music, video games and
-                        op-shopping (I love vintage finds!).
                       </p>
                     </div>
 
@@ -1169,6 +1081,95 @@ const OurTeam = () => {
                     </Dialog.Title>
                     <div className="mt-2 text-xl text-alt2 text-center flex flex-col gap-3">
                       <p>Hi, I'm Zeinah...</p>
+                    </div>
+
+                    <div className="mt-4">
+                      <button
+                        type="button"
+                        className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-md hover:bg-primary-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
+                        onClick={() => setOpen(false)}
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </Dialog>
+            </Transition>
+          </Fragment>
+
+          {/* Layal */}
+          <Fragment>
+            <div className="flex justify-center items-center flex-col text-center">
+              <div
+                className="rounded-full  bg-primary flex flex-col justify-center items-center content-center w-[220px] h-[220px] hover:scale-105 cursor-pointer transition: duration-500"
+                onClick={() => openModal("layal")}
+              >
+                <img
+                  src={user}
+                  alt=""
+                  className="rounded-full w-[200px] h-[200px] object-cover"
+                />
+              </div>
+              <h2 className=" text-xl font-semibold text-primary mt-5">
+                LAYAL
+              </h2>
+              <h2 className=" text-lg font-semibold text-alt2 my-2">
+                Employment Specialist
+              </h2>
+              <p className="w-[240px] text-alt2">
+                Hi, My name is layal majzoub. Im a professional and personable
+                life coach with 10...
+              </p>
+            </div>
+            <Transition
+              show={open === "layal"}
+              enter="transition duration-500 ease-out"
+              enterFrom="transform scale-100 opacity-0"
+              enterTo="transform scale-100 opacity-100"
+              leave="transition duration-300 ease-out"
+              leaveFrom="transform scale-100 opacity-100"
+              leaveTo="transform scale-100 opacity-0"
+              as={Fragment}
+            >
+              <Dialog
+                as="div"
+                className="fixed inset-0 z-50 overflow-y-auto"
+                onClose={closeModal}
+              >
+                <div className="min-h-screen px-4 text-center">
+                  <Dialog.Overlay className="fixed inset-0 bg-black opacity-30" />
+
+                  <span
+                    className="inline-block h-screen align-middle"
+                    aria-hidden="true"
+                  >
+                    &#8203;
+                  </span>
+
+                  <div className="inline-block w-full max-w-[600px] p-10 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+                    <Dialog.Title
+                      as="h3"
+                      className="text-lg flex flex-col gap-3 justify-center items-center leading-6"
+                    >
+                      <p className=" text-primary font-semibold text-3xl">
+                        LAYAL
+                      </p>
+                      <p className=" text-alt2 font-semibold text-2xl">
+                        Employment Support Officer.
+                      </p>
+                    </Dialog.Title>
+                    <div className="mt-2 text-xl text-alt2 text-center flex flex-col gap-3">
+                      <p>
+                        Hi, My name is Layal majzoub. Im a professional and
+                        personable life coach with 10 years of experience in
+                        youth and community services. Skilled in holistic
+                        intuitive coaching, trauma informed care and youth led
+                        services. My values are underpinned by authenticity and
+                        compassionate integrity. I love supporting our local
+                        community and building on peoples strengths; for
+                        individuals to flourish and thrive.{" "}
+                      </p>
                     </div>
 
                     <div className="mt-4">

@@ -105,6 +105,24 @@ const rows = [
     "04_805_0133_5_1_T"
   ),
   createData(
+    "Increased Social & Community Participation",
+    70.87,
+    70.87,
+    70.87,
+    70.87,
+    "",
+    "Life Transition Planning Incl. Mentoring Peer-Support And Indiv Skill Development",
+    "Innovative Community Participation",
+    "Community Participation Activities",
+    "Skills Development And Training",
+    "",
+    "09_006_0106_6_3",
+    "09_008_0116_6_3",
+    "09_011_0125_6_3",
+    "09_009_0117_6_3",
+    ""
+  ),
+  createData(
     "SLES",
     "",
     "",
@@ -126,21 +144,21 @@ const rows = [
 
   createData(
     "Employment counselling",
-    90.14,
-    "Saturday – TTP",
-    "04_803_0133_5_1_T"
-  ),
-  createData(
-    "Secialised Employment",
-    90.14,
-    "Saturday – TTP",
-    "04_803_0133_5_1_T"
-  ),
-  createData(
-    "Life transition & mentoring",
-    90.14,
-    "Saturday – TTP",
-    "04_803_0133_5_1_T"
+    193.99,
+    "",
+    "",
+    "",
+    "",
+    "Employment Related Assessment & Counselling",
+    "",
+    "",
+    "",
+    "",
+    "10_011_0128_5_3",
+    "",
+    "",
+    "",
+    ""
   ),
 ];
 

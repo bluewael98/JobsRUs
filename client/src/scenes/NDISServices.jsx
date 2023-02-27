@@ -13,7 +13,7 @@ const NDISServices = () => {
   const isLargeDevice = useMediaQuery("(min-width: 1440px)");
   const isSmallDevice = useMediaQuery("(max-width: 1090px)");
   return (
-    <section className=" flex justify-center flex-col mt-[100px] pb-[200px] items-center overflow-hidden">
+    <section className=" flex justify-center flex-col mt-[80px] pb-[200px] items-center overflow-hidden">
       {/* HEADER */}
       {isLargeDevice ? (
         <div className="w-[100%] bg-primary relative flex justify-between overflow-hidden  mb-[5rem]">
@@ -221,8 +221,7 @@ const NDISServices = () => {
           </div>
         </div>
       )}
-
-      <div className="flex justify-center items-center content-center  xxs:mr-[110px] sm:mr-[240px] md:mr-[460px]">
+      <div className="w-full flex justify-center items-center">
         <Box />
       </div>
     </section>

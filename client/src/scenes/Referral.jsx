@@ -1,11 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
 import ndisreferral from "../assets/ndisreferral.png";
 import useMediaQuery from "../hooks/useMediaQuery";
 const Referral = () => {
   const isSmallDevice = useMediaQuery("(max-width: 650px)");
+  const [isBottom, setIsBottom] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleScroll = () => {
+    const scrollPoitition = window.innerHeight + window.pageYOffset;
+    const pageHeight = document.documentElement.scrollHeight;
+
+    if (scrollPoitition >= pageHeight) {
+      setIsBottom(true);
+    } else {
+      setIsBottom(false);
+    }
+  };
   return (
     <div
-      className="w-screen bg-lavender h-[80px] bottom-0 z-50 fixed align-middle  flex"
+      className={`w-screen bg-lavender h-[80px] bottom-0 z-[70] fixed align-middle  flex ${
+        isBottom
+          ? "opacity-0 transition duration-300"
+          : "opacity-100 transition duration-300"
+      }`}
       style={{ boxShadow: "0px -2px 4px rgba(0, 0, 0, 0.15)" }}
     >
       <div className="flex justify-between w-full px-[8%] items-center align-middle">

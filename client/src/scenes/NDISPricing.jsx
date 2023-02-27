@@ -3,8 +3,8 @@ import React from "react";
 
 const NDISPricing = () => {
   return (
-    <section className="py-24 flex items-center justify-center flex-col font-Oswald mx-2">
-      <div className="w-[100%] bg-primary relative flex justify-center items-center h-[220px] overflow-hidden">
+    <section className="mt-[80px] pb-[280px] flex items-center justify-center flex-col font-Oswald mx-2">
+      <div className="w-screen bg-primary relative flex justify-center items-center h-[220px] overflow-hidden">
         <div className="flex flex-col justify-center ">
           <h2 className=" md:text-6xl xxs:text-4xl sm:text-5xl font-bold text-lavender ">
             PRICING{" "}
@@ -28,7 +28,13 @@ const NDISPricing = () => {
       <div className="xxs:w-[370px] ss:w-[500px] xs:w-[440px] sm:w-[700px] md:w-[1000px] ">
         <PricingTable />
       </div>
-      ADD PRICES PDF
+      <div className="flex justify-center items-center mt-10">
+        <a href="https://kor01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.ndis.gov.au%2Fmedia%2F4540%2Fdownload%3Fattachment&data=05%7C01%7C%7C1ad00d356f9e4f589c3b08db17941eab%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638129697157750333%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=qPO7NIY6aahGQc6h2aoFRZyx5jZwyHCspcWkK61QR1I%3D&reserved=0">
+          <button className="py-2 px-4 bg-primary rounded-full shadow-md text-lavender text-xl hover:scale-105 transition duration-300">
+            Click to view NDIS Price Catalogue
+          </button>
+        </a>
+      </div>
     </section>
   );
 };
