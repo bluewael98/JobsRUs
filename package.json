@@ -1,0 +1,22 @@
+{
+  "name": "jobsrus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-client": "cd client && npm install --force",
+    "build-client": "cd client && npm run build",
+    "start": "node server.js",
+    "heroku-postbuild": "npm run install-client && npm run build-client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluewael98/JobsRUs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bluewael98/JobsRUs/issues"
+  },
+  "homepage": "https://github.com/bluewael98/JobsRUs#readme"
+}
