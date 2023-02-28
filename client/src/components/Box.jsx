@@ -43,7 +43,7 @@ function ExpandedCard({ children, onCollapse }) {
 function CompactCard({ children, onExpand, disabled, data }) {
   return (
     <motion.div
-      className="card compact xxs:w-[350px] sm:w-[500px] md:w-[1000px] flex items-center content-center gap-2 text-primary  "
+      className="card compact xxs:w-[350px] sm:w-[500px] md:w-[1000px] flex items-center content-center gap-2 text-primary   "
       layoutId="expandable-card"
       onClick={disabled ? undefined : onExpand}
     >

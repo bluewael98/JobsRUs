@@ -53,24 +53,27 @@ const Navbar = ({ isTopOfPage }) => {
 
   return (
     <nav
-      className={`${navbarBackground} z-50 w-full fixed top-0 pt-4 h-[80px]`}
+      className={`${navbarBackground} z-[80] w-full fixed top-0 pt-4 h-[80px]`}
     >
       {/* DESKTOP NAV */}
       {isDesktop ? (
         <div className="flex items-center align-middle justify-between mx-auto w-5/6">
-          <div className="flex flex-row  align-middle items-center font-semibold">
-            <img
-              src={jobsrus}
-              alt="jobsrus"
-              className="w-[70px] h-full  object-cover"
-            />
-            <h2 className=" font-Bebas font-extrabold text-xl text-primary">
-              JOBS <span className=" text-alt2">R</span> US
-            </h2>
-          </div>
+          <Link to="/" onClick={handleClick}>
+            <div className="flex flex-row  align-middle items-center font-semibold">
+              <img
+                src={jobsrus}
+                alt="jobsrus"
+                className="w-[70px] h-full  object-cover"
+              />
+              <h2 className=" font-Bebas font-extrabold text-xl text-primary">
+                JOBS <span className=" text-alt2">R</span> US
+              </h2>
+            </div>
+          </Link>
           <div className="navbar flex items-center gap-4 justify-between font-Bebas font-semibold  text-primary">
             <Link
               to="/"
+              onClick={handleClick}
               className="group text-primary transition-all duration-300 ease-in-out"
             >
               <h2 className="bg-left-bottom bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] group-hover:opacity-80 transition-all duration-500 ease-out">
@@ -79,6 +82,7 @@ const Navbar = ({ isTopOfPage }) => {
             </Link>
             <Link
               to="/about"
+              onClick={handleClick}
               className="group text-primary transition-all duration-300 ease-in-out"
             >
               <h2 className="bg-left-bottom bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] group-hover:opacity-80 transition-all duration-500 ease-out">
@@ -117,6 +121,7 @@ const Navbar = ({ isTopOfPage }) => {
                           <div className="grid grid-cols-1 bg-lavender  px-5  gap-3 shadow-md py-5 rounded-md">
                             <Link
                               to="/ndis-services"
+                              onClick={handleClick}
                               className="group text-primary transition-all duration-300 ease-in-out"
                             >
                               <h2 className="bg-left-bottom bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] group-hover:opacity-80 transition-all duration-500 ease-out">
@@ -124,6 +129,7 @@ const Navbar = ({ isTopOfPage }) => {
                               </h2>
                             </Link>
                             <Link
+                              onClick={handleClick}
                               to="/ndis-pricing"
                               className="group text-primary transition-all duration-300 ease-in-out"
                             >

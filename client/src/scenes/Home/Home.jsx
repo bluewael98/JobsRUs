@@ -38,13 +38,15 @@ const Home = () => {
   return (
     <section className="  w-full bg-lavender font-Oswald overflow-hidden mt-[80px] ">
       {/* LANDING PAGE */}
+
+      {/* MOBILE LANDING PAGE */}
       {isSmallScreen ? (
         <div className="flex flex-col justify-center items-center pt-10 font-Oswald font-semibold relative w-screen text-lavender mb-[100px]">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, delay: 1 }}
             variants={{
               hidden: { opacity: 0, x: -50 },
               visible: { opacity: 1, x: 0 },
@@ -81,6 +83,7 @@ const Home = () => {
           />
         </div>
       ) : (
+        // DESKTOP LANDING PAGE
         <div className="flex flex-col justify-center items-center py-10 font-Oswald font-semibold relative w-screen text-lavender  mb-[220px]">
           <motion.div
             initial="hidden"
@@ -209,17 +212,21 @@ const Home = () => {
         </div>
       )}
 
+      {/* HEROES SECTION */}
       <section>
         <Heroes />
       </section>
 
-      <img src={stackedwave} alt="" />
-      <TheMessage />
-      <img src={stackedwavetop} alt="" />
+      {/* OUR MESSAGE SECTION */}
 
+      <TheMessage />
+
+      {/* REVIEWS SECTION */}
       <section>
         <Reviews />
       </section>
+
+      {/* CONTACT SECTION */}
       <section className="bg-primary flex sm:flex-row xxs:flex-col justify-center font-Oswald text-lavender gap-10 px-5 mb-20 py-5 items-start">
         <div className="flex flex-col sm:w-[500px] xxs:w-full my-5">
           <h1 className="text-2xl font-bold  my-5">OUR DETAILS</h1>

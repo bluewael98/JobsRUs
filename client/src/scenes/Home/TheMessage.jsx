@@ -22,7 +22,7 @@ const TheMessage = () => {
     visible: { opacity: 1, y: 0 },
   };
   return (
-    <section className=" bg-primary text-center  text-lavender font-Oswald flex xlg:text-start xlg:flex-row xxs:flex-col xxs:justify-center xxs:items-center">
+    <section className=" bg-primary text-center  text-lavender font-Oswald flex xlg:text-start xlg:flex-row xxs:flex-col xxs:justify-center xxs:items-center py-20">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -56,7 +56,7 @@ const TheMessage = () => {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true }}
         variants={containerVariants}
         className=" xlg:mr-10 flex-col opacity-90  text-alt2 mt-5 items-center flex justify-center px-5 xlg:px-0 "
       >
@@ -87,7 +87,7 @@ const TheMessage = () => {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true }}
         variants={containerVariants}
         className=" xlg:mr-10 flex-col opacity-90 text-alt2 x-5 xlg:px-0 px-5"
       >

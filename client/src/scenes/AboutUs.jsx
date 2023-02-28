@@ -7,6 +7,7 @@ import arrowdown from "../assets/arrowdown.svg";
 import useMediaQuery from "../hooks/useMediaQuery";
 import Team from "../components/team";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const AboutUs = () => {
   const isSmallDevice = useMediaQuery("(max-width: 1020px)");
@@ -100,7 +101,17 @@ const AboutUs = () => {
           <div className="flex flex-col w-screen px-5 justify-center items-center">
             <div className="flex flex-col w-screen ">
               {/* DO GOOD */}
-              <div className="flex flex-col items-center justify-center relative mt-[150px] h-[50%]">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                variants={{
+                  hidden: { opacity: 0, x: -200 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                className="flex flex-col items-center justify-center relative mt-[150px] h-[50%]"
+              >
                 <p className="text-3xl font-semibold">WE DO GOOD</p>
                 <div className="flex justify-center flex-col align-top w-screen relative">
                   <div className="bg-alt2 text-lavender mt-10 p-[2rem] text-xl font-Oswald rounded-t-2xl">
@@ -114,10 +125,20 @@ const AboutUs = () => {
                     <img src={dogood} alt="" className="w-[250px]" />
                   </div>
                 </div>
-              </div>
+              </motion.div>
               {/* WE GIVE OUT BEST */}
 
-              <div className="flex flex-col items-center justify-center relative mt-[150px] h-[50%]">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                variants={{
+                  hidden: { opacity: 0, x: 200 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                className="flex flex-col items-center justify-center relative mt-[150px] h-[50%]"
+              >
                 <p className="text-3xl font-semibold">WE GIVE OUR BEST</p>
                 <div className="flex justify-center flex-col align-top w-screen relative">
                   <div className="bg-alt2 text-lavender mt-10 p-[2rem] text-xl font-Oswald rounded-t-2xl">
@@ -131,9 +152,19 @@ const AboutUs = () => {
                     <img src={giveourbest} alt="" className="w-[250px]" />
                   </div>
                 </div>
-              </div>
+              </motion.div>
               {/* WE STAND TOGETHER */}
-              <div className="flex flex-col items-center justify-center relative mt-[150px] h-[50%]">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                variants={{
+                  hidden: { opacity: 0, x: -200 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                className="flex flex-col items-center justify-center relative mt-[150px] h-[50%]"
+              >
                 <p className="text-3xl font-semibold">WE STAND TOGETHER</p>
                 <div className="flex justify-center flex-col align-top w-screen relative">
                   <div className="bg-alt2 text-lavender mt-10 p-[2rem] text-xl font-Oswald rounded-t-2xl">
@@ -147,9 +178,19 @@ const AboutUs = () => {
                     <img src={standtogether} alt="" className="w-[250px]" />
                   </div>
                 </div>
-              </div>
+              </motion.div>
               {/* WE EMBRACE DIVERSITY */}
-              <div className="flex flex-col items-center justify-center relative mt-[150px] h-[50%]">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                variants={{
+                  hidden: { opacity: 0, x: 200 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                className="flex flex-col items-center justify-center relative mt-[150px] h-[50%]"
+              >
                 <p className="text-3xl font-semibold">WE EMBRACE DIVERSITY</p>
                 <div className="flex justify-center flex-col align-top w-screen relative">
                   <div className="bg-alt2 text-lavender mt-10 p-[2rem] text-xl font-Oswald rounded-t-2xl">
@@ -163,9 +204,19 @@ const AboutUs = () => {
                     <Team />
                   </div>
                 </div>
-              </div>
+              </motion.div>
               {/* WE CARE */}
-              <div className="flex flex-col items-center justify-center relative mt-[150px] h-[50%]">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                variants={{
+                  hidden: { opacity: 0, x: -200 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                className="flex flex-col items-center justify-center relative mt-[150px] h-[50%]"
+              >
                 <p className="text-3xl font-semibold">WE CARE</p>
                 <div className="flex justify-center flex-col align-top w-screen relative">
                   <div className="bg-alt2 text-lavender mt-10 p-[2rem] text-xl font-Oswald rounded-t-2xl">
@@ -179,7 +230,7 @@ const AboutUs = () => {
                     <img src={caring} alt="" className="w-[250px]" />
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         ) : (
@@ -187,7 +238,17 @@ const AboutUs = () => {
           <div className="flex flex-col">
             <div className="flex flex-col">
               {/* DO GOOD */}
-              <div className="flex flex-col items-center justify-center relative mt-[150px] mr-[60px]">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                variants={{
+                  hidden: { opacity: 0, x: 200 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                className="flex flex-col items-center justify-center relative mt-[150px] mr-[60px]"
+              >
                 <p className="absolute top-0 left-[135px] text-3xl font-semibold">
                   WE DO GOOD
                 </p>
@@ -203,9 +264,19 @@ const AboutUs = () => {
                     <img src={dogood} alt="" className="w-[250px]" />
                   </div>
                 </div>
-              </div>
+              </motion.div>
               {/* WE GIVE OUT BEST */}
-              <div className="flex flex-col items-center justify-center relative mt-[150px] ml-[60px]">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                variants={{
+                  hidden: { opacity: 0, x: -200 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                className="flex flex-col items-center justify-center relative mt-[150px] ml-[60px]"
+              >
                 <p className="absolute top-0 right-[135px] text-3xl font-semibold">
                   WE GIVE OUR BEST
                 </p>
@@ -221,9 +292,19 @@ const AboutUs = () => {
                     <img src={giveourbest} alt="" className="w-[250px]" />
                   </div>
                 </div>
-              </div>
+              </motion.div>
               {/* WE STAND TOGETHER */}
-              <div className="flex flex-col items-center justify-center relative mt-[150px] mr-[60px]">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                variants={{
+                  hidden: { opacity: 0, x: 200 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                className="flex flex-col items-center justify-center relative mt-[150px] mr-[60px]"
+              >
                 <p className="absolute top-0 left-[135px] text-3xl font-semibold">
                   WE STAND TOGETHER
                 </p>
@@ -239,9 +320,19 @@ const AboutUs = () => {
                     <img src={standtogether} alt="" className="w-[250px]" />
                   </div>
                 </div>
-              </div>
+              </motion.div>
               {/* WE EMBRACE DIVERSITY */}
-              <div className="flex flex-col items-center justify-center relative mt-[150px] ml-[60px]">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                variants={{
+                  hidden: { opacity: 0, x: -200 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                className="flex flex-col items-center justify-center relative mt-[150px] ml-[60px]"
+              >
                 <p className="absolute top-0 right-[135px] text-3xl font-semibold">
                   WE EMBRACE DIVERSITY
                 </p>
@@ -257,25 +348,35 @@ const AboutUs = () => {
                     <Team />
                   </div>
                 </div>
-                {/* WE CARE */}
-                <div className="flex flex-col items-center justify-center relative mt-[150px] mr-[125px] ">
-                  <p className="absolute top-0 left-0 text-3xl font-semibold">
-                    WE CARE
-                  </p>
-                  <div className="flex justify-center align-top w-[600px] relative">
-                    <div className="bg-alt2 text-lavender mt-10 p-[2rem] text-xl font-Oswald rounded-2xl ">
-                      <p className=" max-w-[500px] mr-10">
-                        We prioritize the well-being and support of our people,
-                        celebrating each other's successes and offering help
-                        during tough times.
-                      </p>
-                    </div>
-                    <div className="bg-primary w-[300px] h-[300px] rounded-full z-10 absolute right-[-240px] top-[-20px] flex justify-center items-center">
-                      <img src={caring} alt="" className="w-[250px]" />
-                    </div>
+              </motion.div>
+              {/* WE CARE */}
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                variants={{
+                  hidden: { opacity: 0, x: 200 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                className="flex flex-col items-center justify-center relative mt-[150px] mr-[125px] "
+              >
+                <p className="absolute top-0 left-0 text-3xl font-semibold">
+                  WE CARE
+                </p>
+                <div className="flex justify-center align-top w-[600px] relative">
+                  <div className="bg-alt2 text-lavender mt-10 p-[2rem] text-xl font-Oswald rounded-2xl ">
+                    <p className=" max-w-[500px] mr-10">
+                      We prioritize the well-being and support of our people,
+                      celebrating each other's successes and offering help
+                      during tough times.
+                    </p>
+                  </div>
+                  <div className="bg-primary w-[300px] h-[300px] rounded-full z-10 absolute right-[-240px] top-[-20px] flex justify-center items-center">
+                    <img src={caring} alt="" className="w-[250px]" />
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         )}
