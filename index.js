@@ -10,7 +10,7 @@ app.use(cors());
 app.use(helmet());
 app.use(morgan('common'));
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 const API_KEY = 'AIzaSyA-KRW4MlLYE3hXWgauOew4pk1ddujgTIk'
 
