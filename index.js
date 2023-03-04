@@ -3,6 +3,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import axios from 'axios';
+import path from 'path';
 
 const app = express();
 app.use(express.json());
@@ -28,10 +29,6 @@ app.get('/api/place/:placeId/reviews', async (req, res) => {
     console.error(error);
     res.status(5000).send('Server error');
   }
-});
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 
 app.listen(port, () => {
