@@ -1,17 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
-import stackedwave from "../../assets/stackedwave.svg";
-import stackedwavetop from "../../assets/stackedwavetop.svg";
 import TheMessage from "./TheMessage";
 import Heroes from "./Heroes";
 import Reviews from "../../components/Reviews";
-import ourteamheader from "../../assets/ourteamheader.JPG";
+import ourteamheader from "../../assets/ourteamheader.jpg";
 import ContactForm from "../../components/ContactForm";
 import header2 from "../../assets/header2.jpg";
 import header3 from "../../assets/header3.jpg";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import p1 from "../../assets/p1.png";
-import oneonone from "../../assets/oneonone.JPG";
+import oneonone from "../../assets/oneonone.jpg";
 import phonebackground from "../../assets/phonebackground.svg";
 import { Link } from "react-router-dom";
 const Home = () => {
