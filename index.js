@@ -13,7 +13,8 @@ app.use(csp({
  
   directives: {
     defaultSrc: ["'self'"],
-    styleSrc: ["'self'", 'https://lh3.googleusercontent.com']
+    styleSrc: ["'self'", 'https://lh3.googleusercontent.com'],
+    imgSrc: ["'self'", 'data:', 'https://lh3.googleusercontent.com']
   }
 }));
 app.use(helmet());
