@@ -25,8 +25,17 @@ app.get('/api/place/:placeId/reviews', async (req, res) => {
 
   try {
     const response = await axios.get(url);
-    const reviews = response.data.result.reviews;
-    res.json(reviews);
+    const allReviews = response.data.result.reviews;
+    let nextPageToken = response.data.next_page_token;
+
+    while (nextPageToken) {
+      const nextPageUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=reviews&key=${API_KEY}&pagetoken=${nextPageToken}`;
+      const nextPageResponse = await axios.get(nextPageUrl);
+      allReviews.push(...nextPageResponse.data.result.reviews);
+      nextPageToken = nextPageResponse.data.next_page_token;
+    }
+
+    res.json(allReviews);
   } catch (error) {
     console.error(error);
     res.status(5000).send('Server error');
