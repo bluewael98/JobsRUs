@@ -9,7 +9,16 @@ import path from 'path';
 const app = express();
 app.use(express.json());
 
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        ...helmet.contentSecurityPolicy.getDefaultDirectives(),
+        'img-src': ["'self'", 'data:', 'https://lh3.googleusercontent.com'],
+      },
+    },
+  })
+);
 app.use(morgan('common'));
 
 const port = process.env.PORT || 5000;
