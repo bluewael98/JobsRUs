@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
+import csp from 'helmet-csp';
 import morgan from 'morgan';
 import axios from 'axios';
 import path from 'path';
@@ -8,6 +9,13 @@ import path from 'path';
 const app = express();
 app.use(express.json());
 app.use(cors());
+app.use(csp({
+ 
+  directives: {
+    defaultSrc: ["'self'"],
+    styleSrc: ["'self'", 'https://lh3.googleusercontent.com']
+  }
+}));
 app.use(helmet());
 app.use(morgan('common'));
 
@@ -25,17 +33,8 @@ app.get('/api/place/:placeId/reviews', async (req, res) => {
 
   try {
     const response = await axios.get(url);
-    const allReviews = response.data.result.reviews;
-    let nextPageToken = response.data.next_page_token;
-
-    while (nextPageToken) {
-      const nextPageUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=reviews&key=${API_KEY}&pagetoken=${nextPageToken}`;
-      const nextPageResponse = await axios.get(nextPageUrl);
-      allReviews.push(...nextPageResponse.data.result.reviews);
-      nextPageToken = nextPageResponse.data.next_page_token;
-    }
-
-    res.json(allReviews);
+    const reviews = response.data.result.reviews;
+    res.json(reviews);
   } catch (error) {
     console.error(error);
     res.status(5000).send('Server error');
