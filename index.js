@@ -1,22 +1,14 @@
 import express from 'express';
-import cors from 'cors';
+
 import helmet from 'helmet';
-import csp from 'helmet-csp';
+
 import morgan from 'morgan';
 import axios from 'axios';
 import path from 'path';
 
 const app = express();
 app.use(express.json());
-app.use(cors());
-app.use(csp({
- 
-  directives: {
-    defaultSrc: ["'self'"],
-    styleSrc: ["'self'", 'https://lh3.googleusercontent.com'],
-    imgSrc: ["'self'", 'data:', 'https://lh3.googleusercontent.com']
-  }
-}));
+
 app.use(helmet());
 app.use(morgan('common'));
 
