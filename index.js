@@ -31,7 +31,6 @@ const port = process.env.PORT || 5000;
 
 const API_KEY = 'AIzaSyA-KRW4MlLYE3hXWgauOew4pk1ddujgTIk'
 
-app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.get('/api/place/:placeId/reviews', async (req, res) => {
   const placeId = req.params.placeId;
