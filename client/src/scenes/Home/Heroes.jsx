@@ -17,7 +17,7 @@ const Heroes = () => {
       </div>
       <div className="flex ss:flex-row xxs:flex-col  gap-10 my-10 items-center justify-center ">
         <div className="max-w-[250px] w-auto flex flex-col items-end ">
-          <img src={person4} alt="" />
+          <img src={person3} alt="" />
           <p className="mt-5  font-Oswald text-2xl ">Honesty</p>
           <div className="w-[70px] h-[10px] bg-primary mt-3  rounded-sm opacity-70 "></div>
         </div>
@@ -27,12 +27,12 @@ const Heroes = () => {
           <div className="w-[70px] h-[10px] bg-primary mt-3  rounded-sm opacity-70 "></div>
         </div>
         <div className="max-w-[250px] w-auto flex flex-col items-end">
-          <img src={person2} alt="" />
+          <img src={person4} alt="" />
           <p className="mt-5  font-Oswald text-2xl ">Reliability</p>
           <div className="w-[70px] h-[10px] bg-primary mt-3  rounded-sm opacity-70 "></div>
         </div>
         <div className="max-w-[250px] w-auto flex flex-col items-end">
-          <img src={person3} alt="" />
+          <img src={person2} alt="" />
           <p className="mt-5  font-Oswald text-2xl text-center ">
             Open Mindedness
           </p>

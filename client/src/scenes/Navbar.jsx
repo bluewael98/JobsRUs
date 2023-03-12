@@ -45,8 +45,10 @@ const Navbar = ({ isTopOfPage }) => {
     timeout = setTimeout(() => closePopover(), timeoutDuration);
   };
 
+  const navbarLarge = useMediaQuery("(min-width: 1310px)");
+
   const [isMenuToggled, setIsMenuToggled] = useState(false);
-  const isDesktop = useMediaQuery("(min-width: 1020px)");
+  const isDesktop = useMediaQuery("(min-width: 1034px)");
   const navbarBackground = isTopOfPage
     ? "transition duration-500"
     : "bg-lavender transition duration-500 shadow-md";
@@ -59,7 +61,7 @@ const Navbar = ({ isTopOfPage }) => {
       {isDesktop ? (
         <div className="flex items-center align-middle justify-between mx-auto w-5/6">
           <Link to="/" onClick={handleClick}>
-            <div className="flex flex-row  align-middle items-center font-semibold">
+            <div className="flex flex-row  align-middle items-center font-semibold gap-2">
               <img
                 src={jobsrus}
                 alt="jobsrus"
@@ -68,9 +70,17 @@ const Navbar = ({ isTopOfPage }) => {
               <h2 className=" font-Bebas font-extrabold text-xl text-primary">
                 JOBS <span className=" text-alt2">R</span> US
               </h2>
+              {navbarLarge ? (
+                <h1 className="font-Bebas text-sm ml-4 text-primary font-extrabold">
+                  Your goal, our target.
+                </h1>
+              ) : (
+                ""
+              )}
             </div>
           </Link>
-          <div className="navbar flex items-center gap-4 justify-between font-Bebas font-semibold  text-primary">
+
+          <div className="navbar flex items-center gap-8 justify-between font-Bebas font-semibold  text-primary">
             <Link
               to="/"
               onClick={handleClick}
@@ -90,6 +100,15 @@ const Navbar = ({ isTopOfPage }) => {
               </h2>
             </Link>
 
+            <Link
+              to="/our-team"
+              className="group text-primary transition-all duration-300 ease-in-out"
+              onClick={handleClick}
+            >
+              <h2 className="bg-left-bottom bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] group-hover:opacity-80 transition-all duration-500 ease-out">
+                OUR TEAM
+              </h2>
+            </Link>
             <Popover className="relative">
               {({ open }) => {
                 return (
@@ -147,16 +166,9 @@ const Navbar = ({ isTopOfPage }) => {
             </Popover>
 
             <Link
-              to="/our-team"
-              className="group text-primary transition-all duration-300 ease-in-out"
-            >
-              <h2 className="bg-left-bottom bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] group-hover:opacity-80 transition-all duration-500 ease-out">
-                OUR TEAM
-              </h2>
-            </Link>
-            <Link
               to="/contact"
               className="group text-primary transition-all duration-300 ease-in-out"
+              onClick={handleClick}
             >
               <h2 className="bg-left-bottom bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] group-hover:opacity-80 transition-all duration-500 ease-out">
                 CONTACT
@@ -167,7 +179,7 @@ const Navbar = ({ isTopOfPage }) => {
               className="group text-lavender transition-all duration-300 ease-in-out"
             >
               <h2 className="bg-left-bottom bg-primary bg-gradient-to-r from-lavender to-lavender bg-[length:0%_40px] bg-no-repeat group-hover:bg-[length:100%_40px] group-hover:opacity-80 group-hover:text-primary transition-all duration-500 ease-out py-2 px-3 rounded-full">
-                REFER A CLIENT
+                JOIN OUR TEAM
               </h2>
             </a>
           </div>

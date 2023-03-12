@@ -8,9 +8,7 @@ function Reviews() {
 
   useEffect(() => {
     axios
-      .get(
-        "http://localhost:5000/api/place/ChIJAQCsfRC8EmsRrvtItQ_le8A/reviews"
-      )
+      .get("/api/place/ChIJAQCsfRC8EmsRrvtItQ_le8A/reviews")
       .then((response) => {
         const data = response.data;
         setReviews(data);

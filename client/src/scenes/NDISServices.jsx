@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Box from "../components/Box";
 import aboutus from "../assets/about-us.jpg";
 import jobfinding from "../assets/jobfinding.svg";
@@ -8,10 +8,37 @@ import guidance from "../assets/guidance.svg";
 import empowering from "../assets/empowering.svg";
 import useMediaQuery from "../hooks/useMediaQuery";
 import arrowdown from "../assets/arrowdown.svg";
+import { useLocation } from "react-router-dom";
 
 const NDISServices = () => {
   const isLargeDevice = useMediaQuery("(min-width: 1440px)");
   const isSmallDevice = useMediaQuery("(max-width: 1090px)");
+
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash) {
+      const elem = document.getElementById(location.hash.slice(1));
+      if (elem) {
+        const topOffset = elem.getBoundingClientRect().top;
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+        const newScrollTop =
+          scrollTop +
+          topOffset -
+          window.innerHeight / 2 +
+          elem.offsetHeight / 2;
+        document.documentElement.scrollTop = newScrollTop;
+        window.scrollTo({
+          top: newScrollTop,
+          left: 0,
+          behavior: "smooth",
+        });
+      }
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
+  }, [location]);
+
   return (
     <section className=" flex justify-center flex-col mt-[80px] pb-[200px] items-center overflow-hidden">
       {/* HEADER */}
@@ -129,7 +156,10 @@ const NDISServices = () => {
               US?
             </h1>
             {/* p1` */}
-            <div className="flex flex-col items-center justify-center relative mt-[50px]">
+            <section
+              className="flex flex-col items-center justify-center relative mt-[50px]"
+              id="div1"
+            >
               <div className="flex justify-center align-top w-[600px] relative">
                 <div className="bg-primary text-lavender mt-10 p-[2rem] text-xl font-Oswald rounded-2xl">
                   <p className="mr-10">
@@ -144,13 +174,16 @@ const NDISServices = () => {
                   <img src={jobfinding} alt="" className="w-[180px]" />
                 </div>
               </div>
-            </div>
+            </section>
             <div className="flex justify-center items-center mt-10">
               <img src={arrowdown} alt="" className="w-[100px]" />
             </div>
 
             {/* p2 */}
-            <div className="flex flex-col items-center justify-center relative ">
+            <section
+              className="flex flex-col items-center justify-center relative "
+              id="div2"
+            >
               <div className="flex justify-center align-top w-[600px] relative">
                 <div className="bg-primary text-lavender mt-10 p-[2rem] text-xl font-Oswald rounded-2xl">
                   <p className="ml-10">
@@ -166,12 +199,15 @@ const NDISServices = () => {
                   <img src={unique} alt="" className="w-[180px]" />
                 </div>
               </div>
-            </div>
+            </section>
             <div className="flex justify-center items-center mt-10">
               <img src={arrowdown} alt="" className="w-[100px]" />
             </div>
             {/* p3 */}
-            <div className="flex flex-col items-center justify-center relative ">
+            <section
+              className="flex flex-col items-center justify-center relative "
+              id="div3"
+            >
               <div className="flex justify-center align-top w-[600px] relative">
                 <div className="bg-primary text-lavender mt-10 p-[2rem] text-xl font-Oswald rounded-2xl">
                   <p className="mr-10">
@@ -188,12 +224,15 @@ const NDISServices = () => {
                   <img src={guidance} alt="" className="w-[200px]" />
                 </div>
               </div>
-            </div>
+            </section>
             <div className="flex justify-center items-center mt-10">
               <img src={arrowdown} alt="" className="w-[100px]" />
             </div>
             {/* p4 */}
-            <div className="flex flex-col items-center justify-center relative ">
+            <div
+              className="flex flex-col items-center justify-center relative "
+              id="div4"
+            >
               <div className="flex justify-center align-top w-[600px] relative">
                 <div className="bg-primary text-lavender mt-10 p-[2rem] text-xl font-Oswald rounded-2xl">
                   <p className="ml-10">

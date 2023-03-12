@@ -200,6 +200,9 @@ const OurTeam = () => {
             <h2 className=" text-lg font-semibold text-alt2 my-2">
               Managing Director
             </h2>
+            <p className="w-[240px] text-alt2 font-semibold">
+              Fluent in Arabic.
+            </p>
             <p className="w-[240px] text-alt2">
               Hi, I’m Tureif. I have experience in working with complex
               behaviours and in implementing...
@@ -240,6 +243,9 @@ const OurTeam = () => {
                     </p>
                     <p className=" text-alt2 font-semibold text-2xl">
                       Managing Director
+                    </p>
+                    <p className="w-[240px] text-alt2 font-semibold text-center">
+                      Fluent in Arabic.
                     </p>
                   </Dialog.Title>
                   <div className="mt-2 text-center text-xl text-alt2 gap-4 flex flex-col">
@@ -296,6 +302,9 @@ const OurTeam = () => {
                 Amina
               </h2>
               <h2 className=" text-lg font-semibold text-alt2 my-2">Manager</h2>
+              <p className="w-[240px] text-alt2 font-semibold text-center">
+                Fluent in Arabic.
+              </p>
               <p className="w-[240px] text-alt2">
                 I am a mother of two who has completed a Bachelor of Arts,
                 Pathway to a Master of Teaching and...
@@ -335,6 +344,9 @@ const OurTeam = () => {
                         </p>
                         <p className=" text-alt2 font-semibold text-2xl">
                           Head of employment.
+                        </p>
+                        <p className="w-[240px] text-alt2 font-semibold text-center">
+                          Fluent in Arabic.
                         </p>
                       </Dialog.Title>
                       <div className="mt-2">
@@ -385,6 +397,9 @@ const OurTeam = () => {
               <h2 className=" text-lg font-semibold text-alt2 my-2">
                 Team Leader
               </h2>
+              <p className="w-[240px] text-alt2 font-semibold text-center">
+                Fluent in Samoan.
+              </p>
               <p className="w-[240px] text-alt2">
                 Hi my name is Jordan, I come from a Pacific island background. I
                 have completed my Diploma of community...
@@ -425,6 +440,9 @@ const OurTeam = () => {
                       </p>
                       <p className=" text-alt2 font-semibold text-2xl">
                         Team Leader.
+                      </p>
+                      <p className="w-[240px] text-alt2 font-semibold text-center">
+                        Fluent in Samoan.
                       </p>
                     </Dialog.Title>
                     <div className="mt-2 text-xl text-alt2 text-center flex flex-col">
@@ -476,6 +494,9 @@ const OurTeam = () => {
               <h2 className=" text-lg font-semibold text-alt2 my-2">
                 Support Worker
               </h2>
+              <p className="w-[240px] text-alt2 font-semibold text-center">
+                Limited Arabic.
+              </p>
               <p className="w-[240px] text-alt2">
                 My Name is Abeir but most call me Abbey. I'm a proud Support
                 Worker who loves being a part of the...
@@ -516,6 +537,9 @@ const OurTeam = () => {
                       </p>
                       <p className=" text-alt2 font-semibold text-2xl">
                         Support Worker.
+                      </p>
+                      <p className="w-[240px] text-alt2 font-semibold text-center">
+                        Limited Arabic.
                       </p>
                     </Dialog.Title>
                     <div className="mt-2 text-xl text-alt2 text-center flex flex-col gap-3">
@@ -576,6 +600,9 @@ const OurTeam = () => {
               <h2 className=" text-lg font-semibold text-alt2 my-2">
                 Employment Specialist
               </h2>
+              <p className="w-[240px] text-alt2 font-semibold text-center">
+                Fluent in Arabic.
+              </p>
               <p className="w-[240px] text-alt2">
                 Hi, my name is Maryam Hussein, I am 21 years old. I have a
                 degree in Bachelor of Science and am...
@@ -617,6 +644,9 @@ const OurTeam = () => {
                       </p>
                       <p className=" text-alt2 font-semibold text-2xl">
                         Employment Specialist.
+                      </p>
+                      <p className="w-[240px] text-alt2 font-semibold text-center">
+                        Fluent in Arabic.
                       </p>
                     </Dialog.Title>
                     <div className="mt-2 text-xl text-alt2 text-center flex flex-col gap-3">
@@ -668,9 +698,17 @@ const OurTeam = () => {
               <h2 className=" text-lg font-semibold text-alt2 my-2">
                 Employment Specialist
               </h2>
+              <p className="w-[240px] text-alt2 font-semibold text-center">
+                Fluent in Arabic.
+              </p>
               <p className="w-[240px] text-alt2">
                 Becoming an employment specialist for people with disabilities
                 allowed me to discover my passion...
+              </p>
+              <p>
+                <p className="w-[240px] text-alt2 font-semibold text-center">
+                  &nbsp;
+                </p>
               </p>
             </div>
             <Transition
@@ -708,6 +746,9 @@ const OurTeam = () => {
                       </p>
                       <p className=" text-alt2 font-semibold text-2xl">
                         Employment Specialist.
+                      </p>
+                      <p className="w-[240px] text-alt2 font-semibold text-center">
+                        Fluent in Arabic.
                       </p>
                     </Dialog.Title>
                     <div className="mt-2 text-xl text-alt2 text-center flex flex-col gap-3">
@@ -764,6 +805,12 @@ const OurTeam = () => {
               <p className="w-[240px] text-alt2">
                 Hi, im Corey, and my background is in counselling and music. I
                 have a passion for bringing....
+              </p>
+              <p className="w-[240px] text-alt2 font-semibold text-center">
+                &nbsp;
+              </p>
+              <p className="w-[240px] text-alt2 font-semibold text-center">
+                &nbsp;
               </p>
             </div>
             <Transition
@@ -860,6 +907,9 @@ const OurTeam = () => {
               <p className="w-[240px] text-alt2">Hi, I'm Tahlia..</p>
               <p>&#8203;</p>
               <p>&#8203;</p>
+              <p className="w-[240px] text-alt2 font-semibold text-center">
+                &nbsp;
+              </p>
             </div>
             <Transition
               show={open === "tahlia"}
@@ -936,6 +986,9 @@ const OurTeam = () => {
               <h2 className=" text-lg font-semibold text-alt2 my-2">
                 Employment Specialist
               </h2>
+              <p className="w-[240px] text-alt2 font-semibold text-center">
+                Fluent in Filipino.
+              </p>
               <p className="w-[240px] text-alt2">
                 My name is Danica, I have a background in psychology and I’m
                 working towards....
@@ -976,6 +1029,9 @@ const OurTeam = () => {
                       </p>
                       <p className=" text-alt2 font-semibold text-2xl">
                         Employment Specialist.
+                      </p>
+                      <p className="w-[240px] text-alt2 font-semibold text-center">
+                        Fluent in Filipino.
                       </p>
                     </Dialog.Title>
                     <div className="mt-2 text-xl text-alt2 text-center flex flex-col">
@@ -1038,6 +1094,9 @@ const OurTeam = () => {
               <h2 className=" text-lg font-semibold text-alt2 my-2">
                 Employment Support Officer
               </h2>
+              <p className="w-[240px] text-alt2 font-semibold text-center">
+                Fluent in Arabic.
+              </p>
               <p className="w-[240px] text-alt2">Hi, I'm Zeinah...</p>
               <p>&#8203;</p>
               <p>&#8203;</p>
@@ -1077,6 +1136,9 @@ const OurTeam = () => {
                       </p>
                       <p className=" text-alt2 font-semibold text-2xl">
                         Employment Support Officer.
+                      </p>
+                      <p className="w-[240px] text-alt2 font-semibold text-center">
+                        Fluent in Arabic.
                       </p>
                     </Dialog.Title>
                     <div className="mt-2 text-xl text-alt2 text-center flex flex-col gap-3">
