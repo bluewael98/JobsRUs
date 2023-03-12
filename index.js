@@ -28,15 +28,9 @@ app.use(
 app.use(morgan('common'));
 
 const port = process.env.PORT || 5000;
-<<<<<<< HEAD
-
-const __dirname = path.dirname(new URL(import.meta.url).pathname);
-=======
->>>>>>> e7f035887e31f5ab695eeb291eae52f110ca8c37
 
 const API_KEY = 'AIzaSyA-KRW4MlLYE3hXWgauOew4pk1ddujgTIk'
 
-app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.get('/api/place/:placeId/reviews', async (req, res) => {
   const placeId = req.params.placeId;
