@@ -7,9 +7,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
+<<<<<<< HEAD
     "heroku-postbuild": "cd client && npm install --force && npm run build && cd ..",
     "client": "cd client && npm start",
     "server": "nodemon index.js",
+=======
+    "heroku-postbuild": "cd client && npm install --force && npm run build",
+>>>>>>> e7f035887e31f5ab695eeb291eae52f110ca8c37
     "dev": "concurrently --kill-others-on-fail \"npm run client\" \"npm run server\""
   },
   "author": "",
@@ -21,11 +25,18 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "helmet": "^6.0.1",
+<<<<<<< HEAD
     "helmet-csp": "^3.4.0",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.20",
     "npx": "^10.2.2",
     "pkg": "^5.8.0",
     "react-router-hash-link": "^2.4.3"
+=======
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20",
+    "npx": "^10.2.2",
+    "pkg": "^5.8.0"
+>>>>>>> e7f035887e31f5ab695eeb291eae52f110ca8c37
   }
 }

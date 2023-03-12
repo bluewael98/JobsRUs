@@ -29,8 +29,6 @@ app.use(morgan('common'));
 
 const port = process.env.PORT || 5000;
 
-const __dirname = path.dirname(new URL(import.meta.url).pathname);
-
 const API_KEY = 'AIzaSyA-KRW4MlLYE3hXWgauOew4pk1ddujgTIk'
 
 app.use(express.static(path.join(__dirname, 'client/build')));
