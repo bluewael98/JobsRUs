@@ -85,7 +85,7 @@ const Home = () => {
         </div>
       ) : (
         // DESKTOP LANDING PAGE
-        <div className="flex flex-col justify-center items-center py-10 font-Oswald font-semibold relative w-screen text-lavender  mb-[220px]">
+        <div className="flex flex-col justify-center items-center py-10 font-Oswald font-semibold relative w-screen text-lavender  mb-[120px]">
           <motion.div
             initial="hidden"
             whileInView="visible"
