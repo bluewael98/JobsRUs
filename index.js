@@ -33,11 +33,6 @@ const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 const API_KEY = 'AIzaSyA-KRW4MlLYE3hXWgauOew4pk1ddujgTIk'
 
-<<<<<<< HEAD
-=======
-app.use(express.static(path.join(__dirname, 'client/build')));
->>>>>>> ec4210bced50fa8f8524bd1098a72afbe2623884
-
 app.get('/api/place/:placeId/reviews', async (req, res) => {
   const placeId = req.params.placeId;
   const url= `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=reviews&key=${API_KEY}`;
