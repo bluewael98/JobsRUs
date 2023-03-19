@@ -1,12 +1,8 @@
 import React, { useEffect } from "react";
-<<<<<<< HEAD
 import EmploynentAssistance from "../components/EmploymentAssistance";
 import EmploymentSupport from "../components/EmploymentSupport";
 import GroupActivities from "../components/GroupActivities";
 import SLES from "../components/SLES";
-=======
-import Box from "../components/Box";
->>>>>>> ab027c4969445d087a48dc88a5dccd646e4e56cf
 import aboutus from "../assets/about-us.jpg";
 import jobfinding from "../assets/jobfinding.svg";
 import unique from "../assets/unique.svg";
@@ -16,10 +12,7 @@ import empowering from "../assets/empowering.svg";
 import useMediaQuery from "../hooks/useMediaQuery";
 import arrowdown from "../assets/arrowdown.svg";
 import { useLocation } from "react-router-dom";
-<<<<<<< HEAD
 import circles from "../assets/circles.svg";
-=======
->>>>>>> ab027c4969445d087a48dc88a5dccd646e4e56cf
 
 const NDISServices = () => {
   const isLargeDevice = useMediaQuery("(min-width: 1440px)");
@@ -36,11 +29,7 @@ const NDISServices = () => {
         const newScrollTop =
           scrollTop +
           topOffset -
-<<<<<<< HEAD
           window.innerHeight / 4 +
-=======
-          window.innerHeight / 2 +
->>>>>>> ab027c4969445d087a48dc88a5dccd646e4e56cf
           elem.offsetHeight / 2;
         document.documentElement.scrollTop = newScrollTop;
         window.scrollTo({
@@ -184,13 +173,8 @@ const NDISServices = () => {
             </h1>
             {/* p1` */}
             <section
-<<<<<<< HEAD
               className="flex flex-col items-center justify-center relative my-[50px]"
               id="sles"
-=======
-              className="flex flex-col items-center justify-center relative mt-[50px]"
-              id="div1"
->>>>>>> ab027c4969445d087a48dc88a5dccd646e4e56cf
             >
               <div className="flex justify-center align-top w-[600px] relative">
                 <div className="bg-primary text-lavender mt-10 p-[2rem] text-xl font-Oswald rounded-2xl pr-[100px]">
@@ -210,23 +194,15 @@ const NDISServices = () => {
                 </div>
               </div>
             </section>
-<<<<<<< HEAD
             <SLES />
-=======
->>>>>>> ab027c4969445d087a48dc88a5dccd646e4e56cf
             <div className="flex justify-center items-center mt-10">
               <img src={arrowdown} alt="" className="w-[100px]" />
             </div>
 
             {/* p2 */}
             <section
-<<<<<<< HEAD
               className="flex flex-col items-center justify-center relative my-[50px] "
               id="spa"
-=======
-              className="flex flex-col items-center justify-center relative "
-              id="div2"
->>>>>>> ab027c4969445d087a48dc88a5dccd646e4e56cf
             >
               <div className="flex justify-center align-top w-[600px] relative">
                 <div className="bg-primary text-lavender mt-10 p-[2rem] text-xl font-Oswald rounded-2xl pl-[100px]">
@@ -244,22 +220,14 @@ const NDISServices = () => {
                 </div>
               </div>
             </section>
-<<<<<<< HEAD
             <EmploynentAssistance />
-=======
->>>>>>> ab027c4969445d087a48dc88a5dccd646e4e56cf
             <div className="flex justify-center items-center mt-10">
               <img src={arrowdown} alt="" className="w-[100px]" />
             </div>
             {/* p3 */}
             <section
-<<<<<<< HEAD
               className="flex flex-col items-center justify-center relative my-[50px]"
               id="eso"
-=======
-              className="flex flex-col items-center justify-center relative "
-              id="div3"
->>>>>>> ab027c4969445d087a48dc88a5dccd646e4e56cf
             >
               <div className="flex justify-center align-top w-[600px] relative">
                 <div className="bg-primary text-lavender mt-10 p-[2rem] text-xl font-Oswald rounded-2xl pr-[100px]">
@@ -277,22 +245,14 @@ const NDISServices = () => {
                 </div>
               </div>
             </section>
-<<<<<<< HEAD
             <EmploymentSupport />
-=======
->>>>>>> ab027c4969445d087a48dc88a5dccd646e4e56cf
             <div className="flex justify-center items-center mt-10">
               <img src={arrowdown} alt="" className="w-[100px]" />
             </div>
             {/* p4 */}
             <div
-<<<<<<< HEAD
               className="flex flex-col items-center justify-center relative my-[50px]"
               id="group"
-=======
-              className="flex flex-col items-center justify-center relative "
-              id="div4"
->>>>>>> ab027c4969445d087a48dc88a5dccd646e4e56cf
             >
               <div className="flex justify-center align-top w-[600px] relative">
                 <div className="bg-primary text-lavender mt-10 p-[2rem] text-xl font-Oswald rounded-2xl pl-[100px]">
