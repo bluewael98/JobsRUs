@@ -33,7 +33,10 @@ const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 const API_KEY = 'AIzaSyA-KRW4MlLYE3hXWgauOew4pk1ddujgTIk'
 
+<<<<<<< HEAD
 app.use(express.static(path.join(__dirname, 'client/build')));
+=======
+>>>>>>> ab027c4969445d087a48dc88a5dccd646e4e56cf
 
 app.get('/api/place/:placeId/reviews', async (req, res) => {
   const placeId = req.params.placeId;

@@ -214,6 +214,12 @@ const Home = () => {
               />
             </motion.div>
           </div>
+
+          <img
+            src={jobsrus}
+            alt=""
+            className="absolute w-[900px] translate-x-0 top-0 mx-auto  z-[6] opacity-5 mix-blend-darker"
+          />
         </div>
       )}
 

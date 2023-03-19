@@ -2,7 +2,10 @@ import React from "react";
 import personalised from "../../assets/personalised.svg";
 import transition from "../../assets/transition.svg";
 import choice from "../../assets/choice.svg";
+<<<<<<< HEAD
 import screenedstaff from "../../assets/screenedstaff.svg";
+=======
+>>>>>>> ab027c4969445d087a48dc88a5dccd646e4e56cf
 import { motion } from "framer-motion";
 const Facts = () => {
   return (
@@ -33,12 +36,21 @@ const Facts = () => {
               <img src={transition} alt="" className="w-[200px]" />
             </div>
             <div className="flex flex-col justify-between items-center text-center   border-opacity-50 bg-primary p-4 rounded-lg hover:scale-105 tansition duration-300">
+<<<<<<< HEAD
               <h2>Live your own life. Choice and control.</h2>
               <img src={choice} alt="" className="w-[200px]" />
             </div>
             <div className="flex flex-col justify-between items-center text-center bg-primary p-4 rounded-lg hover:scale-105 tansition duration-300 ">
               <h2>3 step screened staff, at your help.</h2>
               <img src={screenedstaff} alt="" className="w-[200px]" />
+=======
+              <h2>Choice and control.</h2>
+              <img src={choice} alt="" className="w-[200px]" />
+            </div>
+            <div className="flex flex-col justify-between items-center text-center bg-primary p-4 rounded-lg hover:scale-105 tansition duration-300 ">
+              <h2>Choice and control.</h2>
+              <img src={transition} alt="" className="w-[200px]" />
+>>>>>>> ab027c4969445d087a48dc88a5dccd646e4e56cf
             </div>
           </div>
         </div>
