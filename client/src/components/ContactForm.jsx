@@ -31,7 +31,7 @@ const ContactForm = () => {
           <div className="w-full flex flex-col gap-5">
             <p className="font-semibold text-lavender text-opacity-90">Name</p>
             <input
-              className="w-full bg-lavender text-black placeholder-opaque-black p-3"
+              className="w-full bg-lavender text-black placeholder-opaque-black p-3 border-2 border-primary border-opacity-60"
               type="text"
               placeholder="Name."
               {...register("name", {
@@ -53,7 +53,7 @@ const ContactForm = () => {
               Phone Number
             </p>
             <input
-              className="w-full bg-lavender text-black placeholder-opaque-black p-3 "
+              className="w-full bg-lavender text-black placeholder-opaque-black p-3 border-2 border-primary border-opacity-60"
               type="text"
               placeholder="Phone Number."
               {...register("phone", {
@@ -73,7 +73,7 @@ const ContactForm = () => {
         <div className="w-full flex flex-col gap-5 mt-5">
           <p className="font-semibold text-lavender text-opacity-90">Email</p>
           <input
-            className="w-full bg-lavender text-black placeholder-opaque-black p-3 "
+            className="w-full bg-lavender text-black placeholder-opaque-black p-3 border-2 border-primary border-opacity-60"
             type="text"
             placeholder="Email."
             {...register("email", {
@@ -94,7 +94,7 @@ const ContactForm = () => {
             Your Message
           </p>
           <textarea
-            className="w-full bg-lavender text-black placeholder-opaque-black p-3"
+            className="w-full bg-lavender text-black placeholder-opaque-black p-3 border-2 border-primary border-opacity-60"
             type="text"
             placeholder="Enter your message."
             rows="4"
@@ -115,7 +115,7 @@ const ContactForm = () => {
           <div></div>
           <button
             type="submit"
-            className="p-3 bg-lavender shadow-xl font-semibold text-primary mt-5 rounded-xl hover:scale-105
+            className="p-3  shadow-xl font-semibold text-lavender bg-primary mt-5 rounded-xl hover:scale-105
               transition duration-300 "
           >
             SEND A MESSAGE

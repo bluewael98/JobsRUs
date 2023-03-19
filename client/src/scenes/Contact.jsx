@@ -7,6 +7,7 @@ import email from "../assets/email.svg";
 import phone from "../assets/phone.svg";
 import mobile from "../assets/mobile.svg";
 import wearehere from "../assets/wearehere.png";
+import circles from "../assets/circles.svg";
 const Contact = () => {
   const [open, setOpen] = useState(null);
   const openModal = (id) => {
@@ -20,22 +21,23 @@ const Contact = () => {
     <section className=" flex justify-center flex-col mt-[80px]  items-center font-Bebas xxs:text ">
       <div className="w-[100%] bg-primary relative flex justify-center items-center md:h-[220px] xxs:h-[150px] overflow-hidden z-10">
         <div className="flex flex-col justify-center ">
-          <h2 className=" md:text-6xl xxs:text-3xl font-bold text-lavender ">
+          <h1 className="  xxs:text-5xl md:text-6xl font-extrabold font-Oswald bottom-4  text-lavender z-10 ">
             CONTACT US
-          </h2>
+          </h1>
         </div>
+        <img
+          src={circles}
+          alt=""
+          className="absolute w-screen opacity-30 z-[5]"
+        />
       </div>
 
       {/* CONTACT BOX */}
       <div className="z-10 relative w-full flex flex-col justify-center items-center md:px-10">
-        <div className=" lg:px-20 lg:py-20 md:py-10 px:10 bg-primary mt-[80px] flex flex-col items-center justify-center  z-40 rounded-3xl shadow-xl">
-          <h1 className="md:text-5xl xxs:text-2xl font text-lavender my-5">
-            We'd love to here from{" "}
-            <span className=" font-semibold opacity-100">you.</span>
-          </h1>
+        <div className=" lg:px-20 lg:py-20 md:py-10 px:10  mt-[80px] flex flex-col items-center justify-center  z-40 rounded-3xl text-primary ">
           <div className="flex md:justify-between xxs:flex-col xxs:justify-center md:flex-row align-top items-center gap-10">
-            <div className="flex flex-col xxs:justify-center xxs:items-center md:items-start min-w-[300px] max-w-[500px] py-5 px-5 text-lavender">
-              <h1 className="md:text-2xl xxs:text-xl font-bold  my-5">
+            <div className="flex flex-col xxs:justify-center xxs:items-center md:items-start min-w-[300px] max-w-[500px] py-5 px-5 bg-primary rounded-lg text-lavender ">
+              <h1 className="md:text-2xl xxs:text-xl font-bold  my-5 mt-12">
                 OUR DETAILS
               </h1>
               <div className="flex flex-col sm:gap-3 xxs:gap-5 xxs:text-center md:text-start xxs:justify-center md:justify-start xxs:items-center md:items-start">
@@ -51,9 +53,11 @@ const Contact = () => {
                   >
                     Suite 6, 75 Rickard Rd, Bankstown corner NSW 2200.
                   </a>{" "}
-                  (Corner of 443 Chapel Rd Bankstown. Opposite Bankstown library
-                  & New Western Sydney University. Only 500m from Bankstown
-                  tafe.)
+                </p>
+                <p> (Corner of 443 Chapel Rd Bankstown)</p>
+                <p>
+                  We are opposite Bankstown library, New Western Sydney
+                  University & only 500m from Bankstown Tafe.
                 </p>
                 <Fragment>
                   <div
@@ -105,7 +109,7 @@ const Contact = () => {
                               <div className="mt-4">
                                 <button
                                   type="button"
-                                  className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-md hover:bg-primary-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
+                                  className="inline-flex justify-center px-4 py-2 text-sm font-medium  bg-primary rounded-md hover:bg-primary-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
                                   onClick={() => setOpen(false)}
                                 >
                                   Close
@@ -138,6 +142,9 @@ const Contact = () => {
               </div>
             </div>
             <div className="px-5 py-5">
+              <h1 className="md:text-2xl xxs:text-xl font-bold  my-5">
+                WE WOULD LOVE TO HEAR FROM YOU!
+              </h1>
               <ContactForm />
             </div>
           </div>

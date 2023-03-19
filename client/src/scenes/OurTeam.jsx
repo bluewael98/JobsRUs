@@ -1,7 +1,6 @@
 import { React, Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import group from "../assets/group.jpg";
-import shape from "../assets/shape.svg";
 import Tureif from "../assets/team/Tureif.jpg";
 import Amina from "../assets/team/Amina.jpg";
 import Jordan from "../assets/team/Jordan.jpg";
@@ -20,10 +19,12 @@ import support from "../assets/support.svg";
 import standtogether from "../assets/standtogether.svg";
 import useMediaQuery from "../hooks/useMediaQuery";
 import WeAreHiring from "../components/WeAreHiring";
+import circles from "../assets/circles.svg";
 
 const OurTeam = () => {
   const [open, setOpen] = useState(null);
-  const isDesktop = useMediaQuery("(min-width: 1300px)");
+
+  const isLargeDevice = useMediaQuery("(min-width: 1440px)");
   const isSmallDevice = useMediaQuery("(max-width: 768px)");
   const openModal = (id) => {
     setOpen(id);
@@ -35,30 +36,41 @@ const OurTeam = () => {
   return (
     <section className=" flex justify-center flex-col mt-[80px] pb-[200px] items-center font-Oswald">
       <WeAreHiring />
-      <div className="w-full bg-primary relative flex justify-center items-center xxs:p-10  sm:h-[220px] overflow-hidden z-0 font-Bebas">
-        <div className="flex flex-col justify-center items-center z-0 font-Bebas">
-          <h2 className=" md:text-6xl xxs:text-4xl font-bold text-lavender ">
-            OUR TEAM{" "}
-          </h2>
-          {isSmallDevice ? (
-            <div className="text-center flex flex-col pt-5">
-              {" "}
-              <h1 className="md:text-5xl xxs:text-2xl font text-lavender">
-                Meet our team of{" "}
-                <span className=" font-semibold opacity-100 italic">
-                  HEROES.
-                </span>
-              </h1>
-              <h1 className="md:text-5xl xxs:text-2xl  font text-lavender ">
-                {" "}
-                Honest, empathetic, reliable, and open-minded individuals.
-              </h1>
-            </div>
-          ) : (
-            ""
-          )}
+      {/* HEADER */}
+      {isLargeDevice ? (
+        <div className="w-screen  bg-primary relative flex justify-between overflow-hidden  mb-[5rem]">
+          <div className="flex flex-col justify-center pl-10 ">
+            <h1 className="  xxs:text-4xl md:text-6xl font-extrabold font-Oswald bottom-4  text-lavender z-10 ">
+              OUR TEAM OF HEROES
+            </h1>
+          </div>
+          <div className="flex  z-20 top-[25px] justify-center items-center shadow-5xl overflow-hidden  w-[600px]  ml-[100px] rounded-bl-[200px] pl-[25px] shadow--l5xl  whitespace-pre   bg-primary bg-opacity-80 ">
+            <img
+              src={group}
+              alt=""
+              className="w-[600px] object-cover object-top  rounded-bl-[200px]"
+            />
+          </div>
+          <img
+            src={circles}
+            alt=""
+            className="absolute w-screen opacity-30 z-[5]"
+          />
         </div>
-      </div>
+      ) : (
+        <div className="w-screen xxs:max-h-[240px] xs:max-h-[500px]  bg-primary relative flex justify-center items-center overflow-hidden py-20  mb-[5rem]">
+          <div className="flex flex-col justify-center items-center text-center z-10 font-Bebas">
+            <h1 className="  xxs:text-3xl md:text-6xl font-extrabold font-Oswald bottom-4  text-lavender z-10 ">
+              OUR TEAM
+            </h1>
+          </div>
+          <img
+            src={circles}
+            alt=""
+            className="absolute w-screen opacity-30 z-[5] xs:h-[300px] xxs:h-[240px] object-cover"
+          />
+        </div>
+      )}
 
       {isSmallDevice ? (
         <div className="flex sm:px-20 md:px-[100px] xlg:px-[200px] xxs:flex-col xlg:flex-row gap-3 justify-center items-center w-full pt-10 mx-auto text-opacity-90 ">
@@ -151,27 +163,13 @@ const OurTeam = () => {
               type of support you need.
             </p>
             <p className="text-lg text-alt2 text-semibold">
-              Our staff are then able to perform the role of a key support
-              worker and be the main contact for you, ensuring effective
-              coordination and communication across the board. Our priority is
-              the quality of service you receive, and we've taken this approach
-              to provide you with the best possible experience.
+              Once our staff are hired, they are provided with regular training
+              to ensure your program is on track and is in line with your goals.
+              This provides our team the opportunity to seek guidance from a
+              superior to ensure you are always getting the higheset level of
+              support regardless if you are seen by the managing director or a
+              newly hired employment support officer.
             </p>
-          </div>
-          <div
-            div
-            className="xlg:w-[30%] xxs:w-[90%]  relative xlg:mt-[200px] xxs:mt-20 flex justify-center items-center"
-          >
-            <div className=" bg-primary flex justify-center items-center p-5 rounded-2xl z-10 max-w-[700px]">
-              <img src={group} alt="" className="rounded-2xl z-10 " />
-            </div>
-            {isDesktop ? (
-              <img
-                src={shape}
-                alt=""
-                className="z-0 absolute w-[200px] right-[-80px] top-[-80px]"
-              />
-            ) : null}
           </div>
         </div>
       )}
@@ -200,6 +198,9 @@ const OurTeam = () => {
             <h2 className=" text-lg font-semibold text-alt2 my-2">
               Managing Director
             </h2>
+            <p className="w-[240px] text-alt2 font-semibold">
+              Fluent in Arabic.
+            </p>
             <p className="w-[240px] text-alt2">
               Hi, I’m Tureif. I have experience in working with complex
               behaviours and in implementing...
@@ -240,6 +241,9 @@ const OurTeam = () => {
                     </p>
                     <p className=" text-alt2 font-semibold text-2xl">
                       Managing Director
+                    </p>
+                    <p className="w-[240px] text-alt2 font-semibold text-center">
+                      Fluent in Arabic.
                     </p>
                   </Dialog.Title>
                   <div className="mt-2 text-center text-xl text-alt2 gap-4 flex flex-col">
@@ -296,6 +300,9 @@ const OurTeam = () => {
                 Amina
               </h2>
               <h2 className=" text-lg font-semibold text-alt2 my-2">Manager</h2>
+              <p className="w-[240px] text-alt2 font-semibold text-center">
+                Fluent in Arabic.
+              </p>
               <p className="w-[240px] text-alt2">
                 I am a mother of two who has completed a Bachelor of Arts,
                 Pathway to a Master of Teaching and...
@@ -335,6 +342,9 @@ const OurTeam = () => {
                         </p>
                         <p className=" text-alt2 font-semibold text-2xl">
                           Head of employment.
+                        </p>
+                        <p className="w-[240px] text-alt2 font-semibold text-center">
+                          Fluent in Arabic.
                         </p>
                       </Dialog.Title>
                       <div className="mt-2">
@@ -385,6 +395,9 @@ const OurTeam = () => {
               <h2 className=" text-lg font-semibold text-alt2 my-2">
                 Team Leader
               </h2>
+              <p className="w-[240px] text-alt2 font-semibold text-center">
+                Fluent in Samoan.
+              </p>
               <p className="w-[240px] text-alt2">
                 Hi my name is Jordan, I come from a Pacific island background. I
                 have completed my Diploma of community...
@@ -425,6 +438,9 @@ const OurTeam = () => {
                       </p>
                       <p className=" text-alt2 font-semibold text-2xl">
                         Team Leader.
+                      </p>
+                      <p className="w-[240px] text-alt2 font-semibold text-center">
+                        Fluent in Samoan.
                       </p>
                     </Dialog.Title>
                     <div className="mt-2 text-xl text-alt2 text-center flex flex-col">
@@ -476,6 +492,9 @@ const OurTeam = () => {
               <h2 className=" text-lg font-semibold text-alt2 my-2">
                 Support Worker
               </h2>
+              <p className="w-[240px] text-alt2 font-semibold text-center">
+                Limited Arabic.
+              </p>
               <p className="w-[240px] text-alt2">
                 My Name is Abeir but most call me Abbey. I'm a proud Support
                 Worker who loves being a part of the...
@@ -516,6 +535,9 @@ const OurTeam = () => {
                       </p>
                       <p className=" text-alt2 font-semibold text-2xl">
                         Support Worker.
+                      </p>
+                      <p className="w-[240px] text-alt2 font-semibold text-center">
+                        Limited Arabic.
                       </p>
                     </Dialog.Title>
                     <div className="mt-2 text-xl text-alt2 text-center flex flex-col gap-3">
@@ -576,6 +598,9 @@ const OurTeam = () => {
               <h2 className=" text-lg font-semibold text-alt2 my-2">
                 Employment Specialist
               </h2>
+              <p className="w-[240px] text-alt2 font-semibold text-center">
+                Fluent in Arabic.
+              </p>
               <p className="w-[240px] text-alt2">
                 Hi, my name is Maryam Hussein, I am 21 years old. I have a
                 degree in Bachelor of Science and am...
@@ -617,6 +642,9 @@ const OurTeam = () => {
                       </p>
                       <p className=" text-alt2 font-semibold text-2xl">
                         Employment Specialist.
+                      </p>
+                      <p className="w-[240px] text-alt2 font-semibold text-center">
+                        Fluent in Arabic.
                       </p>
                     </Dialog.Title>
                     <div className="mt-2 text-xl text-alt2 text-center flex flex-col gap-3">
@@ -668,9 +696,17 @@ const OurTeam = () => {
               <h2 className=" text-lg font-semibold text-alt2 my-2">
                 Employment Specialist
               </h2>
+              <p className="w-[240px] text-alt2 font-semibold text-center">
+                Fluent in Arabic.
+              </p>
               <p className="w-[240px] text-alt2">
                 Becoming an employment specialist for people with disabilities
                 allowed me to discover my passion...
+              </p>
+              <p>
+                <p className="w-[240px] text-alt2 font-semibold text-center">
+                  &nbsp;
+                </p>
               </p>
             </div>
             <Transition
@@ -708,6 +744,9 @@ const OurTeam = () => {
                       </p>
                       <p className=" text-alt2 font-semibold text-2xl">
                         Employment Specialist.
+                      </p>
+                      <p className="w-[240px] text-alt2 font-semibold text-center">
+                        Fluent in Arabic.
                       </p>
                     </Dialog.Title>
                     <div className="mt-2 text-xl text-alt2 text-center flex flex-col gap-3">
@@ -764,6 +803,12 @@ const OurTeam = () => {
               <p className="w-[240px] text-alt2">
                 Hi, im Corey, and my background is in counselling and music. I
                 have a passion for bringing....
+              </p>
+              <p className="w-[240px] text-alt2 font-semibold text-center">
+                &nbsp;
+              </p>
+              <p className="w-[240px] text-alt2 font-semibold text-center">
+                &nbsp;
               </p>
             </div>
             <Transition
@@ -860,6 +905,9 @@ const OurTeam = () => {
               <p className="w-[240px] text-alt2">Hi, I'm Tahlia..</p>
               <p>&#8203;</p>
               <p>&#8203;</p>
+              <p className="w-[240px] text-alt2 font-semibold text-center">
+                &nbsp;
+              </p>
             </div>
             <Transition
               show={open === "tahlia"}
@@ -936,6 +984,9 @@ const OurTeam = () => {
               <h2 className=" text-lg font-semibold text-alt2 my-2">
                 Employment Specialist
               </h2>
+              <p className="w-[240px] text-alt2 font-semibold text-center">
+                Fluent in Filipino.
+              </p>
               <p className="w-[240px] text-alt2">
                 My name is Danica, I have a background in psychology and I’m
                 working towards....
@@ -976,6 +1027,9 @@ const OurTeam = () => {
                       </p>
                       <p className=" text-alt2 font-semibold text-2xl">
                         Employment Specialist.
+                      </p>
+                      <p className="w-[240px] text-alt2 font-semibold text-center">
+                        Fluent in Filipino.
                       </p>
                     </Dialog.Title>
                     <div className="mt-2 text-xl text-alt2 text-center flex flex-col">
@@ -1038,6 +1092,9 @@ const OurTeam = () => {
               <h2 className=" text-lg font-semibold text-alt2 my-2">
                 Employment Support Officer
               </h2>
+              <p className="w-[240px] text-alt2 font-semibold text-center">
+                Fluent in Arabic.
+              </p>
               <p className="w-[240px] text-alt2">Hi, I'm Zeinah...</p>
               <p>&#8203;</p>
               <p>&#8203;</p>
@@ -1077,6 +1134,9 @@ const OurTeam = () => {
                       </p>
                       <p className=" text-alt2 font-semibold text-2xl">
                         Employment Support Officer.
+                      </p>
+                      <p className="w-[240px] text-alt2 font-semibold text-center">
+                        Fluent in Arabic.
                       </p>
                     </Dialog.Title>
                     <div className="mt-2 text-xl text-alt2 text-center flex flex-col gap-3">

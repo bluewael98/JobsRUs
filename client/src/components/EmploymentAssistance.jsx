@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimateSharedLayout } from "framer-motion";
-import { SensorOccupied, School, Badge, Diversity3 } from "@mui/icons-material";
+import { Badge } from "@mui/icons-material";
+import oneonone from "../assets/oneonone.JPG";
 
 import "./styles.css";
 
@@ -43,7 +44,7 @@ function ExpandedCard({ children, onCollapse }) {
 function CompactCard({ children, onExpand, disabled, data }) {
   return (
     <motion.div
-      className="card compact xxs:w-[350px] sm:w-[500px] md:w-[1000px] flex items-center content-center gap-2 text-primary   "
+      className="card compact w-full object-contain md:w-[1000px] flex items-center content-center gap-2 text-primary mx-auto    "
       layoutId="expandable-card"
       onClick={disabled ? undefined : onExpand}
     >
@@ -81,6 +82,11 @@ function DataButton({ data, onCollapse, onExpand, disabled }) {
             data={data}
           >
             <Content data={data} disabled={disabled} showSubtitle={false} />
+            <img
+              src={oneonone}
+              className="h-[150px] w-[150px] rounded-full bg-primary p-2 shadow-lg object-cover"
+              alt=""
+            />
           </CompactCard>
         )}
       </AnimateSharedLayout>
@@ -92,7 +98,7 @@ export default function App() {
   const [expandedData, setCollapsedData] = useState();
   const data = [
     {
-      title: "Employment Assistance",
+      title: "Specialised Employment Assistance",
       subtitle: (
         <div className="flex flex-col gap-5 font-Oswald">
           <p>
@@ -130,101 +136,12 @@ export default function App() {
             {" "}
             Finally, our Open services offer complete support for clients
             transitioning out of supportive employment and into open employment.
-            At [Company Name], we are here to support every step of the
-            employment journey.
+            At JobsRUs, we are here to support every step of the employment
+            journey.
           </p>
         </div>
       ),
       image: <Badge />,
-    },
-    {
-      title: "Employment Support",
-      subtitle: (
-        <div className="flex flex-col gap-5 font-Oswald">
-          <p>
-            At JobRUs, we are committed to assisting you in building your
-            strengths, skills, and independence, tailored specifically to your
-            personal employment goals.
-          </p>
-          <p>
-            We understand that every individual is unique, with their own
-            personality, perceptions, self-taught skills, strengths, and comfort
-            levels. That's why we provide customized support to meet your
-            individual needs.
-          </p>
-          <p>
-            Our comprehensive employment support covers a wide range of areas,
-            including budgeting, money skills, legal responsibilities, cooking
-            skills, driving skills, social skills, work etiquette, job
-            searching, cover letter training, resume writing, interview skills,
-            handling feedback, career goals, work exposure, work trials, work
-            experience, and easy-to-learn workshops.
-          </p>
-          <p>
-            With our personalized support, you can gain the confidence and
-            skills you need to succeed in the workplace and beyond.
-          </p>
-        </div>
-      ),
-      image: <SensorOccupied />,
-    },
-    {
-      title: "SLES",
-      subtitle: (
-        <div className="flex flex-col gap-5 font-Oswald">
-          <p>
-            Our transition program (School Leavers Employment Supports) is
-            designed to help you seamlessly transition from school to employment
-            by finding and keeping a job.{" "}
-          </p>
-          <p>
-            We provide a supportive and personalized approach to help you build
-            independence, confidence, social skills, and professional skills
-            that are tailored to your individual goals.
-          </p>
-          <p>
-            Through our program, you'll have access to industry visits, work
-            experience, and both assistive and open employment opportunities.
-          </p>
-          <p>
-            Our model ensures that all skills learned are transferable, meaning
-            that you can easily adapt them to new goals and career paths.
-          </p>
-          <p>
-            With our support, you can confidently navigate any changes or
-            challenges that may arise, and continue to grow and develop your
-            skills.
-          </p>
-        </div>
-      ),
-      image: <School />,
-    },
-    {
-      title: "Group Activities",
-      subtitle: (
-        <div className="flex flex-col gap-5 font-Oswald">
-          <p>
-            Join us for a day of leisure and fun every Saturday with JobsRUs!
-            Our group-based activities are designed to help you socialize, have
-            a good time, and achieve group-based goals, all while exploring the
-            beautiful sights and experiences that Sydney and its surroundings
-            have to offer.
-          </p>
-          <p>
-            In the summer, we explore places like the Blue Mountains, new
-            beaches, go-karting, animal parks, waterfalls, and more, while
-            winter days call for indoor activities such as shopping, cooking,
-            making healthy snacks, arts and crafts, board games, and movies.
-          </p>
-          <p>
-            Whatever the weather, we make sure to have a great time while also
-            promoting social skills, team-building, and a sense of
-            accomplishment. Join us for a memorable and enjoyable day out with
-            our supportive and fun-loving team at JobsRUs!
-          </p>
-        </div>
-      ),
-      image: <Diversity3 />,
     },
   ];
 

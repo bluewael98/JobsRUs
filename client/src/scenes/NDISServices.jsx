@@ -1,5 +1,8 @@
-import React from "react";
-import Box from "../components/Box";
+import React, { useEffect } from "react";
+import EmploynentAssistance from "../components/EmploymentAssistance";
+import EmploymentSupport from "../components/EmploymentSupport";
+import GroupActivities from "../components/GroupActivities";
+import SLES from "../components/SLES";
 import aboutus from "../assets/about-us.jpg";
 import jobfinding from "../assets/jobfinding.svg";
 import unique from "../assets/unique.svg";
@@ -8,49 +11,81 @@ import guidance from "../assets/guidance.svg";
 import empowering from "../assets/empowering.svg";
 import useMediaQuery from "../hooks/useMediaQuery";
 import arrowdown from "../assets/arrowdown.svg";
+import { useLocation } from "react-router-dom";
+import circles from "../assets/circles.svg";
 
 const NDISServices = () => {
   const isLargeDevice = useMediaQuery("(min-width: 1440px)");
   const isSmallDevice = useMediaQuery("(max-width: 1090px)");
+
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash) {
+      const elem = document.getElementById(location.hash.slice(1));
+      if (elem) {
+        const topOffset = elem.getBoundingClientRect().top;
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+        const newScrollTop =
+          scrollTop +
+          topOffset -
+          window.innerHeight / 4 +
+          elem.offsetHeight / 2;
+        document.documentElement.scrollTop = newScrollTop;
+        window.scrollTo({
+          top: newScrollTop,
+          left: 0,
+          behavior: "smooth",
+        });
+      }
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
+  }, [location]);
+
   return (
-    <section className=" flex justify-center flex-col mt-[80px] pb-[200px] items-center overflow-hidden">
+    <section className=" flex justify-center flex-col mt-[80px] pb-[200px] items-center overflow-hidden relative">
       {/* HEADER */}
       {isLargeDevice ? (
-        <div className="w-[100%] bg-primary relative flex justify-between overflow-hidden  mb-[5rem]">
-          <div className="flex flex-col justify-center ">
-            <h2 className=" text-4xl font-bold text-lavender  ml-20">
+        <div className="w-screen  bg-primary relative flex justify-between overflow-hidden  mb-[5rem]">
+          <div className="flex flex-col justify-center pl-10 ">
+            <h1 className="  xxs:text-4xl md:text-6xl font-extrabold font-Oswald bottom-4  text-lavender z-10 ">
               Empowering clients,
-            </h2>
-            <h2 className=" text-4xl font-bold text-lavender ml-20">
-              through personalized opportunities.
-            </h2>
-            <button className="py-[0.5rem] px-[0.5rem] w-[150px] rounded-lg font-bold text-primary ml-[500px] mt-[20px] bg-lavender hover:scale-105 transition duration-200">
+            </h1>
+            <h1 className="  xxs:text-4xl md:text-6xl font-extrabold font-Oswald bottom-4  text-lavender z-10 ">
+              through personalized programs.
+            </h1>
+            <button className="py-[0.5rem] px-[0.5rem] w-[150px] rounded-lg font-bold text-primary ml-[500px] mt-[20px] bg-lavender hover:scale-105 transition duration-200 z-10">
               Contact Us
             </button>
           </div>
-          <div className="flex  z-20 top-[25px] justify-center items-center shadow-5xl overflow-hidden  w-[800px] h-[300px] ml-[100px] rounded-bl-[200px] pl-[25px] shadow--l5xl  whitespace-pre   bg-primary bg-opacity-80 ">
+          <div className="flex  z-20 top-[25px] justify-center items-center shadow-5xl overflow-hidden  w-[600px]  ml-[100px] rounded-bl-[200px] pl-[25px] shadow--l5xl  whitespace-pre   bg-primary bg-opacity-80 ">
             <img
               src={aboutus}
               alt=""
-              className="w-[800px] max-h-[300px] object-cover object-top  rounded-bl-[200px]"
+              className="w-[600px] object-cover object-top  rounded-bl-[200px]"
             />
           </div>
+          <img
+            src={circles}
+            alt=""
+            className="absolute w-screen opacity-30 z-[5]"
+          />
         </div>
       ) : (
-        <div className="w-screen xxs:max-h-[240px] xs:max-h-[500px]  bg-black relative flex justify-center items-center overflow-hidden py-20  mb-[5rem]">
+        <div className="w-screen xxs:max-h-[240px] xs:max-h-[500px]  bg-primary relative flex justify-center items-center overflow-hidden py-20  mb-[5rem]">
           <div className="flex flex-col justify-center items-center text-center z-10 font-Bebas">
-            <h2 className=" text-2xl sm:text-3xl font-bold text-lavender">
+            <h1 className="  xxs:text-3xl md:text-6xl font-extrabold font-Oswald bottom-4  text-lavender z-10 ">
               Empowering clients,
-            </h2>
-            <h2 className=" text-2xl sm:text-3xl font-bold text-lavender">
-              through personalized opportunities.
-            </h2>
+            </h1>
+            <h1 className="  xxs:text-3xl md:text-6xl font-extrabold font-Oswald bottom-4  text-lavender z-10 ">
+              through personalized programs.
+            </h1>
           </div>
-
           <img
-            src={aboutus}
+            src={circles}
             alt=""
-            className="w-screen  xxs:max-h-[240px] xs:max-h-[300px] sm:max-h-[270px] md:max-h-[400px] lg:max-h-[500px] object-cover object-top absolute z-0 opacity-70 "
+            className="absolute w-screen opacity-30 z-[5] xs:h-[300px] xxs:h-[240px] object-cover"
           />
         </div>
       )}
@@ -58,56 +93,64 @@ const NDISServices = () => {
       {/* MAIN SECTION */}
       {isSmallDevice ? (
         <div className="font-Oswald flex flex-col items-center justify-center text-alt2 ">
-          <div className="pb-[50px] flex flex-col justify-center items-center text-center">
-            <h1 className="text-[30px] font-Oswald text-primary">
+          <div className="pb-[50px] flex flex-col justify-center items-center text-center ">
+            <h1 className="text-2xl font-bold text-center font-Oswald text-primary px-5">
               WHAT DO WE OFFER AT JOBS <span className=" text-alt2 ">R</span>{" "}
               US?
             </h1>
-            <div className=" text-lg  text-opacity-85 w-screen flex flex-col gap-6 px-10">
-              <div className="flex align-middle items-center mt-5 flex-col">
-                <p>
-                  At Jobs R Us, we provide{" "}
-                  <span className="font-semibold">specialized </span> and
-                  <span className="font-semibold"> personalized</span>{" "}
-                  employment and job-finding support for people with
-                  disabilities.
+            <div className=" text-lg  text-opacity-85  flex flex-col gap-6 px-10">
+              <div className="flex flex-col justify-center items-center mt-5">
+                <h1 className="text-2xl font-bold text-lavender">
+                  SLES{" "}
+                  <span className=" font-medium">
+                    &#40;School Leavers Employment Support&#41;{" "}
+                  </span>
+                </h1>
+                <p className="">
+                  A 2 year program that provides the opportunity to zone on and
+                  target key employability outcomes and gain direction.
                 </p>
-                <img src={jobfinding} alt="" className="w-[75px]" />
+                <img src={jobfinding} alt="" className="w-[75px] mb-10 mt-3" />
+                <SLES />
               </div>
 
               <div className="flex flex-col justify-center items-center">
-                <p>
-                  We recognize that each individual has{" "}
-                  <span className="font-semibold">unique</span> strengths,
-                  challenges, and goals, and we work closely with our clients to
-                  understand their <span className="font-semibold">needs</span>{" "}
-                  and
-                  <span className="font-semibold"> aspirations.</span>
+                <h1 className="text-2xl font-bold text-lavender">
+                  Specialised Employment Assistance
+                </h1>
+                <p className="">
+                  From SLES regardless of your transition you will have an
+                  Employment specialist help tailor a capacity building program
+                  for your continued supports in employment.
                 </p>
-                <img src={unique} alt="" className="w-[70px] " />
+                <img src={unique} alt="" className="w-[70px] mb-10 mt-3 " />
+                <EmploynentAssistance />
               </div>
 
-              <div className="flex flex-col items-center">
-                <p>
-                  Our approach includes{" "}
-                  <span className="font-semibold"> tailored</span> career
-                  guidance, job readiness training, and access to a wide network
-                  of employers, with the goal of placing our clients in
-                  meaningful, sustainable employment that aligns with their{" "}
-                  <span className="font-semibold">abilities</span> and{" "}
-                  <span className="font-semibold">interests.</span>
+              <div className="flex flex-col justify-center items-center">
+                <h1 className="text-2xl font-bold text-lavender">
+                  Employment Support Officer
+                </h1>
+                <p className="">
+                  A cost-effective way to help you follow through with the
+                  employment specialist tailored program to achieve whatever
+                  your employment goals are.
                 </p>
-                <img src={guidance} alt="" className="w-[70px] " />
+                <img src={guidance} alt="" className="w-[70px]  mb-10 mt-3" />
+                <EmploymentSupport />
               </div>
 
               <div className="flex flex-col  items-center">
-                <p>
-                  We are committed to{" "}
-                  <span className="font-semibold">empowering</span> people with
-                  disabilities to achieve their full potential in the workforce
-                  and beyond.
+                <h1 className="text-2xl font-bold text-lavender">
+                  Group Activities
+                </h1>
+                <p className="">
+                  Can’t be all work and no play, we have our leisure days on
+                  Saturday’s fortnightly so you can unwind from your capacity
+                  building goals..
                 </p>
-                <img src={empowering} alt="" className="w-[75px] " />
+                <img src={empowering} alt="" className="w-[75px] mb-10 mt-3" />
+                <GroupActivities />
               </div>
 
               <div className="flex flex-col justify-center align-top items-center mt-1">
@@ -123,84 +166,103 @@ const NDISServices = () => {
       ) : (
         // DESKTOP
         <div className="font-Oswald flex flex-row text-alt2 mx-10 ">
-          <div className=" flex flex-col">
+          <div className=" flex flex-col justify-center items-center">
             <h1 className="text-4xl font-Bebas text-primary font-bold">
               WHAT DO WE OFFER AT JOBS <span className=" text-alt2 ">R</span>{" "}
               US?
             </h1>
             {/* p1` */}
-            <div className="flex flex-col items-center justify-center relative mt-[50px]">
+            <section
+              className="flex flex-col items-center justify-center relative my-[50px]"
+              id="sles"
+            >
               <div className="flex justify-center align-top w-[600px] relative">
-                <div className="bg-primary text-lavender mt-10 p-[2rem] text-xl font-Oswald rounded-2xl">
+                <div className="bg-primary text-lavender mt-10 p-[2rem] text-xl font-Oswald rounded-2xl pr-[100px]">
+                  <h1 className="text-2xl font-bold text-lavender">
+                    SLES{" "}
+                    <span className=" font-medium">
+                      &#40;School Leavers Employment Support&#41;{" "}
+                    </span>
+                  </h1>
                   <p className="mr-10">
-                    At Jobs R Us, we provide{" "}
-                    <span className="font-semibold">specialized </span> and
-                    <span className="font-semibold"> personalized</span>{" "}
-                    employment and job-finding support for people with
-                    disabilities.
+                    A 2 year program that provides the opportunity to zone on
+                    and target key employability outcomes and gain direction.
                   </p>
                 </div>
                 <div className="bg-alt2 w-[300px] h-[300px] rounded-full z-10 absolute right-[-240px] top-[-20px] flex justify-center items-center">
                   <img src={jobfinding} alt="" className="w-[180px]" />
                 </div>
               </div>
-            </div>
+            </section>
+            <SLES />
             <div className="flex justify-center items-center mt-10">
               <img src={arrowdown} alt="" className="w-[100px]" />
             </div>
 
             {/* p2 */}
-            <div className="flex flex-col items-center justify-center relative ">
+            <section
+              className="flex flex-col items-center justify-center relative my-[50px] "
+              id="spa"
+            >
               <div className="flex justify-center align-top w-[600px] relative">
-                <div className="bg-primary text-lavender mt-10 p-[2rem] text-xl font-Oswald rounded-2xl">
-                  <p className="ml-10">
-                    We recognize that each individual has{" "}
-                    <span className="font-semibold">unique</span> strengths,
-                    challenges, and goals, and we work closely with our clients
-                    to understand their{" "}
-                    <span className="font-semibold">needs</span> and
-                    <span className="font-semibold"> aspirations.</span>
+                <div className="bg-primary text-lavender mt-10 p-[2rem] text-xl font-Oswald rounded-2xl pl-[100px]">
+                  <h1 className="text-2xl font-bold text-lavender">
+                    Specialised Employment Assistance
+                  </h1>
+                  <p className="mr-10">
+                    From SLES regardless of your transition you will have an
+                    Employment specialist help tailor a capacity building
+                    program for your continued supports in employment.
                   </p>
                 </div>
                 <div className="bg-alt2 w-[300px] h-[300px] rounded-full z-10 absolute left-[-240px] top-[-20px] flex justify-center items-center">
                   <img src={unique} alt="" className="w-[180px]" />
                 </div>
               </div>
-            </div>
+            </section>
+            <EmploynentAssistance />
             <div className="flex justify-center items-center mt-10">
               <img src={arrowdown} alt="" className="w-[100px]" />
             </div>
             {/* p3 */}
-            <div className="flex flex-col items-center justify-center relative ">
+            <section
+              className="flex flex-col items-center justify-center relative my-[50px]"
+              id="eso"
+            >
               <div className="flex justify-center align-top w-[600px] relative">
-                <div className="bg-primary text-lavender mt-10 p-[2rem] text-xl font-Oswald rounded-2xl">
+                <div className="bg-primary text-lavender mt-10 p-[2rem] text-xl font-Oswald rounded-2xl pr-[100px]">
+                  <h1 className="text-2xl font-bold text-lavender">
+                    Employment Support Officer
+                  </h1>
                   <p className="mr-10">
-                    Our approach includes{" "}
-                    <span className="font-semibold"> tailored</span> career
-                    guidance, job readiness training, and access to a wide
-                    network of employers, with the goal of placing our clients
-                    in meaningful, sustainable employment that aligns with their{" "}
-                    <span className="font-semibold">abilities</span> and{" "}
-                    <span className="font-semibold">interests.</span>
+                    A cost-effective way to help you follow through with the
+                    employment specialist tailored program to achieve whatever
+                    your employment goals are.
                   </p>
                 </div>
                 <div className="bg-alt2 w-[300px] h-[300px] rounded-full z-10 absolute right-[-240px] top-[-20px] flex justify-center items-center">
                   <img src={guidance} alt="" className="w-[200px]" />
                 </div>
               </div>
-            </div>
+            </section>
+            <EmploymentSupport />
             <div className="flex justify-center items-center mt-10">
               <img src={arrowdown} alt="" className="w-[100px]" />
             </div>
             {/* p4 */}
-            <div className="flex flex-col items-center justify-center relative ">
+            <div
+              className="flex flex-col items-center justify-center relative my-[50px]"
+              id="group"
+            >
               <div className="flex justify-center align-top w-[600px] relative">
-                <div className="bg-primary text-lavender mt-10 p-[2rem] text-xl font-Oswald rounded-2xl">
-                  <p className="ml-10">
-                    We are committed to{" "}
-                    <span className="font-semibold">empowering</span> people
-                    with disabilities to achieve their full potential in the
-                    workforce and beyond.
+                <div className="bg-primary text-lavender mt-10 p-[2rem] text-xl font-Oswald rounded-2xl pl-[100px]">
+                  <h1 className="text-2xl font-bold text-lavender">
+                    Group Activities
+                  </h1>
+                  <p className="mr-10">
+                    Can’t be all work and no play, we have our leisure days on
+                    Saturday’s fortnightly so you can unwind from your capacity
+                    building goals..
                   </p>
                 </div>
                 <div className="bg-alt2 w-[300px] h-[300px] rounded-full z-10 absolute left-[-240px] top-[-20px] flex justify-center items-center">
@@ -208,8 +270,9 @@ const NDISServices = () => {
                 </div>
               </div>
             </div>
+            <GroupActivities />
 
-            <div className=" text-lg  text-opacity-85 mt-[150px] mb-[50px] max-w-[660px] mx-[100px]">
+            <div className=" text-xl font-bold  text-opacity-85  my-[50px] max-w-[660px] mx-[100px]">
               <div className="flex justify-center align-top items-center mt-1">
                 <p>
                   Our supports are delivered as part of the NDIS ‘finding and
@@ -221,9 +284,6 @@ const NDISServices = () => {
           </div>
         </div>
       )}
-      <div className="w-full flex justify-center items-center">
-        <Box />
-      </div>
     </section>
   );
 };

@@ -1,17 +1,26 @@
 import PricingTable from "../components/PricingTable";
 import React from "react";
+import circles from "../assets/circles.svg";
 
 const NDISPricing = () => {
   return (
-    <section className="mt-[80px] pb-[280px] flex items-center justify-center flex-col font-Oswald mx-2">
-      <div className="w-screen bg-primary relative flex justify-center items-center h-[220px] overflow-hidden">
+    <section className="mt-[80px] pb-[280px] flex items-center justify-center flex-col font-Oswald ">
+      <div className="w-[100%] bg-primary relative flex justify-center items-center md:h-[220px] xxs:h-[150px] overflow-hidden z-10 mb-5">
         <div className="flex flex-col justify-center ">
-          <h2 className=" md:text-6xl xxs:text-4xl sm:text-5xl font-bold text-lavender ">
-            PRICING{" "}
-          </h2>
+          <h1 className="  xxs:text-5xl md:text-6xl font-extrabold font-Oswald bottom-4  text-lavender z-10 ">
+            PRICING
+          </h1>
         </div>
+        <img
+          src={circles}
+          alt=""
+          className="absolute w-screen opacity-30 z-[5]"
+        />
       </div>
       <div className="max-w-[1000px] text-alt2  py-10 text-xl flex justify-center flex-col items-center mx-2 text-center">
+        <h1 className=" text-3xl text-primary font-bold pb-3">
+          JOBS <span className=" text-alt2">R</span> US
+        </h1>
         <h2>
           We provide multiple services to assist you in accessing your desired
           employment goals.

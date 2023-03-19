@@ -46,7 +46,7 @@ const TheMessage = () => {
             brighter future for all.
           </p>
           <Link to="/contact">
-            <button className=" shadow-md  bg-lavender text-primary font-bold   mt-5  rounded-full py-2 px-4 flex justify-center items-center gap-3 hover:scale-105 transition duration-300">
+            <button className=" shadow-md  bg-lavender text-primary font-bold   mt-5  rounded-lg py-2 px-4 flex justify-center items-center gap-3 hover:scale-105 transition duration-300">
               <p className=" font-Oswald text-lg">Contact Us Here</p>
               <img src={arrow} alt="" className="max-w-[25px]" />
             </button>
@@ -73,14 +73,16 @@ const TheMessage = () => {
           variants={variants}
           className="shadow-md bg-lavender  w-full      xlg:max-w-[400px] py-[2rem] px-[4rem] mt-5 font-semibold rounded-2xl"
         >
-          Suitable mainly for candidates unique and individual’s needs and
-          requirements.
+          We're personalised and tailored to the individual needs of the each
+          client. No two people are the same and we understand that.
         </motion.div>
         <motion.div
           variants={variants}
           className="shadow-md bg-lavender w-full     xlg:max-w-[400px] py-[2rem] px-[4rem] mt-5 font-semibold rounded-2xl"
         >
-          Two candidates can’t be the same, just like no two Jobs are the same.
+          Your long term goals are our priority, and we'll strive in
+          transitioning you into a role that is both suitable and sustainable
+          for you.
         </motion.div>
       </motion.div>
 
@@ -95,23 +97,22 @@ const TheMessage = () => {
           variants={variants}
           className="shadow-md bg-lavender w-full  xlg:max-w-[400px] py-[2rem] px-[4rem] mt-5 font-semibold rounded-2xl"
         >
-          Our goal is clear and we always will strive in order to locate new
-          creative, innovative and exciting opportunities to have our candidates
-          in a role that’s suitable and sustainable for them.
+          We're strong advocates of choice and control. You are in control of
+          your own life, and we'll help you to make the right choices.
         </motion.div>
         <motion.div
           variants={variants}
           className="shadow-md bg-lavender w-full    xlg:max-w-[400px] py-[2rem] px-[4rem] mt-5 font-semibold rounded-2xl"
         >
-          Employers that are unique and for the individual role.
+          Our staff are our greatet asset. All our staff undergo a 3 step
+          screening interview process to ensure they're the right fit for you.
         </motion.div>
         <motion.div
           variants={variants}
           className="shadow-md bg-lavender   w-full    xlg:max-w-[400px] py-[2rem] px-[4rem] mt-5 font-semibold rounded-2xl"
         >
-          Sustainable for the candidates financial circumstances, long term
-          goals and attitude. Suitable as well for the employers budget, planned
-          growth and work environment.
+          Once our staff are hired, they are provided with regular training to
+          ensure your program is on track and is in line with your goals.
         </motion.div>
       </motion.div>
     </section>

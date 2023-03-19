@@ -22,12 +22,6 @@ const Footer = () => {
           >
             NDIS Services
           </Link>
-          <Link
-            to="ndis-pricing"
-            className="hover:underline-offset-1 hover:underline "
-          >
-            NDIS Pricing
-          </Link>
         </div>
 
         <div className="flex justify-start  flex-col  gap-5 font-Bebas ">
@@ -43,12 +37,6 @@ const Footer = () => {
           >
             Contact
           </Link>
-          <a
-            className="hover:underline-offset-1 hover:underline "
-            href="https://6gitozn79lt.typeform.com/to/c6p2y0pE?typeform-source=jobsrus.com.au"
-          >
-            Refer A Client
-          </a>
         </div>
       </div>
       <p>Copyright © 2023 JobsRUs</p>

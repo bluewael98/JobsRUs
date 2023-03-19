@@ -1,7 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import stackedwave from "../../assets/stackedwave.svg";
-import stackedwavetop from "../../assets/stackedwavetop.svg";
 import TheMessage from "./TheMessage";
 import Heroes from "./Heroes";
 import Reviews from "../../components/Reviews";
@@ -14,6 +12,10 @@ import p1 from "../../assets/p1.png";
 import oneonone from "../../assets/oneonone.JPG";
 import phonebackground from "../../assets/phonebackground.svg";
 import { Link } from "react-router-dom";
+import jobsrus from "../../assets/jobsrus.png";
+import Facts from "./Facts";
+import circle from "../../assets/circles.svg";
+
 const Home = () => {
   const isSmallScreen = useMediaQuery("(max-width: 1080px)");
 
@@ -68,7 +70,7 @@ const Home = () => {
                 ARE.
               </h2>
               <Link to="/contact">
-                <button className="  rounded-3xl items-center  flex justify-center md:py-4 md:px-10 xxs:py-2 xxs:px-6  font-extrabold hover:scale-105 transition duration-300 bg-lavender text-primary my-5 ">
+                <button className="  rounded-lg items-center  flex justify-center md:py-4 md:px-10 xxs:py-2 xxs:px-6  font-extrabold hover:scale-105 transition duration-300 bg-lavender text-primary my-5 ">
                   GET IN TOUCH
                 </button>
               </Link>
@@ -84,7 +86,7 @@ const Home = () => {
         </div>
       ) : (
         // DESKTOP LANDING PAGE
-        <div className="flex flex-col justify-center items-center py-10 font-Oswald font-semibold relative w-screen text-lavender  mb-[220px]">
+        <div className="flex flex-col justify-center items-center py-10 font-Oswald font-semibold relative w-screen text-lavender  mb-[120px]">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -96,26 +98,25 @@ const Home = () => {
             }}
             className="flex justify-center items-center w-screen flex-col z-10 font-Oswald font-extrabold mt-10 "
           >
-            <h1 className="  xs:text-5xl md:text-6xl font-extrabold font-Oswald bottom-4  text-lavender z-10">
-              JOBS R US
-            </h1>
-            <h2 className=" md:text-5xl xs:text-4xl font-Oswald">
-              EMPLOYMENT SUPPORT,
-            </h2>
-            <h2 className=" md:text-5xl xs:text-4xl font-Oswald">
-              AS UNIQUE AS{" "}
-              <span className=" font-extrabold xs:text-4xl md:text-5xl">
-                YOU
-              </span>{" "}
-              ARE.
-            </h2>
+            <div className="flex flex-col justify-center items-center">
+              <img
+                src={jobsrus}
+                alt="jobsrus"
+                className="w-[130px] opacity-100 h-full  object-cover"
+              />
+              <h2 className=" font-Bebas font-extrabold text-5xl text-lavender">
+                JOBS R US
+              </h2>
+            </div>
+
+            <h2 className=" md:text-3xl xs:text-2xl font-Oswald">YOUR GOAL,</h2>
+            <h2 className=" md:text-3xl xs:text-2xl font-Oswald">OUR TARGET</h2>
             <Link to="/contact">
-              <button className="  rounded-3xl items-center  flex justify-center md:py-4 md:px-10 xxs:py-2 xxs:px-6  font-extrabold hover:scale-105 transition duration-300 bg-lavender text-primary my-5 ">
+              <button className="  rounded-lg items-center  flex justify-center md:py-4 md:px-10 xxs:py-2 xxs:px-6  font-extrabold hover:scale-105 transition duration-300 bg-lavender text-primary my-5 ">
                 GET IN TOUCH
               </button>
             </Link>
           </motion.div>
-
           <motion.div
             initial="hidden"
             animate="visible"
@@ -123,7 +124,7 @@ const Home = () => {
             className="flex items-center justify-center w-3/4  gap-10 z-[10]  "
           >
             <motion.div variants={variants}>
-              <Link to="/ndis-services" className="z-10">
+              <Link to="/ndis-services#eso" className="z-10">
                 <div className=" overflow-hidden cursor-pointer  flex justify-center items-centr w-full z-10 xlg:p-2 bg-lavender rounded-[20%] shadow-md hover:scale-105 transition duration-300 mt-[100px]  max-h-[250px] ">
                   <div className="bg-black  overflow-hidden rounded-[20%] relative flex justify-center items-center">
                     <img
@@ -140,7 +141,7 @@ const Home = () => {
             </motion.div>
 
             <motion.div variants={variants}>
-              <Link to="/ndis-services" className="z-10">
+              <Link to="/ndis-services#spa" className="z-10">
                 <div className=" overflow-hidden  flex justify-center items-centr w-full z-10 xlg:p-2 bg-lavender rounded-[20%] shadow-md hover:scale-105 transition duration-300  max-h-[250px]  ">
                   <div className="bg-black  overflow-hidden rounded-[20%] relative flex justify-center items-center">
                     <img
@@ -157,7 +158,7 @@ const Home = () => {
             </motion.div>
 
             <motion.div variants={variants}>
-              <Link to="/ndis-services" className="z-10">
+              <Link to="/ndis-services#sles" className="z-10">
                 <div className=" overflow-hidden  flex justify-center items-centr w-full z-10 xlg:p-2 bg-lavender rounded-[20%] shadow-md hover:scale-105 transition duration-300 mt-[100px]  max-h-[250px]  ">
                   <div className="bg-black  overflow-hidden rounded-[20%] relative flex justify-center items-center">
                     <img
@@ -174,7 +175,7 @@ const Home = () => {
             </motion.div>
 
             <motion.div variants={variants}>
-              <Link to="/ndis-services" className="z-10">
+              <Link to="ndis-services#group" className="z-10">
                 <div className=" overflow-hidden  flex justify-center items-centr  w-full   z-10 xlg:p-2 bg-lavender relative rounded-[20%] shadow-md hover:scale-105 transition duration-300 max-h-[250px]">
                   <div className="bg-black  overflow-hidden rounded-[20%] flex justify-center  items-center   w-full">
                     <img
@@ -190,8 +191,7 @@ const Home = () => {
               </Link>
             </motion.div>
           </motion.div>
-
-          <div className="w-screen h-3/4 absolute top-0 opacity-100  z-[5] bg-primary overflow-hidden ">
+          <div className="w-screen h-3/4 absolute  top-0 opacity-100  z-[5] bg-primary overflow-hidden ">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -207,10 +207,18 @@ const Home = () => {
                 alt=""
                 className="absolute w-[900px] xlg:left-[-200px] lg:left-[-280px] md:left-[-290px]  z-[7]"
               />
+              <img
+                src={circle}
+                alt=""
+                className=" w-screen h-screen object-cover translate-x-0 top-0 mx-auto  z-[6] opacity-30 mix-blend-darker"
+              />
             </motion.div>
           </div>
         </div>
       )}
+
+      {/* EMPLOYMENT SUPPORT AS UNIQUE AS YOU ARE */}
+      <Facts />
 
       {/* HEROES SECTION */}
       <section>
@@ -227,25 +235,34 @@ const Home = () => {
       </section>
 
       {/* CONTACT SECTION */}
-      <section className="bg-primary flex sm:flex-row xxs:flex-col justify-center font-Oswald text-lavender gap-10 px-5 mb-20 py-5 items-start">
-        <div className="flex flex-col sm:w-[500px] xxs:w-full my-5">
+      <section className=" flex sm:flex-row xxs:flex-col justify-center font-Oswald text-primary gap-10 px-5 mb-20 py-5 items-start relative">
+        <div className="flex flex-col sm:w-[500px] xxs:w-full my-5 z-10 bg-primary text-lavender rounded-lg pl-5 ">
           <h1 className="text-2xl font-bold  my-5">OUR DETAILS</h1>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-2">
             <h2 className="text-xl font-bold ">Our Address</h2>
             <p>
-              Suite 6, 75 Rickard Rd, Bankstown corner (Corner of 443 Chapel Rd
-              Bankstown) NSW 2200.
+              <a
+                href="https://goo.gl/maps/du94CGnpjmnUndcH8"
+                className="cursor-pointer underline-offset-3"
+              >
+                Suite 6, 75 Rickard Rd, Bankstown corner NSW 2200.
+              </a>{" "}
+            </p>
+            <p> (Corner of 443 Chapel Rd Bankstown)</p>
+            <p className="mb-[30px]">
+              We are opposite Bankstown library, New Western Sydney University &
+              only 500m from Bankstown Tafe.
             </p>
             <h2 className="text-xl font-bold ">Email</h2>
-            <p>info@jobsrus.com.au</p>
+            <p className="mb-[30px]">info@jobsrus.com.au</p>
             <h2 className="text-xl font-bold ">Phone</h2>
-            <p>02 9703 5732</p>
+            <p className="mb-[30px]">02 9703 5732</p>
             <h2 className="text-xl font-bold ">Mobile</h2>
-            <p>0450 518 508</p>
+            <p className="mb-[30px]">0450 518 508</p>
           </div>
         </div>
-        <div className="flex flex-col sm:w-[500px] xxs:w-full mt-5 items-start">
-          <h1 className="text-2xl font-bold  my-5">CONTACT FORM</h1>
+        <div className="flex flex-col sm:w-[500px] xxs:w-full mt-5 items-start z-10">
+          <h1 className="text-2xl font-bold  my-5">CONTACT US HERE</h1>
           <ContactForm />
         </div>
       </section>
