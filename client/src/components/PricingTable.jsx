@@ -144,7 +144,7 @@ const rows = [
 
   createData(
     "Employment counselling",
-    "$S193.99",
+    "$193.99",
     "",
     "",
     "",
