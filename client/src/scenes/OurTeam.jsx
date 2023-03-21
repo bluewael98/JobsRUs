@@ -12,7 +12,6 @@ import Tahlia from "../assets/team/Tahlia.jpg";
 import Dancia from "../assets/team/Dancia.jpg";
 import Zeinah from "../assets/team/Zeinah.jpg";
 import Alfred from "../assets/team/Alfred.jpg";
-import user from "../assets/user.svg";
 import Fish from "../assets/team/Fish.jpg";
 import screening from "../assets/screening.svg";
 import support from "../assets/support.svg";
@@ -20,6 +19,7 @@ import standtogether from "../assets/standtogether.svg";
 import useMediaQuery from "../hooks/useMediaQuery";
 import WeAreHiring from "../components/WeAreHiring";
 import circles from "../assets/circles.svg";
+import cpi from "../assets/cpi.jpg";
 
 const OurTeam = () => {
   const [open, setOpen] = useState(null);
@@ -198,6 +198,13 @@ const OurTeam = () => {
             <h2 className=" text-lg font-semibold text-alt2 my-2">
               Managing Director
             </h2>
+
+            <div className="flex justify-center items-center gap-2 ">
+              <h2 className=" text-lg font-semibold text-alt2 ">
+                CPI Safety Intervention Trainer
+              </h2>
+              <img src={cpi} alt="cpi" className="w-[30px] rounded-full" />
+            </div>
             <p className="w-[240px] text-alt2 font-semibold">
               Fluent in Arabic.
             </p>
@@ -300,6 +307,12 @@ const OurTeam = () => {
                 Amina
               </h2>
               <h2 className=" text-lg font-semibold text-alt2 my-2">Manager</h2>
+              <div className="flex justify-center items-center ">
+                <h2 className=" text-lg font-semibold text-alt2 gap-2 ">
+                  CPI Safety Intervention Trained
+                </h2>
+                <img src={cpi} alt="cpi" className="w-[30px] rounded-full" />
+              </div>
               <p className="w-[240px] text-alt2 font-semibold text-center">
                 Fluent in Arabic.
               </p>
@@ -395,6 +408,12 @@ const OurTeam = () => {
               <h2 className=" text-lg font-semibold text-alt2 my-2">
                 Team Leader
               </h2>
+              <div className="flex justify-center items-center gap-2 ">
+                <h2 className=" text-lg font-semibold text-alt2 ">
+                  CPI Safety Intervention Trained
+                </h2>
+                <img src={cpi} alt="cpi" className="w-[30px] rounded-full" />
+              </div>
               <p className="w-[240px] text-alt2 font-semibold text-center">
                 Fluent in Samoan.
               </p>
@@ -492,6 +511,12 @@ const OurTeam = () => {
               <h2 className=" text-lg font-semibold text-alt2 my-2">
                 Support Worker
               </h2>
+              <div className="flex justify-center items-center gap-2  ">
+                <h2 className=" text-lg font-semibold text-alt2 ">
+                  CPI Safety Intervention Trained
+                </h2>
+                <img src={cpi} alt="cpi" className="w-[30px] rounded-full" />
+              </div>
               <p className="w-[240px] text-alt2 font-semibold text-center">
                 Limited Arabic.
               </p>
@@ -598,6 +623,12 @@ const OurTeam = () => {
               <h2 className=" text-lg font-semibold text-alt2 my-2">
                 Employment Specialist
               </h2>
+              <div className="flex justify-center items-center gap-2 ">
+                <h2 className=" text-lg font-semibold text-alt2 ">
+                  CPI Safety Intervention Trained
+                </h2>
+                <img src={cpi} alt="cpi" className="w-[30px] rounded-full" />
+              </div>
               <p className="w-[240px] text-alt2 font-semibold text-center">
                 Fluent in Arabic.
               </p>
@@ -696,6 +727,12 @@ const OurTeam = () => {
               <h2 className=" text-lg font-semibold text-alt2 my-2">
                 Employment Specialist
               </h2>
+              <div className="flex justify-center items-center gap-2 ">
+                <h2 className=" text-lg font-semibold text-alt2 ">
+                  CPI Safety Intervention Trained
+                </h2>
+                <img src={cpi} alt="cpi" className="w-[30px] rounded-full" />
+              </div>
               <p className="w-[240px] text-alt2 font-semibold text-center">
                 Fluent in Arabic.
               </p>
@@ -800,6 +837,12 @@ const OurTeam = () => {
               <h2 className=" text-lg font-semibold text-alt2 my-2">
                 Employment Specialist
               </h2>
+              <div className="flex justify-center items-center gap-2 ">
+                <h2 className=" text-lg font-semibold text-alt2 ">
+                  CPI Safety Intervention Trained
+                </h2>
+                <img src={cpi} alt="cpi" className="w-[30px] rounded-full" />
+              </div>
               <p className="w-[240px] text-alt2">
                 Hi, im Corey, and my background is in counselling and music. I
                 have a passion for bringing....
@@ -902,6 +945,12 @@ const OurTeam = () => {
               <h2 className=" text-lg font-semibold text-alt2 my-2">
                 Employment Specialist
               </h2>
+              <div className="flex justify-center items-center gap-2 ">
+                <h2 className=" text-lg font-semibold text-alt2 ">
+                  CPI Safety Intervention Trained
+                </h2>
+                <img src={cpi} alt="cpi" className="w-[30px] rounded-full" />
+              </div>
               <p className="w-[240px] text-alt2">Hi, I'm Tahlia..</p>
               <p>&#8203;</p>
               <p>&#8203;</p>
@@ -991,6 +1040,7 @@ const OurTeam = () => {
                 My name is Danica, I have a background in psychology and I’m
                 working towards....
               </p>
+              <p>&nbsp;</p>
             </div>
             <Transition
               show={open === "dancia"}
@@ -1098,6 +1148,7 @@ const OurTeam = () => {
               <p className="w-[240px] text-alt2">Hi, I'm Zeinah...</p>
               <p>&#8203;</p>
               <p>&#8203;</p>
+              <p>&nbsp;</p>
             </div>
             <Transition
               show={open === "zeinah"}
@@ -1141,95 +1192,6 @@ const OurTeam = () => {
                     </Dialog.Title>
                     <div className="mt-2 text-xl text-alt2 text-center flex flex-col gap-3">
                       <p>Hi, I'm Zeinah...</p>
-                    </div>
-
-                    <div className="mt-4">
-                      <button
-                        type="button"
-                        className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-md hover:bg-primary-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
-                        onClick={() => setOpen(false)}
-                      >
-                        Close
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </Dialog>
-            </Transition>
-          </Fragment>
-
-          {/* Layal */}
-          <Fragment>
-            <div className="flex justify-center items-center flex-col text-center">
-              <div
-                className="rounded-full  bg-primary flex flex-col justify-center items-center content-center w-[220px] h-[220px] hover:scale-105 cursor-pointer transition: duration-500"
-                onClick={() => openModal("layal")}
-              >
-                <img
-                  src={user}
-                  alt=""
-                  className="rounded-full w-[200px] h-[200px] object-cover"
-                />
-              </div>
-              <h2 className=" text-xl font-semibold text-primary mt-5">
-                LAYAL
-              </h2>
-              <h2 className=" text-lg font-semibold text-alt2 my-2">
-                Employment Specialist
-              </h2>
-              <p className="w-[240px] text-alt2">
-                Hi, My name is layal majzoub. Im a professional and personable
-                life coach with 10...
-              </p>
-            </div>
-            <Transition
-              show={open === "layal"}
-              enter="transition duration-500 ease-out"
-              enterFrom="transform scale-100 opacity-0"
-              enterTo="transform scale-100 opacity-100"
-              leave="transition duration-300 ease-out"
-              leaveFrom="transform scale-100 opacity-100"
-              leaveTo="transform scale-100 opacity-0"
-              as={Fragment}
-            >
-              <Dialog
-                as="div"
-                className="fixed inset-0 z-50 overflow-y-auto"
-                onClose={closeModal}
-              >
-                <div className="min-h-screen px-4 text-center">
-                  <Dialog.Overlay className="fixed inset-0 bg-black opacity-30" />
-
-                  <span
-                    className="inline-block h-screen align-middle"
-                    aria-hidden="true"
-                  >
-                    &#8203;
-                  </span>
-
-                  <div className="inline-block w-full max-w-[600px] p-10 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
-                    <Dialog.Title
-                      as="h3"
-                      className="text-lg flex flex-col gap-3 justify-center items-center leading-6"
-                    >
-                      <p className=" text-primary font-semibold text-3xl">
-                        LAYAL
-                      </p>
-                      <p className=" text-alt2 font-semibold text-2xl">
-                        Employment Support Officer.
-                      </p>
-                    </Dialog.Title>
-                    <div className="mt-2 text-xl text-alt2 text-center flex flex-col gap-3">
-                      <p>
-                        Hi, My name is Layal majzoub. Im a professional and
-                        personable life coach with 10 years of experience in
-                        youth and community services. Skilled in holistic
-                        intuitive coaching, trauma informed care and youth led
-                        services. My values are underpinned by authenticity and
-                        compassionate integrity. I love supporting our local
-                        community and building on peoples strengths; for
-                        individuals to flourish and thrive.{" "}
-                      </p>
                     </div>
 
                     <div className="mt-4">

@@ -22,6 +22,10 @@ const NDISPricing = () => {
           JOBS <span className=" text-alt2">R</span> US
         </h1>
         <h2>
+          We're transparent with our pricing, and we're here to help you choose
+          the right service.
+        </h2>
+        <h2>
           We provide multiple services to assist you in accessing your desired
           employment goals.
         </h2>

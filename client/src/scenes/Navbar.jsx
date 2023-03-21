@@ -174,14 +174,14 @@ const Navbar = ({ isTopOfPage }) => {
                 CONTACT
               </h2>
             </Link>
-            <a
-              href="https://6gitozn79lt.typeform.com/to/c6p2y0pE?typeform-source=jobsrus.com.au"
+            <Link
+              to="/join-our-team"
               className="group text-lavender transition-all duration-300 ease-in-out"
             >
               <h2 className="bg-left-bottom bg-primary bg-gradient-to-r from-lavender to-lavender bg-[length:0%_40px] bg-no-repeat group-hover:bg-[length:100%_40px] group-hover:opacity-80 group-hover:text-primary transition-all duration-500 ease-out py-2 px-3 rounded-full">
                 JOIN OUR TEAM
               </h2>
-            </a>
+            </Link>
           </div>
         </div>
       ) : (

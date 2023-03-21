@@ -6,7 +6,7 @@ import location from "../assets/location.svg";
 import email from "../assets/email.svg";
 import phone from "../assets/phone.svg";
 import mobile from "../assets/mobile.svg";
-import wearehere from "../assets/wearehere.png";
+import wearehere from "../assets/wearehere.JPG";
 import circles from "../assets/circles.svg";
 const Contact = () => {
   const [open, setOpen] = useState(null);
@@ -67,7 +67,7 @@ const Contact = () => {
                     <img
                       src={wearehere}
                       alt=""
-                      className="w-[200px] shadow-sm bg-lavender rounded-3xl hover:scale-105 object-cover cursor-pointer transition-all ease-out duration-500"
+                      className="w-[200px] shadow-sm rounded-3xl hover:scale-[200%] object-cover cursor-pointer transition-all ease-out duration-500"
                     />
                     <Transition
                       show={open === "location"}

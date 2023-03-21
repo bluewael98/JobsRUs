@@ -9,6 +9,7 @@ import NDISPricing from "./scenes/NDISPricing";
 import OurTeam from "./scenes/OurTeam";
 import Contact from "./scenes/Contact";
 import Referral from "./scenes/Referral";
+import WorkWithUs from "./scenes/Home/WorkWithUs";
 import Footer from "./scenes/Footer";
 import jobsrus from "./assets/jobsrus.png";
 
@@ -48,6 +49,8 @@ function App() {
         <Route path='/our-team' element={<OurTeam />} />
 
         <Route path='/contact' element={<Contact />} />
+
+        <Route path="/join-our-team" element={<WorkWithUs />} />
 
         
       </Routes>

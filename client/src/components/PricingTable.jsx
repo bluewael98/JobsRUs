@@ -88,11 +88,11 @@ function createData(
 const rows = [
   createData(
     "Employment support",
-    64.04,
-    70.56,
-    90.14,
-    116.24,
-    142.35,
+    "$64.04",
+    "$70.56",
+    "$90.14",
+    "$116.24",
+    "$142.35",
     "Weekday Daytime – TTP ",
     "Weekday Evening – TTP",
     "Saturday – TTP",
@@ -106,10 +106,10 @@ const rows = [
   ),
   createData(
     "Increased Social & Community Participation",
-    70.87,
-    70.87,
-    70.87,
-    70.87,
+    "$70.87",
+    "$70.87",
+    "$70.87",
+    "$70.87",
     "",
     "Life Transition Planning Incl. Mentoring Peer-Support And Indiv Skill Development",
     "Innovative Community Participation",
@@ -125,18 +125,18 @@ const rows = [
   createData(
     "SLES",
     "",
+    "$70.87 ",
     "",
     "",
     "",
-    "",
-    "Prices vary, contact for quotes.",
-    "",
+    "SLES is run as a 10 week program and reviewed in the two week holidays/break between the programs. During those two weeks we will review progress and outcomes and make recommendations for the following term.",
+    "School Leaver Employment Supports",
     "",
     "",
     "",
 
     "",
-    "",
+    "10_021_0102_5_3",
     "",
     "",
     ""
@@ -144,7 +144,7 @@ const rows = [
 
   createData(
     "Employment counselling",
-    193.99,
+    "$S193.99",
     "",
     "",
     "",
@@ -231,27 +231,27 @@ export default function PricingTable() {
                     </TableRow>
                     <TableRow>
                       <TableCell align="left">{row.description1}</TableCell>
-                      <TableCell align="left">${row.price1}</TableCell>
+                      <TableCell align="left">{row.price1}</TableCell>
                       <TableCell align="right">{row.detail1}</TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell align="left">{row.description2}</TableCell>
-                      <TableCell align="left">${row.price2}</TableCell>
+                      <TableCell align="left">{row.price2}</TableCell>
                       <TableCell align="right">{row.detail2}</TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell align="left">{row.description3}</TableCell>
-                      <TableCell align="left">${row.price3}</TableCell>
+                      <TableCell align="left">{row.price3}</TableCell>
                       <TableCell align="right">{row.detail3}</TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell align="left">{row.description4}</TableCell>
-                      <TableCell align="left">${row.price4}</TableCell>
+                      <TableCell align="left">{row.price4}</TableCell>
                       <TableCell align="right">{row.detail4}</TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell align="left">{row.description5}</TableCell>
-                      <TableCell align="left">${row.price5}</TableCell>
+                      <TableCell align="left">{row.price5}</TableCell>
                       <TableCell align="right">{row.detail5}</TableCell>
                     </TableRow>
                   </Table>
