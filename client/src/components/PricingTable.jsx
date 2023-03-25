@@ -123,7 +123,7 @@ const rows = [
     ""
   ),
   createData(
-    "SLES",
+    "SLES (School Leavers Employment Support)",
     "",
     "$70.87 ",
     "",
@@ -168,9 +168,13 @@ const ExpandableTableRow = ({ children, expandComponent, ...otherProps }) => {
 
   return (
     <>
-      <TableRow {...otherProps}>
+      <TableRow
+        {...otherProps}
+        onClick={() => setIsExpanded(!isExpanded)}
+        className="cursor-pointer"
+      >
         <TableCell padding="checkbox">
-          <IconButton onClick={() => setIsExpanded(!isExpanded)}>
+          <IconButton>
             {isExpanded ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
           </IconButton>
         </TableCell>

@@ -20,6 +20,8 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import WeAreHiring from "../components/WeAreHiring";
 import circles from "../assets/circles.svg";
 import cpi from "../assets/cpi.jpg";
+import user from "../assets/user.svg";
+import ContactTransition from "../components/ContactTransition";
 
 const OurTeam = () => {
   const [open, setOpen] = useState(null);
@@ -34,7 +36,7 @@ const OurTeam = () => {
     setOpen(null);
   };
   return (
-    <section className=" flex justify-center flex-col mt-[80px] pb-[200px] items-center font-Oswald">
+    <section className=" flex justify-center flex-col mt-[80px] items-center font-Oswald">
       <WeAreHiring />
       {/* HEADER */}
       {isLargeDevice ? (
@@ -148,7 +150,7 @@ const OurTeam = () => {
             </h1>
             <h1 className="md:text-5xl xxs:text-2xl  font text-primary">
               {" "}
-              Honest, empathetic, reliable, and open-minded individuals.
+              Honest, Empathetic, Eeliable, and Open-minded individuals.
             </h1>
             <p className="text-lg text-alt2 text-semibold font-Oswald ">
               At Jobs R Us, we thoroughly screen our staff to ensure we hire
@@ -603,6 +605,105 @@ const OurTeam = () => {
               </Dialog>
             </Transition>
           </Fragment>
+          {/* KHADEEJA */}
+          <Fragment>
+            <div className="flex justify-center items-center flex-col text-center">
+              <div
+                className="rounded-full  bg-primary flex flex-col justify-center items-center content-center w-[220px] h-[220px] hover:scale-105 cursor-pointer transition: duration-500"
+                onClick={() => openModal("khadeeja")}
+              >
+                <img
+                  src={user}
+                  alt=""
+                  className="rounded-full w-[200px] h-[200px] object-cover"
+                />
+              </div>
+              <h2 className=" text-xl font-semibold text-primary mt-5">
+                KHADEEJA
+              </h2>
+              <h2 className=" text-lg font-semibold text-alt2 my-2">
+                Employment Specialist
+              </h2>
+              <div className="flex justify-center items-center gap-2  ">
+                <h2 className=" text-lg font-semibold text-alt2 ">
+                  CPI Safety Intervention Trained
+                </h2>
+                <img src={cpi} alt="cpi" className="w-[30px] rounded-full" />
+              </div>
+              <p className="w-[240px] text-alt2 font-semibold text-center">
+                Fluenr in Arabic.
+              </p>
+              <p className="w-[240px] text-alt2">
+                Hi, my name is Khadeja, and I am currently studying a Bachelor
+                of Primary and Special Education...
+              </p>
+            </div>
+            <Transition
+              show={open === "khadeeja"}
+              enter="transition duration-500 ease-out"
+              enterFrom="transform scale-100 opacity-0"
+              enterTo="transform scale-100 opacity-100"
+              leave="transition duration-300 ease-out"
+              leaveFrom="transform scale-100 opacity-100"
+              leaveTo="transform scale-100 opacity-0"
+              as={Fragment}
+            >
+              <Dialog
+                as="div"
+                className="fixed inset-0 z-50 overflow-y-auto"
+                onClose={closeModal}
+              >
+                <div className="min-h-screen px-4 text-center">
+                  <Dialog.Overlay className="fixed inset-0 bg-black opacity-30" />
+
+                  <span
+                    className="inline-block h-screen align-middle"
+                    aria-hidden="true"
+                  >
+                    &#8203;
+                  </span>
+
+                  <div className="inline-block w-full max-w-[600px] p-10 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+                    <Dialog.Title
+                      as="h3"
+                      className="text-lg flex flex-col gap-3 justify-center items-center leading-6"
+                    >
+                      <p className=" text-primary font-semibold text-3xl">
+                        KHADEEJA
+                      </p>
+                      <p className=" text-alt2 font-semibold text-2xl">
+                        Employment Specialist
+                      </p>
+                      <p className="w-[240px] text-alt2 font-semibold text-center">
+                        Fluent in Arabic.
+                      </p>
+                    </Dialog.Title>
+                    <div className="mt-2 text-xl text-alt2 text-center flex flex-col gap-3">
+                      <p>
+                        Hi, my name is Khadeja, and I am currently studying a
+                        Bachelor of Primary and Special Education. I have a
+                        passion to make a difference in the education system and
+                        I aspire to make a change. I believe in equality for all
+                        individuals regardless of their abilities. Working with
+                        JobsRus will allow me to work further towards my goals
+                        and aspirations.
+                      </p>
+                    </div>
+
+                    <div className="mt-4">
+                      <button
+                        type="button"
+                        className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-md hover:bg-primary-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
+                        onClick={() => setOpen(false)}
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </Dialog>
+            </Transition>
+          </Fragment>
 
           {/* MARYAM */}
           <Fragment>
@@ -1033,6 +1134,12 @@ const OurTeam = () => {
               <h2 className=" text-lg font-semibold text-alt2 my-2">
                 Employment Specialist
               </h2>
+              <div className="flex justify-center items-center gap-2 ">
+                <h2 className=" text-lg font-semibold text-alt2 ">
+                  CPI Safety Intervention Trainer
+                </h2>
+                <img src={cpi} alt="cpi" className="w-[30px] rounded-full" />
+              </div>
               <p className="w-[240px] text-alt2 font-semibold text-center">
                 Fluent in Filipino.
               </p>
@@ -1040,7 +1147,6 @@ const OurTeam = () => {
                 My name is Danica, I have a background in psychology and I’m
                 working towards....
               </p>
-              <p>&nbsp;</p>
             </div>
             <Transition
               show={open === "dancia"}
@@ -1376,6 +1482,7 @@ const OurTeam = () => {
           </Fragment>
         </div>
       </div>
+      <ContactTransition />
     </section>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import ContactTransition from "../components/ContactTransition";
 import dogood from "../assets/dogood.svg";
 import giveourbest from "../assets/giveourbest.svg";
 import standtogether from "../assets/standtogether.svg";
@@ -22,7 +23,7 @@ const AboutUs = () => {
   };
 
   return (
-    <section className=" flex justify-center flex-col mt-[80px] pb-[200px] items-center font-Oswald overflow-hidden">
+    <section className=" flex justify-center flex-col mt-[80px]  items-center font-Oswald overflow-hidden">
       <div className="w-[100%] bg-primary relative flex justify-center items-center md:h-[220px] xxs:h-[150px] overflow-hidden z-10 mb-5">
         <div className="flex flex-col justify-center ">
           <h1 className="  xxs:text-5xl md:text-6xl font-extrabold font-Oswald bottom-4  text-lavender z-10 ">
@@ -82,7 +83,7 @@ const AboutUs = () => {
 
             <p className="max-w-[800px] mt-10 text-alt2 text-2xl">
               An employment provider, with a{" "}
-              <span className="font-semibold">differnce.</span>{" "}
+              <span className="font-semibold">difference.</span>{" "}
             </p>
             <div className="flex justify-center items-center gap-8 mt-10">
               <button onClick={() => handleClickScrol("integrity")}>
@@ -237,7 +238,7 @@ const AboutUs = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.5 }}
+                transition={{ duration: 0.5 }}
                 variants={{
                   hidden: { opacity: 0, x: -200 },
                   visible: { opacity: 1, x: 0 },
@@ -264,7 +265,7 @@ const AboutUs = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.5 }}
+                transition={{ duration: 0.5 }}
                 variants={{
                   hidden: { opacity: 0, x: 200 },
                   visible: { opacity: 1, x: 0 },
@@ -287,19 +288,19 @@ const AboutUs = () => {
                   </div>
                 </div>
               </motion.div>
-              {/* WE CARE */}
+              {/* CARE */}
               <motion.div
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.5 }}
+                transition={{ duration: 0.5 }}
                 variants={{
                   hidden: { opacity: 0, x: -200 },
                   visible: { opacity: 1, x: 0 },
                 }}
                 className="flex flex-col items-center justify-center relative mt-[150px] h-[50%]"
               >
-                <p className="text-3xl font-semibold">WE CARE</p>
+                <p className="text-3xl font-semibold"> CARE</p>
                 <div className="flex justify-center flex-col align-top w-screen relative">
                   <div className="bg-alt2 text-lavender mt-10 p-[2rem] text-xl font-Oswald rounded-t-2xl">
                     <p className=" text-center">
@@ -329,7 +330,7 @@ const AboutUs = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
+                transition={{ duration: 0.5 }}
                 variants={{
                   hidden: { opacity: 0, x: 200 },
                   visible: { opacity: 1, x: 0 },
@@ -366,7 +367,7 @@ const AboutUs = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
+                transition={{ duration: 0.5 }}
                 variants={{
                   hidden: { opacity: 0, x: -200 },
                   visible: { opacity: 1, x: 0 },
@@ -395,7 +396,7 @@ const AboutUs = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
+                transition={{ duration: 0.5 }}
                 variants={{
                   hidden: { opacity: 0, x: 200 },
                   visible: { opacity: 1, x: 0 },
@@ -425,7 +426,7 @@ const AboutUs = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
+                transition={{ duration: 0.5 }}
                 variants={{
                   hidden: { opacity: 0, x: -200 },
                   visible: { opacity: 1, x: 0 },
@@ -451,12 +452,12 @@ const AboutUs = () => {
                   </div>
                 </div>
               </motion.div>
-              {/* WE CARE */}
+              {/*  CARE */}
               <motion.div
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
+                transition={{ duration: 0.5 }}
                 variants={{
                   hidden: { opacity: 0, x: 200 },
                   visible: { opacity: 1, x: 0 },
@@ -465,7 +466,7 @@ const AboutUs = () => {
                 id="care"
               >
                 <p className="absolute top-0 left-0 text-3xl font-semibold">
-                  WE CARE
+                  CARE
                 </p>
                 <div className="flex justify-center align-top w-[600px] relative">
                   <div className="bg-alt2 text-lavender mt-10 p-[2rem] text-xl font-Oswald rounded-2xl ">
@@ -489,6 +490,7 @@ const AboutUs = () => {
           </div>
         )}
       </div>
+      <ContactTransition />
     </section>
   );
 };

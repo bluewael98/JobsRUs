@@ -13,6 +13,7 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import arrowdown from "../assets/arrowdown.svg";
 import { useLocation } from "react-router-dom";
 import circles from "../assets/circles.svg";
+import ContactTransition from "../components/ContactTransition";
 
 const NDISServices = () => {
   const isLargeDevice = useMediaQuery("(min-width: 1440px)");
@@ -44,7 +45,7 @@ const NDISServices = () => {
   }, [location]);
 
   return (
-    <section className=" flex justify-center flex-col mt-[80px] pb-[200px] items-center overflow-hidden relative">
+    <section className=" flex justify-center flex-col mt-[80px]  items-center overflow-hidden relative">
       {/* HEADER */}
       {isLargeDevice ? (
         <div className="w-screen  bg-primary relative flex justify-between overflow-hidden  mb-[5rem]">
@@ -53,7 +54,7 @@ const NDISServices = () => {
               Empowering clients,
             </h1>
             <h1 className="  xxs:text-4xl md:text-6xl font-extrabold font-Oswald bottom-4  text-lavender z-10 ">
-              through personalized programs.
+              through Personalised programs.
             </h1>
             <button className="py-[0.5rem] px-[0.5rem] w-[150px] rounded-lg font-bold text-primary ml-[500px] mt-[20px] bg-lavender hover:scale-105 transition duration-200 z-10">
               Contact Us
@@ -147,7 +148,7 @@ const NDISServices = () => {
                 <p className="">
                   Can’t be all work and no play, we have our leisure days on
                   Saturday’s fortnightly so you can unwind from your capacity
-                  building goals..
+                  building goals.
                 </p>
                 <img src={empowering} alt="" className="w-[75px] mb-10 mt-3" />
                 <GroupActivities />
@@ -156,7 +157,8 @@ const NDISServices = () => {
               <div className="flex flex-col justify-center align-top items-center mt-1">
                 <p>
                   Our supports are delivered as part of the NDIS ‘finding and
-                  keeping a job’ category.
+                  keeping a job’ and ‘Increased Social and Community
+                  Participation’ category.
                 </p>
                 <img src={ndis} className="w-[100px]  " alt="" />
               </div>
@@ -211,7 +213,7 @@ const NDISServices = () => {
                   </h1>
                   <p className="mr-10">
                     From SLES regardless of your transition you will have an
-                    Employment specialist help tailor a capacity building
+                    Employment Specialist help tailor a capacity building
                     program for your continued supports in employment.
                   </p>
                 </div>
@@ -236,7 +238,7 @@ const NDISServices = () => {
                   </h1>
                   <p className="mr-10">
                     A cost-effective way to help you follow through with the
-                    employment specialist tailored program to achieve whatever
+                    Employment Specialist tailored program to achieve whatever
                     your employment goals are.
                   </p>
                 </div>
@@ -262,7 +264,7 @@ const NDISServices = () => {
                   <p className="mr-10">
                     Can’t be all work and no play, we have our leisure days on
                     Saturday’s fortnightly so you can unwind from your capacity
-                    building goals..
+                    building goals.
                   </p>
                 </div>
                 <div className="bg-alt2 w-[300px] h-[300px] rounded-full z-10 absolute left-[-240px] top-[-20px] flex justify-center items-center">
@@ -276,7 +278,8 @@ const NDISServices = () => {
               <div className="flex justify-center align-top items-center mt-1">
                 <p>
                   Our supports are delivered as part of the NDIS ‘finding and
-                  keeping a job’ category.
+                  keeping a job’ and ‘Increased Social and Community
+                  Participation’ category.
                 </p>
                 <img src={ndis} className="w-[100px] ml-[10px]  " alt="" />
               </div>
@@ -284,6 +287,7 @@ const NDISServices = () => {
           </div>
         </div>
       )}
+      <ContactTransition />
     </section>
   );
 };

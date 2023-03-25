@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimateSharedLayout } from "framer-motion";
 import { Diversity3 } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 import ourteamheader from "../assets/ourteamheader.JPG";
 import "./styles.css";
 
@@ -74,19 +75,21 @@ function DataButton({ data, onCollapse, onExpand, disabled }) {
             <Content data={data} disabled={disabled} />
           </ExpandedCard>
         ) : (
-          <CompactCard
-            onExpand={expandData}
-            onCollapse={collapseData}
-            disabled={disabled}
-            data={data}
-          >
-            <Content data={data} disabled={disabled} showSubtitle={false} />
-            <img
-              src={ourteamheader}
-              className="h-[150px] w-[150px] rounded-full bg-primary p-2 shadow-lg "
-              alt=""
-            />
-          </CompactCard>
+          <Link to="/ndis-services#group">
+            <CompactCard
+              onExpand={expandData}
+              onCollapse={collapseData}
+              disabled={disabled}
+              data={data}
+            >
+              <Content data={data} disabled={disabled} showSubtitle={false} />
+              <img
+                src={ourteamheader}
+                className="h-[150px] w-[150px] rounded-full bg-primary p-2 shadow-lg "
+                alt=""
+              />
+            </CompactCard>
+          </Link>
         )}
       </AnimateSharedLayout>
     </div>

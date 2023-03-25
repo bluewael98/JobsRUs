@@ -72,7 +72,7 @@ const Navbar = ({ isTopOfPage }) => {
               </h2>
               {navbarLarge ? (
                 <h1 className="font-Bebas text-sm ml-4 text-primary font-extrabold">
-                  Your goal, our target.
+                  Your Goal, Our Target.
                 </h1>
               ) : (
                 ""
@@ -177,6 +177,7 @@ const Navbar = ({ isTopOfPage }) => {
             <Link
               to="/join-our-team"
               className="group text-lavender transition-all duration-300 ease-in-out"
+              onClick={handleClick}
             >
               <h2 className="bg-left-bottom bg-primary bg-gradient-to-r from-lavender to-lavender bg-[length:0%_40px] bg-no-repeat group-hover:bg-[length:100%_40px] group-hover:opacity-80 group-hover:text-primary transition-all duration-500 ease-out py-2 px-3 rounded-full">
                 JOIN OUR TEAM
@@ -236,6 +237,9 @@ const Navbar = ({ isTopOfPage }) => {
               </Link>
               <Link to="/refer-client" onClick={handleClick}>
                 <h2>REFER A CLIENT</h2>
+              </Link>
+              <Link to="/join-our-team" onClick={handleClick}>
+                <h2>JOIN OUR TEAM</h2>
               </Link>
             </div>
           </motion.div>

@@ -1,5 +1,4 @@
-import React, { useState, Fragment } from "react";
-import { Dialog, Transition } from "@headlessui/react";
+import React from "react";
 import blobscatter from "../assets/blobscatter.svg";
 import ContactForm from "../components/ContactForm";
 import location from "../assets/location.svg";
@@ -9,14 +8,6 @@ import mobile from "../assets/mobile.svg";
 import wearehere from "../assets/wearehere.JPG";
 import circles from "../assets/circles.svg";
 const Contact = () => {
-  const [open, setOpen] = useState(null);
-  const openModal = (id) => {
-    setOpen(id);
-  };
-
-  const closeModal = (id) => {
-    setOpen(null);
-  };
   return (
     <section className=" flex justify-center flex-col mt-[80px]  items-center font-Bebas xxs:text ">
       <div className="w-[100%] bg-primary relative flex justify-center items-center md:h-[220px] xxs:h-[150px] overflow-hidden z-10">
@@ -59,69 +50,17 @@ const Contact = () => {
                   We are opposite Bankstown library, New Western Sydney
                   University & only 500m from Bankstown Tafe.
                 </p>
-                <Fragment>
-                  <div
-                    className="relative z-40 xxs:justify-center sm:justify-start "
-                    onClick={() => openModal(location)}
-                  >
-                    <img
-                      src={wearehere}
-                      alt=""
-                      className="w-[200px] shadow-sm rounded-3xl hover:scale-[200%] object-cover cursor-pointer transition-all ease-out duration-500"
-                    />
-                    <Transition
-                      show={open === "location"}
-                      enter="transition duration-300 ease-out"
-                      enterFrom="transform scale-100 opacity-0"
-                      enterTo="transform scale-100 opacity-100"
-                      leave="transition duration-300 ease-out"
-                      leaveFrom="transform scale-100 opacity-100"
-                      leaveTo="transform scale-80 opacity-0"
-                      as={Fragment}
-                    >
-                      <Dialog
-                        as="div"
-                        className="fixed inset-0 z-[60] overflow-y-auto"
-                        onClose={closeModal}
-                      >
-                        <div className="min-h-screen px-4 text-center">
-                          <Dialog.Overlay className="fixed inset-0 bg-black opacity-30" />
-
-                          <span
-                            className="inline-block h-screen align-middle"
-                            aria-hidden="true"
-                          >
-                            &#8203;
-                          </span>
-
-                          <div className="inline-block w-full max-w-[600px] p-10 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
-                            <Dialog.Title
-                              as="h3"
-                              className="text-lg flex flex-col gap-3 justify-center items-center leading-6"
-                            >
-                              <p className=" text-primary font-semibold text-3xl">
-                                OUR LOCATION
-                              </p>
-                            </Dialog.Title>
-                            <div className="mt-2 text-center text-xl text-alt2 gap-4 flex flex-col">
-                              <img src={wearehere} alt="" className="w-full" />
-
-                              <div className="mt-4">
-                                <button
-                                  type="button"
-                                  className="inline-flex justify-center px-4 py-2 text-sm font-medium  bg-primary rounded-md hover:bg-primary-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
-                                  onClick={() => setOpen(false)}
-                                >
-                                  Close
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </Dialog>
-                    </Transition>
-                  </div>
-                </Fragment>
+                <a
+                  href="https://www.google.com.au/maps/place/Jobs+R+Us/@-33.9143616,151.0347469,15z/data=!4m2!3m1!1s0x0:0xc07be50fb548fbae?sa=X&ved=2ahUKEwjsnOnk-vX9AhWezzgGHaa2DA0Q_BJ6BAhxEAk"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src={wearehere}
+                    alt=""
+                    className="w-[200px] shadow-sm rounded-3xl hover:scale-[200%] object-cover cursor-pointer transition-all ease-out duration-500"
+                  />
+                </a>
                 <div className="flex items-center gap-2 xxs:justify-center sm:justify-start">
                   <img src={email} alt="" className="w-[30px]" />
                   <h2 className="text-xl font-bold ">Email</h2>
@@ -142,7 +81,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="px-5 py-5">
-              <h1 className="md:text-2xl xxs:text-xl font-bold  my-5">
+              <h1 className="md:text-2xl xxs:text-xl font-bold  my-5 text-center">
                 WE WOULD LOVE TO HEAR FROM YOU!
               </h1>
               <ContactForm />

@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import jobsrus from "../assets/jobsrus.png";
 
 const Footer = () => {
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <div className="flex flex-col justify-center items-center w-screen bottom-0  bg-primary text-lavender z-[60]  cursor-pointer py-10 gap-10">
       <div className="flex justify-center gap-10">
@@ -12,12 +15,14 @@ const Footer = () => {
         <div className="flex justify-start  flex-col  gap-5 font-Bebas ">
           <Link
             to="/about"
+            onClick={handleClick}
             className="hover:underline-offset-1 hover:underline "
           >
             About US
           </Link>
           <Link
             to="ndis-services"
+            onClick={handleClick}
             className="hover:underline-offset-1 hover:underline "
           >
             NDIS Services
@@ -27,12 +32,14 @@ const Footer = () => {
         <div className="flex justify-start  flex-col  gap-5 font-Bebas ">
           <Link
             to="/our-team"
+            onClick={handleClick}
             className="hover:underline-offset-1 hover:underline "
           >
             Our Team
           </Link>
           <Link
             to="/contact"
+            onClick={handleClick}
             className="hover:underline-offset-1 hover:underline "
           >
             Contact

@@ -36,7 +36,7 @@ const TheMessage = () => {
         <div className=" xlg:mr-[300px] xlg:ml-[100px] flex flex-col items-center xlg:items-start">
           <h1 className=" text-xl font-bold font-Oswald">WHAT WE DO.</h1>
           <h1 className=" text-3xl font-Oswald mt-2 xlg:max-w-[400px]">
-            Empowering individuality through personalized NDIS solutions.
+            Empowering individuality through Personalised NDIS solutions.
           </h1>
           <p className=" xlg:max-w-[300px] px-5 xlg:p-0 mt-5  ">
             Our goal is clear, to find creative, innovative, and exciting

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimateSharedLayout } from "framer-motion";
 import { Badge } from "@mui/icons-material";
 import oneonone from "../assets/oneonone.JPG";
+import { Link } from "react-router-dom";
 
 import "./styles.css";
 
@@ -75,19 +76,21 @@ function DataButton({ data, onCollapse, onExpand, disabled }) {
             <Content data={data} disabled={disabled} />
           </ExpandedCard>
         ) : (
-          <CompactCard
-            onExpand={expandData}
-            onCollapse={collapseData}
-            disabled={disabled}
-            data={data}
-          >
-            <Content data={data} disabled={disabled} showSubtitle={false} />
-            <img
-              src={oneonone}
-              className="h-[150px] w-[150px] rounded-full bg-primary p-2 shadow-lg object-cover"
-              alt=""
-            />
-          </CompactCard>
+          <Link to="/ndis-services#spa" className="z-10">
+            <CompactCard
+              onExpand={expandData}
+              onCollapse={collapseData}
+              disabled={disabled}
+              data={data}
+            >
+              <Content data={data} disabled={disabled} showSubtitle={false} />
+              <img
+                src={oneonone}
+                className="h-[150px] w-[150px] rounded-full bg-primary p-2 shadow-lg object-cover"
+                alt=""
+              />
+            </CompactCard>
+          </Link>
         )}
       </AnimateSharedLayout>
     </div>

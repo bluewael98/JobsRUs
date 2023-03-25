@@ -55,19 +55,15 @@ const Home = () => {
             }}
             className="flex justify-center xxs:items-center  xxs:flex-col sm:flex-row-reverse sm:justify-center w-screen flex-col z-10 font-Oswald font-extrabold mt-10 text-center "
           >
-            <div className="flex justify center items-center flex-col sm:pr-[70%] sm:items-start sm:text-start">
-              <h1 className="  xxs:text-5xl md:text-6xl font-extrabold font-Oswald bottom-4  text-lavender z-10">
+            <div className="flex justify center items-center flex-col sm:pr-[70%] text-center">
+              <h1 className="  xxs:text-5xl md:text-6xl font-extrabold font-Oswald bottom-4  text-lavender z-10 w-max">
                 JOBS R US
               </h1>
-              <h2 className=" md:text-5xl xxs:text-4xl font-Oswald">
-                EMPLOYMENT SUPPORT,
+              <h2 className=" md:text-5xl xxs:text-4xl font-Oswald w-max">
+                Your Goal,
               </h2>
-              <h2 className=" md:text-5xl xxs:text-4xl font-Oswald">
-                AS UNIQUE AS{" "}
-                <span className=" font-extrabold xxs:text-4xl md:text-5xl">
-                  YOU
-                </span>{" "}
-                ARE.
+              <h2 className=" md:text-5xl xxs:text-4xl font-Oswald w-max">
+                Our Target.
               </h2>
               <Link to="/contact">
                 <button className="  rounded-lg items-center  flex justify-center md:py-4 md:px-10 xxs:py-2 xxs:px-6  font-extrabold hover:scale-105 transition duration-300 bg-lavender text-primary my-5 ">
@@ -102,15 +98,17 @@ const Home = () => {
               <img
                 src={jobsrus}
                 alt="jobsrus"
-                className="w-[130px] opacity-100 h-full  object-cover"
+                className="w-[200px] opacity-100 h-full  object-cover"
               />
-              <h2 className=" font-Bebas font-extrabold text-5xl text-lavender">
+              <h2 className=" font-Bebas font-extrabold text-6xl text-lavender">
                 JOBS R US
               </h2>
             </div>
 
-            <h2 className=" md:text-3xl xs:text-2xl font-Oswald">YOUR GOAL,</h2>
-            <h2 className=" md:text-3xl xs:text-2xl font-Oswald">OUR TARGET</h2>
+            <h2 className=" md:text-3xl xs:text-2xl font-Oswald">Your Goal,</h2>
+            <h2 className=" md:text-3xl xs:text-2xl font-Oswald">
+              Our Target.
+            </h2>
             <Link to="/contact">
               <button className="  rounded-lg items-center  flex justify-center md:py-4 md:px-10 xxs:py-2 xxs:px-6  font-extrabold hover:scale-105 transition duration-300 bg-lavender text-primary my-5 ">
                 GET IN TOUCH
@@ -150,7 +148,7 @@ const Home = () => {
                       className="w-screen  object-cover object-top opacity-60 z-[5]"
                     />
                     <h2 className=" xxl:text-3xl md:text-2xl font-Oswald text-center text-lavender opacity-90 z-10 absolute p-0 m-0">
-                      1:1 Training
+                      1:1
                     </h2>
                   </div>
                 </div>
@@ -205,7 +203,7 @@ const Home = () => {
               <img
                 src={p1}
                 alt=""
-                className="absolute w-[900px] xlg:left-[-200px] lg:left-[-280px] md:left-[-290px]  z-[7]"
+                className="absolute w-[1000px] xlg:left-[-200px] lg:left-[-280px] md:left-[-290px]  z-[7]"
               />
               <img
                 src={circle}

@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import hiring from "../assets/hiring.svg";
 import useMediaQuery from "../hooks/useMediaQuery";
+import { Link } from "react-router-dom";
 const drawerVariants = {
   open: {
     x: "0%",
@@ -36,9 +37,11 @@ const WeAreHiring = () => {
           <div className="flex items-center justify-center  text-lavender text-xl font-Bebas font-bold  rounded-r-full ">
             <div className="flex justify-center text-center flex-col items-center max-w-[300px] gap-2">
               <p>We're hiring and we want you to join the team!</p>
-              <button className="py-2 px-4 bg-lavender shadow-md hover:scale-105 transition duration-300 text-primary rounded-full max-w-[150px]">
-                Apply Now
-              </button>
+              <Link to="/join-our-team">
+                <button className="py-2 px-4 bg-lavender shadow-md hover:scale-105 transition duration-300 text-primary rounded-full max-w-[150px]">
+                  Apply Now
+                </button>
+              </Link>
             </div>
             <img src={hiring} alt="" className="w-[150px] " />
           </div>

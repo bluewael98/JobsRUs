@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimateSharedLayout } from "framer-motion";
 import { SensorOccupied } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 import header3 from "../assets/header3.jpg";
 import "./styles.css";
 
@@ -74,19 +75,21 @@ function DataButton({ data, onCollapse, onExpand, disabled }) {
             <Content data={data} disabled={disabled} />
           </ExpandedCard>
         ) : (
-          <CompactCard
-            onExpand={expandData}
-            onCollapse={collapseData}
-            disabled={disabled}
-            data={data}
-          >
-            <Content data={data} disabled={disabled} showSubtitle={false} />
-            <img
-              src={header3}
-              className="h-[150px] w-[150px] rounded-full bg-primary p-2 shadow-lg "
-              alt=""
-            />
-          </CompactCard>
+          <Link to="/ndis-services#eso">
+            <CompactCard
+              onExpand={expandData}
+              onCollapse={collapseData}
+              disabled={disabled}
+              data={data}
+            >
+              <Content data={data} disabled={disabled} showSubtitle={false} />
+              <img
+                src={header3}
+                className="h-[150px] w-[150px] rounded-full bg-primary p-2 shadow-lg "
+                alt=""
+              />
+            </CompactCard>
+          </Link>
         )}
       </AnimateSharedLayout>
     </div>

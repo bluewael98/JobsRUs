@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimateSharedLayout } from "framer-motion";
 import { School } from "@mui/icons-material";
 import header2 from "../assets/header2.jpg";
+import { Link } from "react-router-dom";
 
 import "./styles.css";
 
@@ -75,19 +76,21 @@ function DataButton({ data, onCollapse, onExpand, disabled }) {
             <Content data={data} disabled={disabled} />
           </ExpandedCard>
         ) : (
-          <CompactCard
-            onExpand={expandData}
-            onCollapse={collapseData}
-            disabled={disabled}
-            data={data}
-          >
-            <Content data={data} disabled={disabled} showSubtitle={false} />
-            <img
-              src={header2}
-              className="h-[150px] w-[150px] rounded-full bg-primary p-2 shadow-lg"
-              alt=""
-            />
-          </CompactCard>
+          <Link to="/ndis-services#sles" className="z-10">
+            <CompactCard
+              onExpand={expandData}
+              onCollapse={collapseData}
+              disabled={disabled}
+              data={data}
+            >
+              <Content data={data} disabled={disabled} showSubtitle={false} />
+              <img
+                src={header2}
+                className="h-[150px] w-[150px] rounded-full bg-primary p-2 shadow-lg"
+                alt=""
+              />
+            </CompactCard>
+          </Link>
         )}
       </AnimateSharedLayout>
     </div>
