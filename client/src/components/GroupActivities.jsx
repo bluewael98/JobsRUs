@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimateSharedLayout } from "framer-motion";
 import { Diversity3 } from "@mui/icons-material";
 import { Link } from "react-router-dom";
+import useMediaQuery from "../hooks/useMediaQuery";
 import ourteamheader from "../assets/ourteamheader.JPG";
 import "./styles.css";
 
@@ -56,6 +57,7 @@ function CompactCard({ children, onExpand, disabled, data }) {
 
 function DataButton({ data, onCollapse, onExpand, disabled }) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const isLargeDevice = useMediaQuery("(min-width: 1440px)");
 
   const collapseData = () => {
     setIsExpanded(false);
@@ -75,7 +77,9 @@ function DataButton({ data, onCollapse, onExpand, disabled }) {
             <Content data={data} disabled={disabled} />
           </ExpandedCard>
         ) : (
-          <Link to="/ndis-services#group">
+          <Link
+            to={isLargeDevice ? "/ndis-services#group" : "/ndis-services#group"}
+          >
             <CompactCard
               onExpand={expandData}
               onCollapse={collapseData}

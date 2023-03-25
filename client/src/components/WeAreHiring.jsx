@@ -37,7 +37,7 @@ const WeAreHiring = () => {
           <div className="flex items-center justify-center  text-lavender text-xl font-Bebas font-bold  rounded-r-full ">
             <div className="flex justify-center text-center flex-col items-center max-w-[300px] gap-2">
               <p>We're hiring and we want you to join the team!</p>
-              <Link to="/join-our-team">
+              <Link to="/work-with-us">
                 <button className="py-2 px-4 bg-lavender shadow-md hover:scale-105 transition duration-300 text-primary rounded-full max-w-[150px]">
                   Apply Now
                 </button>

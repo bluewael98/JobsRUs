@@ -175,7 +175,7 @@ const Navbar = ({ isTopOfPage }) => {
               </h2>
             </Link>
             <Link
-              to="/join-our-team"
+              to="/work-with-us"
               className="group text-lavender transition-all duration-300 ease-in-out"
               onClick={handleClick}
             >
@@ -238,7 +238,7 @@ const Navbar = ({ isTopOfPage }) => {
               <Link to="/refer-client" onClick={handleClick}>
                 <h2>REFER A CLIENT</h2>
               </Link>
-              <Link to="/join-our-team" onClick={handleClick}>
+              <Link to="/work-with-us" onClick={handleClick}>
                 <h2>JOIN OUR TEAM</h2>
               </Link>
             </div>

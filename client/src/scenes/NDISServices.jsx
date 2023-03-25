@@ -108,14 +108,17 @@ const NDISServices = () => {
               US?
             </h1>
             <div className=" text-lg  text-opacity-85  flex flex-col gap-6 px-10">
-              <div className="flex flex-col justify-center items-center mt-5">
+              <div
+                className="flex flex-col justify-center items-center mt-5"
+                id="sles"
+              >
                 <h1 className="text-2xl font-bold text-lavender">
                   SLES{" "}
                   <span className=" font-medium">
                     &#40;School Leavers Employment Support&#41;{" "}
                   </span>
                 </h1>
-                <p className="">
+                <p className="" id="top">
                   A 2 year program that provides the opportunity to zone on and
                   target key employability outcomes and gain direction.
                 </p>
@@ -123,11 +126,14 @@ const NDISServices = () => {
                 <SLES />
               </div>
 
-              <div className="flex flex-col justify-center items-center">
+              <div
+                className="flex flex-col justify-center items-center
+              "
+              >
                 <h1 className="text-2xl font-bold text-lavender">
                   Specialised Employment Assistance
                 </h1>
-                <p className="">
+                <p className="" id="spa">
                   From SLES regardless of your transition you will have an
                   Employment specialist help tailor a capacity building program
                   for your continued supports in employment.
@@ -140,7 +146,7 @@ const NDISServices = () => {
                 <h1 className="text-2xl font-bold text-lavender">
                   Employment Support Officer
                 </h1>
-                <p className="">
+                <p className="" id="eso">
                   A cost-effective way to help you follow through with the
                   employment specialist tailored program to achieve whatever
                   your employment goals are.
@@ -153,7 +159,7 @@ const NDISServices = () => {
                 <h1 className="text-2xl font-bold text-lavender">
                   Group Activities
                 </h1>
-                <p className="">
+                <p className="" id="group">
                   Can’t be all work and no play, we have our leisure days on
                   Saturday’s fortnightly so you can unwind from your capacity
                   building goals.

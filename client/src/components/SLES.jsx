@@ -3,6 +3,7 @@ import { motion, AnimateSharedLayout } from "framer-motion";
 import { School } from "@mui/icons-material";
 import header2 from "../assets/header2.jpg";
 import { Link } from "react-router-dom";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 import "./styles.css";
 
@@ -57,6 +58,7 @@ function CompactCard({ children, onExpand, disabled, data }) {
 
 function DataButton({ data, onCollapse, onExpand, disabled }) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const isLargeDevice = useMediaQuery("(min-width: 1440px)");
 
   const collapseData = () => {
     setIsExpanded(false);
@@ -76,7 +78,10 @@ function DataButton({ data, onCollapse, onExpand, disabled }) {
             <Content data={data} disabled={disabled} />
           </ExpandedCard>
         ) : (
-          <Link to="/ndis-services#sles" className="z-10">
+          <Link
+            to={isLargeDevice ? "/ndis-services#sles" : "/ndis-services#top"}
+            className="z-10"
+          >
             <CompactCard
               onExpand={expandData}
               onCollapse={collapseData}

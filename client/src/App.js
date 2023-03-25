@@ -50,7 +50,7 @@ function App() {
 
         <Route path='/contact' element={<Contact />} />
 
-        <Route path="/join-our-team" element={<WorkWithUs />} />
+        <Route path="/work-with-us" element={<WorkWithUs />} />
 
         
       </Routes>
