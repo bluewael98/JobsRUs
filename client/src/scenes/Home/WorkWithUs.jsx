@@ -1,10 +1,18 @@
 import React from "react";
 import WorkForm from "../../components/WorkForm";
 import circles from "../../assets/circles.svg";
+import { Helmet } from "react-helmet";
 
 const WorkWithUs = () => {
   return (
     <section className="flex justify-center flex-col mt-[80px]  items-center font-Oswald overflow-hidden">
+      <Helmet>
+        <title>Work With Us</title>
+        <meta
+          name="description"
+          content="Join our team and make a positive impact in the lives of people with disabilities. Explore our current job openings and apply today."
+        />
+      </Helmet>
       <div className="w-[100%] bg-primary relative flex justify-center items-center md:h-[220px] xxs:h-[150px] overflow-hidden z-10 mb-5">
         <div className="flex flex-col justify-center ">
           <h1 className="  xxs:text-5xl md:text-6xl font-extrabold font-Oswald bottom-4  text-lavender z-10 ">

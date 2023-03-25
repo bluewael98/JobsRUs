@@ -14,6 +14,7 @@ import arrowdown from "../assets/arrowdown.svg";
 import { useLocation } from "react-router-dom";
 import circles from "../assets/circles.svg";
 import ContactTransition from "../components/ContactTransition";
+import { Helmet } from "react-helmet";
 
 const NDISServices = () => {
   const isLargeDevice = useMediaQuery("(min-width: 1440px)");
@@ -46,6 +47,13 @@ const NDISServices = () => {
 
   return (
     <section className=" flex justify-center flex-col mt-[80px]  items-center overflow-hidden relative">
+      <Helmet>
+        <title>NDIS Services</title>
+        <meta
+          name="description"
+          content="Learn about our NDIS services and how we empower our clients to achieve their employment goals."
+        />
+      </Helmet>
       {/* HEADER */}
       {isLargeDevice ? (
         <div className="w-screen  bg-primary relative flex justify-between overflow-hidden  mb-[5rem]">

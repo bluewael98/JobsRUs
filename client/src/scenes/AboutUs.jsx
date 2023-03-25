@@ -10,6 +10,7 @@ import Team from "../components/team";
 import { motion } from "framer-motion";
 import diversity from "../assets/diversity.svg";
 import circles from "../assets/circles.svg";
+import { Helmet } from "react-helmet";
 
 const AboutUs = () => {
   const isSmallDevice = useMediaQuery("(max-width: 1020px)");
@@ -24,6 +25,13 @@ const AboutUs = () => {
 
   return (
     <section className=" flex justify-center flex-col mt-[80px]  items-center font-Oswald overflow-hidden">
+      <Helmet>
+        <title>About Us </title>
+        <meta
+          name="description"
+          content="Learn about our values and mission at JobsRUs."
+        />
+      </Helmet>
       <div className="w-[100%] bg-primary relative flex justify-center items-center md:h-[220px] xxs:h-[150px] overflow-hidden z-10 mb-5">
         <div className="flex flex-col justify-center ">
           <h1 className="  xxs:text-5xl md:text-6xl font-extrabold font-Oswald bottom-4  text-lavender z-10 ">

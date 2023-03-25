@@ -12,6 +12,7 @@ import p1 from "../../assets/p1.png";
 import oneonone from "../../assets/oneonone.JPG";
 import phonebackground from "../../assets/phonebackground.svg";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import jobsrus from "../../assets/jobsrus.png";
 import Facts from "./Facts";
 import circle from "../../assets/circles.svg";
@@ -39,6 +40,13 @@ const Home = () => {
 
   return (
     <section className="  w-full bg-lavender font-Oswald overflow-hidden mt-[80px] ">
+      <Helmet>
+        <title>Home</title>
+        <meta
+          name="description"
+          content="Empowering individuality through Personalised NDIS solutions."
+        />
+      </Helmet>
       {/* LANDING PAGE */}
 
       {/* MOBILE LANDING PAGE */}

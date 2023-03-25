@@ -7,9 +7,17 @@ import phone from "../assets/phone.svg";
 import mobile from "../assets/mobile.svg";
 import wearehere from "../assets/wearehere.JPG";
 import circles from "../assets/circles.svg";
+import { Helmet } from "react-helmet";
 const Contact = () => {
   return (
     <section className=" flex justify-center flex-col mt-[80px]  items-center font-Bebas xxs:text ">
+      <Helmet>
+        <title>Contact Us</title>
+        <meta
+          name="description"
+          content="Contact JobsRUs for all your NDIS employment needs. Our contact details are available here."
+        />
+      </Helmet>
       <div className="w-[100%] bg-primary relative flex justify-center items-center md:h-[220px] xxs:h-[150px] overflow-hidden z-10">
         <div className="flex flex-col justify-center ">
           <h1 className="  xxs:text-5xl md:text-6xl font-extrabold font-Oswald bottom-4  text-lavender z-10 ">

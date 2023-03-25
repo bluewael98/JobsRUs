@@ -22,6 +22,7 @@ import circles from "../assets/circles.svg";
 import cpi from "../assets/cpi.jpg";
 import user from "../assets/user.svg";
 import ContactTransition from "../components/ContactTransition";
+import { Helmet } from "react-helmet";
 
 const OurTeam = () => {
   const [open, setOpen] = useState(null);
@@ -37,6 +38,14 @@ const OurTeam = () => {
   };
   return (
     <section className=" flex justify-center flex-col mt-[80px] items-center font-Oswald">
+      <Helmet>
+        <title>Our Team</title>
+        <meta
+          name="description"
+          content="Honest, Empathetic, Reliable, and Open-minded
+                    individuals who meet and surpass your expectations."
+        />
+      </Helmet>
       <WeAreHiring />
       {/* HEADER */}
       {isLargeDevice ? (
