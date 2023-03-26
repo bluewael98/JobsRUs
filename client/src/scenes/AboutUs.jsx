@@ -41,7 +41,7 @@ const AboutUs = () => {
         <img
           src={circles}
           alt=""
-          className="absolute w-screen opacity-30 z-[5]"
+          className="absolute w-screen min-h-[150px] object-cover opacity-30 z-[5]"
         />
       </div>
       {/* MAIN SECTION */}
