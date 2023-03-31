@@ -15,6 +15,7 @@ import { useLocation } from "react-router-dom";
 import circles from "../assets/circles.svg";
 import ContactTransition from "../components/ContactTransition";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 
 const NDISServices = () => {
   const isLargeDevice = useMediaQuery("(min-width: 1440px)");
@@ -64,9 +65,12 @@ const NDISServices = () => {
             <h1 className="  xxs:text-4xl md:text-6xl font-extrabold font-Oswald bottom-4  text-lavender z-10 ">
               through Personalised programs.
             </h1>
-            <button className="py-[0.5rem] px-[0.5rem] w-[150px] rounded-lg font-bold text-primary ml-[500px] mt-[20px] bg-lavender hover:scale-105 transition duration-200 z-10">
+            <Link
+              to="/contact"
+              className="py-[0.5rem] px-[0.5rem] w-[150px] rounded-lg font-bold text-primary ml-[500px] mt-[20px] bg-lavender hover:scale-105 transition duration-200 z-10 text-center"
+            >
               Contact Us
-            </button>
+            </Link>
           </div>
           <div className="flex  z-20 top-[25px] justify-center items-center shadow-5xl overflow-hidden  w-[600px]  ml-[100px] rounded-bl-[200px] pl-[25px] shadow--l5xl  whitespace-pre   bg-primary bg-opacity-80 ">
             <img

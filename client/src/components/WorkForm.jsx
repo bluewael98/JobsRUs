@@ -4,21 +4,29 @@ import { useForm } from "react-hook-form";
 const WorkForm = () => {
   const {
     register,
-    handleSubmit,
+    trigger,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log("Form Data: ", data);
+  const onSubmit = async (e) => {
+    console.log("~ e", e);
+    const isValid = await trigger();
+    if (!isValid) {
+      e.preventDefault();
+    }
   };
-
   return (
     <section
       id="contact"
       className="flex justify-center items-center flex-col font-Oswald text-xl my-[100px]"
     >
       {/* CONTACT FORM */}
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form
+        onSubmit={onSubmit}
+        target="_blank"
+        action="https://formsubmit.co/e562502946854997d37372895dcbfc61"
+        method="POST"
+      >
         <div className="w-full flex flex-col gap-3 mb-3">
           <p className="font-semibold text-primary text-opacity-90">Name</p>
           <input
