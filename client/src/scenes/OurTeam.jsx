@@ -12,6 +12,7 @@ import Tahlia from "../assets/team/Tahlia.jpg";
 import Dancia from "../assets/team/Dancia.jpg";
 import Zeinah from "../assets/team/Zeinah.jpg";
 import Alfred from "../assets/team/Alfred.jpg";
+import Khadeja from "../assets/team/Khadeja.jpg";
 import Fish from "../assets/team/Fish.jpg";
 import screening from "../assets/screening.svg";
 import support from "../assets/support.svg";
@@ -622,13 +623,13 @@ const OurTeam = () => {
                 onClick={() => openModal("khadeeja")}
               >
                 <img
-                  src={user}
+                  src={Khadeja}
                   alt=""
-                  className="rounded-full w-[200px] h-[200px] object-cover"
+                  className="rounded-full w-[200px] h-[200px] object-cover onk"
                 />
               </div>
               <h2 className=" text-xl font-semibold text-primary mt-5">
-                KHADEEJA
+                KHADEJA
               </h2>
               <h2 className=" text-lg font-semibold text-alt2 my-2">
                 Employment Specialist
@@ -640,7 +641,7 @@ const OurTeam = () => {
                 <img src={cpi} alt="cpi" className="w-[30px] rounded-full" />
               </div>
               <p className="w-[240px] text-alt2 font-semibold text-center">
-                Fluenr in Arabic.
+                Fluent in Arabic.
               </p>
               <p className="w-[240px] text-alt2">
                 Hi, my name is Khadeja, and I am currently studying a Bachelor
@@ -678,7 +679,7 @@ const OurTeam = () => {
                       className="text-lg flex flex-col gap-3 justify-center items-center leading-6"
                     >
                       <p className=" text-primary font-semibold text-3xl">
-                        KHADEEJA
+                        KHADEJA
                       </p>
                       <p className=" text-alt2 font-semibold text-2xl">
                         Employment Specialist
