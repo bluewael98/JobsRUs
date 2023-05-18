@@ -18,8 +18,8 @@ app.use(
   helmet.contentSecurityPolicy({
     directives: {
       ...helmet.contentSecurityPolicy.getDefaultDirectives(),
-      'connect-src': ["'self'", 'https://api.app.outscraper.com'],
-      'img-src': ["'self'", 'data:', 'https://lh3.googleusercontent.com'],
+      'connect-src': ["'self'", 'https://api.app.outscraper.com', 'https://lh3.googleusercontent.com',],
+      'img-src': ["'self'", 'https://lh3.googleusercontent.com', 'https://api.app.outscraper.com'],
     },
   })
 );
