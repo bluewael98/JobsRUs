@@ -8,9 +8,11 @@ function Reviews() {
 
   useEffect(() => {
     axios
-      .get("/api/place/ChIJAQCsfRC8EmsRrvtItQ_le8A/reviews")
+      .get(
+        "https://api.app.outscraper.com/requests/ab-18f57175-1ca0-4ee5-bbc4-bed5ae0a65d0"
+      )
       .then((response) => {
-        const data = response.data;
+        const data = response.data.data[0].reviews_data;
         setReviews(data);
       })
       .catch((error) => {
@@ -52,25 +54,25 @@ function Reviews() {
       </div>
 
       <Flickity
-        className={"carousel"} // default ''
-        elementType={"div"} // default 'div'
-        disableImagesLoaded={true} // default false
-        reloadOnUpdate // default false
-        static // default false
+        className={"carousel"}
+        elementType={"div"}
+        disableImagesLoaded={true}
+        reloadOnUpdate
+        static
         cellClassName={"carousel-cell"}
         options={options}
       >
         {reviews.map((review) => (
           <div
-            key={review.id}
-            className="carousel cell w-screen md:w-[1000px] h-[600px] justify-center flex items-center  text-2xl text-alt2 px-5 "
+            key={review.review_id}
+            className="carousel cell w-screen md:w-[1000px] h-[600px] justify-center flex items-center  text-2xl text-alt2 px-5"
           >
-            <div className=" p-5 flex justify-center items-center flex-col gap-10">
-              <h3 className=" text-2xl  font-semibold">{review.author_name}</h3>
-              <img src={review.profile_photo_url} alt="" />
-              <p className="max-w-[600px] text-center">{review.text}</p>
-              <div className=" text-[#fbbc04]">
-                {renderStars(review.rating)}
+            <div className="p-5 flex justify-center items-center flex-col gap-10">
+              <h3 className="text-2xl font-semibold">{review.author_title}</h3>
+              <img src={review.author_image} alt="" />
+              <p className="max-w-[600px] text-center">{review.review_text}</p>
+              <div className="text-[#fbbc04]">
+                {renderStars(review.review_rating)}
               </div>
             </div>
           </div>
