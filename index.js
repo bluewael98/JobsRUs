@@ -20,6 +20,7 @@ app.use(
       ...helmet.contentSecurityPolicy.getDefaultDirectives(),
       'connect-src': ["'self'", 'https://api.app.outscraper.com', 'https://lh3.googleusercontent.com',],
       'img-src': ["'self'", 'https:', 'data:'],
+      'form-action': ["'self'", "https://formsubmit.co"],
     },
   })
 );
