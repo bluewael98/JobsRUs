@@ -69,7 +69,7 @@ function Reviews() {
           >
             <div className="p-5 flex justify-center items-center flex-col gap-10">
               <h3 className="text-2xl font-semibold">{review.author_title}</h3>
-              <img src={review.author_image} alt="" />
+              <img crossorigin="anonymous" src={review.author_image} alt="" />
               <p className="max-w-[600px] text-center">{review.review_text}</p>
               <div className="text-[#fbbc04]">
                 {renderStars(review.review_rating)}
