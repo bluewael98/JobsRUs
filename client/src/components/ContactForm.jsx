@@ -24,7 +24,7 @@ const ContactForm = () => {
       <form
         target="_blank"
         onSubmit={onSubmit}
-        action="https://formsubmit.co/e562502946854997d37372895dcbfc61"
+        action="https://formsubmit.co/info@jobsrus.com.au"
         method="POST"
       >
         <div className="flex md:flex-row xxs:flex-col justify-center items-center  gap-2 ">

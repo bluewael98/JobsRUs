@@ -1,24 +1,30 @@
-import axios from "axios";
+// import axios from "axios";
 import React, { useState, useEffect } from "react";
 import Flickity from "react-flickity-component";
 import "./flickity.css";
 import google from "../assets/google.jpg";
+import reviewsData from "./reviewsdata.json";
 
 function Reviews() {
   const [reviews, setReviews] = useState([]);
 
+  // useEffect(() => {
+  //   axios
+  //     .get(
+  //       "https://api.app.outscraper.com/requests/ab-18f57175-1ca0-4ee5-bbc4-bed5ae0a65d0"
+  //     )
+  //     .then((response) => {
+  //       const data = response.data.data[0].reviews_data;
+  //       setReviews(data);
+  //     })
+  //     .catch((error) => {
+  //       console.error(error);
+  //     });
+  // }, []);
+
   useEffect(() => {
-    axios
-      .get(
-        "https://api.app.outscraper.com/requests/ab-18f57175-1ca0-4ee5-bbc4-bed5ae0a65d0"
-      )
-      .then((response) => {
-        const data = response.data.data[0].reviews_data;
-        setReviews(data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    // Set the reviews data from the imported JSON file
+    setReviews(reviewsData);
   }, []);
 
   const renderStars = (rating) => {
@@ -56,12 +62,12 @@ function Reviews() {
       </div>
 
       <Flickity
-        className={"carousel"}
-        elementType={"div"}
+        className="carousel"
+        elementType="div"
         disableImagesLoaded={true}
         reloadOnUpdate
         static
-        cellClassName={"carousel-cell"}
+        cellClassName="carousel-cell w-screen md:w-[1000px] h-[600px] justify-center flex items-center  text-2xl text-alt2 px-5"
         options={options}
       >
         {reviews.map((review) => (
@@ -71,7 +77,7 @@ function Reviews() {
           >
             <div className="p-5 flex justify-center items-center flex-col gap-10">
               <h3 className="text-2xl font-semibold">{review.author_title}</h3>
-              <img crossorigin="anonymous" src={review.author_image} alt="" />
+              <img crossOrigin="anonymous" src={review.author_image} alt="" />
               <p className="max-w-[600px] text-center">{review.review_text}</p>
               <div className="text-[#fbbc04] flex items-center justify-center gap-2">
                 <img src={google} alt="" className="h-10 w-10 rounded-full" />
