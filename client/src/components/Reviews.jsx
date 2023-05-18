@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import Flickity from "react-flickity-component";
 import "./flickity.css";
+import google from "../assets/google.jpg";
 
 function Reviews() {
   const [reviews, setReviews] = useState([]);
@@ -49,8 +50,9 @@ function Reviews() {
 
   return (
     <section className="my-[200px]">
-      <div className="w-[100%] flex justify-center items-center text-5xl sm:text-4xl xxs:text-3xl text-center font-bold text-primary">
-        <h1>HERE'S WHAT OUR CLIENTS HAVE TO SAY ABOUT US</h1>
+      <div className="max-w-2/3 flex flex-col justify-center items-center text-5xl sm:text-4xl xxs:text-3xl text-center font-bold text-primary">
+        <h1>We're all about openess and honesty..</h1>
+        <h1>so here's our live google reviews, from good to bad.</h1>
       </div>
 
       <Flickity
@@ -71,7 +73,8 @@ function Reviews() {
               <h3 className="text-2xl font-semibold">{review.author_title}</h3>
               <img crossorigin="anonymous" src={review.author_image} alt="" />
               <p className="max-w-[600px] text-center">{review.review_text}</p>
-              <div className="text-[#fbbc04]">
+              <div className="text-[#fbbc04] flex items-center justify-center gap-2">
+                <img src={google} alt="" className="h-10 w-10 rounded-full" />
                 {renderStars(review.review_rating)}
               </div>
             </div>
