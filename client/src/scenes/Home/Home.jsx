@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import { motion } from "framer-motion";
 import TheMessage from "./TheMessage";
 import Heroes from "./Heroes";
@@ -16,6 +16,10 @@ import { Helmet } from "react-helmet";
 import jobsrus from "../../assets/jobsrus.png";
 import Facts from "./Facts";
 import circle from "../../assets/circles.svg";
+import WeHaveMoved from "../../components/WeHaveMoved";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
 
 const Home = () => {
   const isSmallScreen = useMediaQuery("(max-width: 1080px)");
@@ -38,6 +42,22 @@ const Home = () => {
     visible: { opacity: 1, y: 0 },
   };
 
+  const style = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: 400,
+    bgcolor: "background.paper",
+    border: "2px solid #303FA1",
+    boxShadow: 24,
+    p: 4,
+  };
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <section className="  w-full bg-lavender font-Oswald overflow-hidden mt-[80px] ">
       <Helmet>
@@ -48,7 +68,7 @@ const Home = () => {
         />
       </Helmet>
       {/* LANDING PAGE */}
-
+      <WeHaveMoved />
       {/* MOBILE LANDING PAGE */}
       {isSmallScreen ? (
         <div className="flex flex-col justify-center items-center pt-10 font-Oswald font-semibold relative w-screen text-lavender mb-[100px]">
@@ -73,11 +93,42 @@ const Home = () => {
               <h2 className=" md:text-5xl xxs:text-4xl font-Oswald w-max">
                 Our Target.
               </h2>
-              <Link to="/contact">
-                <button className="  rounded-lg items-center  flex justify-center md:py-4 md:px-10 xxs:py-2 xxs:px-6  font-extrabold hover:scale-105 transition duration-300 bg-lavender text-primary my-5 ">
-                  GET IN TOUCH
+              <div className="flex justify-center items-center flex-col gap-4">
+                <Link to="/contact">
+                  <button className="  rounded-lg items-center  flex justify-center md:py-4 md:px-10 xxs:py-2 xxs:px-6  font-extrabold hover:scale-105 transition duration-300 bg-lavender text-primary mt-5 ">
+                    GET IN TOUCH
+                  </button>
+                </Link>
+                <button
+                  onClick={handleOpen}
+                  className="  rounded-lg items-center  flex justify-center md:py-4 md:px-10 xxs:py-2 xxs:px-6  font-extrabold hover:scale-105 transition duration-300 bg-lavender text-primary  "
+                >
+                  WE HAVE MOVED!
                 </button>
-              </Link>
+                <Modal
+                  open={open}
+                  onClose={handleClose}
+                  aria-labelledby="modal-modal-title"
+                  aria-describedby="modal-modal-description"
+                >
+                  <Box sx={style}>
+                    <Typography
+                      id="modal-modal-title"
+                      variant="h6"
+                      component="h2"
+                      sx={{ mt: 2, color: "#303FA1", fontWeight: "bold" }}
+                    >
+                      Our new location:
+                    </Typography>
+                    <Typography
+                      id="modal-modal-description"
+                      sx={{ mt: 2, color: "#303FA1", fontWeight: "bold" }}
+                    >
+                      Suite 902, L7, 66-72 Rickard Road Bankstown.
+                    </Typography>
+                  </Box>
+                </Modal>
+              </div>
             </div>
 
             <img src={p1} alt="" className="sm:pl-[30%]" />
@@ -257,13 +308,11 @@ const Home = () => {
                 href="https://goo.gl/maps/du94CGnpjmnUndcH8"
                 className="cursor-pointer underline-offset-3"
               >
-                Suite 6, 75 Rickard Rd, Bankstown corner NSW 2200.
+                Suite 902, L9, 66-72 Rickard Rd, Bankstown NSW 2200.
               </a>{" "}
             </p>
-            <p> (Corner of 443 Chapel Rd Bankstown)</p>
             <p className="mb-[30px]">
-              We are opposite Bankstown library, New Western Sydney University &
-              only 500m from Bankstown Tafe.
+              Building is named Civic towers, located above the council.
             </p>
             <h2 className="text-xl font-bold ">Email</h2>
             <p className="mb-[30px]">info@jobsrus.com.au</p>

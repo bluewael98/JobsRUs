@@ -50,13 +50,11 @@ const Contact = () => {
                     href="https://goo.gl/maps/du94CGnpjmnUndcH8"
                     className="cursor-pointer underline-offset-3"
                   >
-                    Suite 6, 75 Rickard Rd, Bankstown corner NSW 2200.
+                    Suite 902, L9, 66-72 Rickard Rd, Bankstown NSW 2200.
                   </a>{" "}
                 </p>
-                <p> (Corner of 443 Chapel Rd Bankstown)</p>
                 <p>
-                  We are opposite Bankstown library, New Western Sydney
-                  University & only 500m from Bankstown Tafe.
+                  Building is named Civic towers, located above the council.
                 </p>
                 <a
                   href="https://www.google.com.au/maps/place/Jobs+R+Us/@-33.9143616,151.0347469,15z/data=!4m2!3m1!1s0x0:0xc07be50fb548fbae?sa=X&ved=2ahUKEwjsnOnk-vX9AhWezzgGHaa2DA0Q_BJ6BAhxEAk"
