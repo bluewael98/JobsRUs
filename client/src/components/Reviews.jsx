@@ -22,6 +22,8 @@ function Reviews() {
   //     });
   // }, []);
 
+  // https://api.app.outscraper.com/maps/reviews-v2?query=ChIJAQCsfRC8EmsRrvtItQ_le8A&reviewsLimit=20 && Headers: X-API-KEY:Z29vZ2xlLW9hdXRoMnwxMDU4NDIyNDIxNTE5NTU3Nzc5MjJ8NjNhMjVlNTdlZQ
+
   useEffect(() => {
     // Set the reviews data from the imported JSON file
     setReviews(reviewsData);

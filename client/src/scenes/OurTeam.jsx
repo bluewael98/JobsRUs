@@ -512,13 +512,13 @@ const OurTeam = () => {
                 onClick={() => openModal("abeir")}
               >
                 <img
-                  src={abbeir}
+                  src={user}
                   alt=""
                   className="rounded-full w-[200px] h-[200px] object-cover"
                 />
               </div>
               <h2 className=" text-xl font-semibold text-primary mt-5">
-                ABEIR
+                ABBEY
               </h2>
               <h2 className=" text-lg font-semibold text-alt2 my-2">
                 Support Worker
@@ -533,7 +533,7 @@ const OurTeam = () => {
                 Limited Arabic.
               </p>
               <p className="w-[240px] text-alt2">
-                My Name is Abeir but most call me Abbey. I'm a proud Support
+                My Name is Abbey but most call me Abbey. I'm a proud Support
                 Worker who loves being a part of the...
               </p>
             </div>
@@ -568,7 +568,7 @@ const OurTeam = () => {
                       className="text-lg flex flex-col gap-3 justify-center items-center leading-6"
                     >
                       <p className=" text-primary font-semibold text-3xl">
-                        ABEIR
+                        Abbey
                       </p>
                       <p className=" text-alt2 font-semibold text-2xl">
                         Support Worker.
@@ -579,18 +579,17 @@ const OurTeam = () => {
                     </Dialog.Title>
                     <div className="mt-2 text-xl text-alt2 text-center flex flex-col gap-3">
                       <p>
-                        My Name is Abeir but most call me Abbey. I'm a proud
-                        Support Worker who loves being a part of the community,
-                        not just my own but all communities. I work in this
-                        field because I have a passion for people and I want to
-                        put that passion into helping others fulfil their goals
-                        in life. And for myself, I couldn't ask for a better
-                        place than Enaya to do this. Having this job is also a
-                        goal for me to push myself in life and do what I love
-                        and learn and grow. I learn something every day from
-                        both my co-workers and clients. I would love to expand
-                        my knowledge in this field so I can one day become a
-                        Support Coordinator.
+                        My Name is Abbey. I'm a proud Support Worker who loves
+                        being a part of the community, not just my own but all
+                        communities. I work in this field because I have a
+                        passion for people and I want to put that passion into
+                        helping others fulfil their goals in life. And for
+                        myself, I couldn't ask for a better place than Enaya to
+                        do this. Having this job is also a goal for me to push
+                        myself in life and do what I love and learn and grow. I
+                        learn something every day from both my co-workers and
+                        clients. I would love to expand my knowledge in this
+                        field so I can one day become a Support Coordinator.
                       </p>
                       <p>
                         I love my family. And I love music anything related to
