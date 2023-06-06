@@ -160,7 +160,7 @@ const OurTeam = () => {
             </h1>
             <h1 className="md:text-5xl xxs:text-2xl  font text-primary">
               {" "}
-              Honest, Empathetic, Eeliable, and Open-minded individuals.
+              Honest, Empathetic, Reliable, and Open-minded individuals.
             </h1>
             <p className="text-lg text-alt2 text-semibold font-Oswald ">
               At Jobs R Us, we thoroughly screen our staff to ensure we hire
