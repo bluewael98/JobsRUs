@@ -31,7 +31,8 @@ module.exports = {
         "5xl": "0px 10px 30px rgba(0,0,0, 0.5)"
       },
       backgroundImage: {
-        'blob': "url('/src/assets/blob.svg')"
+        'blob': "url('/src/assets/blob.svg')",
+        'banner': "url('/src/assets/Banner.png')"
       }
     },
   },

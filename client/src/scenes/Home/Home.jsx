@@ -6,9 +6,9 @@ import Reviews from "../../components/Reviews";
 import ourteamheader from "../../assets/ourteamheader.JPG";
 import ContactForm from "../../components/ContactForm";
 import header2 from "../../assets/header2.jpg";
-import header3 from "../../assets/header3.jpg";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import p1 from "../../assets/p1.png";
+import p1mobile from "../../assets/p1mobile.png";
 import oneonone from "../../assets/oneonone.JPG";
 import phonebackground from "../../assets/phonebackground.svg";
 import { Link } from "react-router-dom";
@@ -20,6 +20,8 @@ import WeHaveMoved from "../../components/WeHaveMoved";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
+import group from "../../assets/group.jpg";
+import Banner from "../../assets/Banner.png";
 
 const Home = () => {
   const isSmallScreen = useMediaQuery("(max-width: 1080px)");
@@ -131,7 +133,7 @@ const Home = () => {
               </div>
             </div>
 
-            <img src={p1} alt="" className="sm:pl-[30%]" />
+            <img src={p1mobile} alt="" className="sm:pl-[30%] pt-5" />
           </motion.div>
           <img
             src={phonebackground}
@@ -185,7 +187,7 @@ const Home = () => {
                 <div className=" overflow-hidden cursor-pointer  flex justify-center items-centr w-full z-10 xlg:p-2 bg-lavender rounded-[20%] shadow-md hover:scale-105 transition duration-300 mt-[100px]  max-h-[250px] ">
                   <div className="bg-black  overflow-hidden rounded-[20%] relative flex justify-center items-center">
                     <img
-                      src={header3}
+                      src={group}
                       alt=""
                       className="w-screen  object-cover object-top opacity-60 z-[5]"
                     />
@@ -258,12 +260,9 @@ const Home = () => {
                 hidden: { opacity: 0, x: -50 },
                 visible: { opacity: 1, x: 0 },
               }}
+              className="relative"
             >
-              <img
-                src={p1}
-                alt=""
-                className="absolute w-[1000px] xlg:left-[-200px] lg:left-[-280px] md:left-[-290px]  z-[7]"
-              />
+              <img src={p1} alt="" className="absolute w-[500px]  py-5 z-[7]" />
               <img
                 src={circle}
                 alt=""

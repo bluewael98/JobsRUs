@@ -24,6 +24,7 @@ import cpi from "../assets/cpi.jpg";
 import user from "../assets/user.svg";
 import ContactTransition from "../components/ContactTransition";
 import { Helmet } from "react-helmet";
+import { Employees } from "../components/Employees";
 
 const OurTeam = () => {
   const [open, setOpen] = useState(null);
@@ -1238,7 +1239,7 @@ const OurTeam = () => {
             </Transition>
           </Fragment>
 
-          {/* ZEINAH */}
+          {/* Zeinah */}
           <Fragment>
             <div className="flex justify-center items-center flex-col text-center">
               <div
@@ -1323,6 +1324,89 @@ const OurTeam = () => {
               </Dialog>
             </Transition>
           </Fragment>
+
+          {/* Employees */}
+          {Employees.map((data, index) => (
+            <Fragment key={index}>
+              <div className="flex justify-center items-center flex-col text-center">
+                <div
+                  className="rounded-full  bg-primary flex flex-col justify-center items-center content-center w-[220px] h-[220px] hover:scale-105 cursor-pointer transition: duration-500"
+                  onClick={() => openModal(data.name)}
+                >
+                  <img
+                    src={data.photo}
+                    alt="JobsRUs Employee"
+                    className="rounded-full w-[200px] h-[200px] object-cover"
+                  />
+                </div>
+                <h2 className=" text-xl font-semibold text-primary mt-5">
+                  {data.name}
+                </h2>
+                <h2 className=" text-lg font-semibold text-alt2 my-2">
+                  {data.position}
+                </h2>
+
+                <p className="w-[240px] text-alt2">{data.bio1}</p>
+                <p>&#8203;</p>
+                <p>&#8203;</p>
+                <p>&nbsp;</p>
+              </div>
+              <Transition
+                show={open === data.name}
+                enter="transition duration-500 ease-out"
+                enterFrom="transform scale-100 opacity-0"
+                enterTo="transform scale-100 opacity-100"
+                leave="transition duration-300 ease-out"
+                leaveFrom="transform scale-100 opacity-100"
+                leaveTo="transform scale-100 opacity-0"
+                as={Fragment}
+              >
+                <Dialog
+                  as="div"
+                  className="fixed inset-0 z-50 overflow-y-auto"
+                  onClose={closeModal}
+                >
+                  <div className="min-h-screen px-4 text-center">
+                    <Dialog.Overlay className="fixed inset-0 bg-black opacity-30" />
+
+                    <span
+                      className="inline-block h-screen align-middle"
+                      aria-hidden="true"
+                    >
+                      &#8203;
+                    </span>
+
+                    <div className="inline-block w-full max-w-[600px] p-10 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+                      <Dialog.Title
+                        as="h3"
+                        className="text-lg flex flex-col gap-3 justify-center items-center leading-6"
+                      >
+                        <p className=" text-primary font-semibold text-3xl">
+                          {data.name}
+                        </p>
+                        <p className=" text-alt2 font-semibold text-2xl">
+                          {data.position}
+                        </p>
+                      </Dialog.Title>
+                      <div className="mt-2 text-xl text-alt2 text-center flex flex-col gap-3">
+                        <p>{data.bio2}</p>
+                      </div>
+
+                      <div className="mt-4">
+                        <button
+                          type="button"
+                          className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-md hover:bg-primary-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
+                          onClick={() => setOpen(false)}
+                        >
+                          Close
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </Dialog>
+              </Transition>
+            </Fragment>
+          ))}
 
           {/* ALFRED */}
           <Fragment>

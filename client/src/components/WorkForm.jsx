@@ -24,7 +24,7 @@ const WorkForm = () => {
       <form
         onSubmit={onSubmit}
         target="_blank"
-        action="https://formsubmit.co/e562502946854997d37372895dcbfc61"
+        action="https://formsubmit.co/info@jobsrus.com.au"
         method="POST"
       >
         <div className="w-full flex flex-col gap-3 mb-3">
