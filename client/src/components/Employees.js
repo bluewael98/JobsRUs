@@ -1,7 +1,15 @@
-import User from "../assets/user.svg"
 import Marwa from "../assets/team/Marwa.jpg"
 import Carlos from "../assets/team/Carlos.jpg"
+import Layla from "../assets/team/Layla.jpg"
+
 export const Employees = [
+  {
+    name: "Layla",
+    position: "Employment Specialist",
+    bio1: "Hi, im Layla..",
+    bio2: "Hi, im Layla..",
+    photo: `${Layla}`
+  },
 {
   name: "MARWA",
   position: "Employment Specialist",

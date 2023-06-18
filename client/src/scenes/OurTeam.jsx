@@ -709,7 +709,7 @@ const OurTeam = () => {
                 ZEINAH
               </h2>
               <h2 className=" text-lg font-semibold text-alt2 my-2">
-                Employment Support Officer
+                Employment Specialist
               </h2>
               <p className="w-[240px] text-alt2 font-semibold text-center">
                 Fluent in Arabic.
