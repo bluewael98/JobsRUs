@@ -426,8 +426,8 @@ const OurTeam = () => {
                 Fluent in Arabic.
               </p>
               <p className="w-[240px] text-alt2">
-                Becoming an employment specialist for people with disabilities
-                allowed me to discover my passion...
+                Becoming an Supervisor for people with disabilities allowed me
+                to discover my passion...
               </p>
               <p>
                 <p className="w-[240px] text-alt2 font-semibold text-center">
@@ -469,7 +469,7 @@ const OurTeam = () => {
                         LAYLA
                       </p>
                       <p className=" text-alt2 font-semibold text-2xl">
-                        Employment Specialist.
+                        Supervisor
                       </p>
                       <p className="w-[240px] text-alt2 font-semibold text-center">
                         Fluent in Arabic.
@@ -477,11 +477,11 @@ const OurTeam = () => {
                     </Dialog.Title>
                     <div className="mt-2 text-xl text-alt2 text-center flex flex-col gap-3">
                       <p>
-                        Becoming an employment specialist for people with
-                        disabilities allowed me to discover my passion for
-                        helping others. Studying Social Sciences (Psychology)
-                        paved the way for gaining the opportunity to work for
-                        Enaya and building on the fundamentals I knew.
+                        Becoming an Supervisor for people with disabilities
+                        allowed me to discover my passion for helping others.
+                        Studying Social Sciences (Psychology) paved the way for
+                        gaining the opportunity to work for Enaya & and building
+                        on the fundamentals I knew.
                       </p>
                       <p>
                         Other than that, I consider myself to be an independent
@@ -523,7 +523,7 @@ const OurTeam = () => {
                 KHADEJA
               </h2>
               <h2 className=" text-lg font-semibold text-alt2 my-2">
-                Employment Specialist
+                Employment Support Officer
               </h2>
               <div className="flex justify-center items-center gap-2  ">
                 <h2 className=" text-lg font-semibold text-alt2 ">
@@ -573,7 +573,7 @@ const OurTeam = () => {
                         KHADEJA
                       </p>
                       <p className=" text-alt2 font-semibold text-2xl">
-                        Employment Specialist
+                        Employment Support Officer
                       </p>
                       <p className="w-[240px] text-alt2 font-semibold text-center">
                         Fluent in Arabic.
@@ -623,7 +623,7 @@ const OurTeam = () => {
                 COREEY
               </h2>
               <h2 className=" text-lg font-semibold text-alt2 my-2">
-                Employment Specialist
+                Employment Support Officer
               </h2>
               <div className="flex justify-center items-center gap-2 ">
                 <h2 className=" text-lg font-semibold text-alt2 ">
@@ -676,7 +676,7 @@ const OurTeam = () => {
                         COREEY
                       </p>
                       <p className=" text-alt2 font-semibold text-2xl">
-                        Employment Specialist.
+                        Employment Support Officer
                       </p>
                     </Dialog.Title>
                     <div className="mt-2 text-xl text-alt2 text-center flex flex-col gap-3">
@@ -731,7 +731,7 @@ const OurTeam = () => {
                 TAHLIA
               </h2>
               <h2 className=" text-lg font-semibold text-alt2 my-2">
-                Employment Specialist
+                Employment Support Officer
               </h2>
               <div className="flex justify-center items-center gap-2 ">
                 <h2 className=" text-lg font-semibold text-alt2 ">
@@ -780,7 +780,7 @@ const OurTeam = () => {
                         Tahlia
                       </p>
                       <p className=" text-alt2 font-semibold text-2xl">
-                        Employment Specialist.
+                        Employment Support Officer
                       </p>
                     </Dialog.Title>
                     <div className="mt-2 text-xl text-alt2 text-center flex flex-col gap-3">
@@ -819,7 +819,7 @@ const OurTeam = () => {
                 ZEINAH
               </h2>
               <h2 className=" text-lg font-semibold text-alt2 my-2">
-                Employment Specialist
+                Employment Support Officer
               </h2>
               <p className="w-[240px] text-alt2 font-semibold text-center">
                 Fluent in Arabic.
