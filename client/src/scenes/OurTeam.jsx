@@ -9,6 +9,7 @@ import Zeinah from "../assets/team/Zeinah.jpg";
 import Alfred from "../assets/team/Alfred.jpg";
 import Khadeja from "../assets/team/Khadeja.jpg";
 import Fish from "../assets/team/Fish.jpg";
+import Layla from "../assets/team/Layla.jpg";
 import screening from "../assets/screening.svg";
 import support from "../assets/support.svg";
 import standtogether from "../assets/standtogether.svg";
@@ -396,6 +397,115 @@ const OurTeam = () => {
             </div>
           </Fragment>
 
+          {/* LAYLA */}
+          <Fragment>
+            <div className="flex justify-center items-center flex-col text-center">
+              <div
+                className="rounded-full  bg-primary flex flex-col justify-center items-center content-center w-[220px] h-[220px] hover:scale-105 cursor-pointer transition: duration-500"
+                onClick={() => openModal("layla")}
+              >
+                <img
+                  src={Layla}
+                  alt=""
+                  className="rounded-full w-[200px] h-[200px] object-cover"
+                />
+              </div>
+              <h2 className=" text-xl font-semibold text-primary mt-5">
+                LAYLA
+              </h2>
+              <h2 className=" text-lg font-semibold text-alt2 my-2">
+                Supervisor
+              </h2>
+              <div className="flex justify-center items-center gap-2 ">
+                <h2 className=" text-lg font-semibold text-alt2 ">
+                  CPI Safety Intervention Trained
+                </h2>
+                <img src={cpi} alt="cpi" className="w-[30px] rounded-full" />
+              </div>
+              <p className="w-[240px] text-alt2 font-semibold text-center">
+                Fluent in Arabic.
+              </p>
+              <p className="w-[240px] text-alt2">
+                Becoming an employment specialist for people with disabilities
+                allowed me to discover my passion...
+              </p>
+              <p>
+                <p className="w-[240px] text-alt2 font-semibold text-center">
+                  &nbsp;
+                </p>
+              </p>
+            </div>
+            <Transition
+              show={open === "layla"}
+              enter="transition duration-300 ease-out"
+              enterFrom="transform scale-95 opacity-0"
+              enterTo="transform scale-100 opacity-100"
+              leave="transition duration-300 ease-out"
+              leaveFrom="transform scale-100 opacity-100"
+              leaveTo="transform scale-100 opacity-0"
+              as={Fragment}
+            >
+              <Dialog
+                as="div"
+                className="fixed inset-0 z-50 overflow-y-auto"
+                onClose={closeModal}
+              >
+                <div className="min-h-screen px-4 text-center">
+                  <Dialog.Overlay className="fixed inset-0 bg-black opacity-30" />
+
+                  <span
+                    className="inline-block h-screen align-middle"
+                    aria-hidden="true"
+                  >
+                    &#8203;
+                  </span>
+
+                  <div className="inline-block w-full max-w-[600px] p-10 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+                    <Dialog.Title
+                      as="h3"
+                      className="text-lg flex flex-col gap-3 justify-center items-center leading-6"
+                    >
+                      <p className=" text-primary font-semibold text-3xl">
+                        LAYLA
+                      </p>
+                      <p className=" text-alt2 font-semibold text-2xl">
+                        Employment Specialist.
+                      </p>
+                      <p className="w-[240px] text-alt2 font-semibold text-center">
+                        Fluent in Arabic.
+                      </p>
+                    </Dialog.Title>
+                    <div className="mt-2 text-xl text-alt2 text-center flex flex-col gap-3">
+                      <p>
+                        Becoming an employment specialist for people with
+                        disabilities allowed me to discover my passion for
+                        helping others. Studying Social Sciences (Psychology)
+                        paved the way for gaining the opportunity to work for
+                        Enaya and building on the fundamentals I knew.
+                      </p>
+                      <p>
+                        Other than that, I consider myself to be an independent
+                        and punctual person who likes to push my limits and
+                        achieve new goals. In my spare time I enjoy shopping,
+                        driving and going to the movies or spending quality time
+                        with friends and family.
+                      </p>
+                    </div>
+
+                    <div className="mt-4">
+                      <button
+                        type="button"
+                        className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-md hover:bg-primary-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
+                        onClick={() => setOpen(false)}
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </Dialog>
+            </Transition>
+          </Fragment>
           {/* KHADEEJA */}
           <Fragment>
             <div className="flex justify-center items-center flex-col text-center">
