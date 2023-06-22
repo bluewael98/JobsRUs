@@ -50,7 +50,7 @@ function Reviews() {
     fullscreen: true,
     contain: true,
     prevNextButtons: true,
-    pageDots: true,
+    pageDots: false,
     autoPlay: true,
     selectedAttraction: 0.01,
     friction: 0.15,
